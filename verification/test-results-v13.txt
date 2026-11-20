@@ -1,0 +1,28 @@
+Memory Palace OS V1.3.0 verification summary
+
+Automated tests: 132/132 passed
+Command: npm test
+Node: v22.16.0
+
+Static checks:
+- Frontend JS syntax: passed (node --check public/app.js)
+- Full TypeScript strict project check: passed (tsc --noEmit)
+
+Regression:
+- V1.1 spatial layout smoke: passed
+- 18-concept fixture: mean related distance 16.380 -> 12.953; route length 81.705 -> 88.473; room overlap violations 0; objective 17.3603 -> 14.0148
+- 40-concept stress fixture: 7 rooms, 15 links, 0 isolated concepts, 0 object overlaps, 0 room overlaps
+
+V1.3 additions:
+- Per-concept inspector exposure events, bounded dwell times and idempotent event IDs
+- Recall-task start timestamp and pre-answer confidence
+- Per-concept exposure provenance and descriptive dwell/response/confidence summaries
+- Confidence Brier score remains descriptive-only
+- CSV event export with spreadsheet formula-injection escaping
+- API validation, persistence, deduplication and export integration tests
+- V1.2 legacy records remain readable and use explicitly labelled proxy timestamps
+
+Limitations:
+- Real browser/WebGL E2E not completed
+- No prospective human efficacy study conducted
+- Dwell, response time and confidence are not proof of learning and do not update the forgetting model

@@ -1,0 +1,29 @@
+V1.2.0 verification summary
+
+Automated tests: 127/127 passed
+Command: npm test
+Node: v22.16.0
+
+V1.2 additions:
+- 5 backend/model/API tests passed.
+- 1 frontend contract test passed.
+- Recall mode and API selectors all resolve to declared DOM elements.
+- Cued and unaided model observations remain separate under spaced observations.
+- Repeated explicit wrong selections produce advisory pair-inspection only.
+- Unattributed misses do not become inferred confusion pairs.
+- Sparse data does not produce a fabricated review schedule.
+- Recall events persist and are returned by the learning report API.
+
+Regression checks:
+- V1.1 spatial layout smoke: passed.
+- 18-concept fixture: mean related distance 16.380 -> 12.953; route length 81.705 -> 88.473; room overlap violations 0 in both; objective 17.3603 -> 14.0148.
+- 40-concept stress fixture: 7 rooms, 15 inter-room links, 0 isolated concepts, 0 object overlaps, 0 room overlaps.
+- Frontend JavaScript syntax check (`node --check public/app.js`): passed.
+
+Static type check:
+- `npm run typecheck` blocked because `@types/node` is not installed in this checkout (`TS2688: Cannot find type definition file for 'node'`).
+- This is an environment/dependency blocker, not a passing typecheck. Full-project strict typecheck remains unverified.
+- An isolated strict check of `src/service.ts` and `src/spatial/palace-learning.ts` passed with temporary minimal Node API declarations; this does not validate the full Node server or replace the full-project check.
+
+Browser verification:
+- Real browser/WebGL end-to-end verification was not run in this environment.
