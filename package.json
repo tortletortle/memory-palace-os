@@ -1,0 +1,35 @@
+{
+  "name": "memory-palace-mnemonic-engine",
+  "version": "1.8.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types src/server.ts",
+    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "demo": "node --experimental-strip-types examples/demo.ts",
+    "typecheck": "tsc --noEmit",
+    "eval": "node --experimental-strip-types examples/evaluate.ts",
+    "experiment": "node --experimental-strip-types examples/experiment.ts",
+    "robustness": "node --experimental-strip-types examples/robustness.ts",
+    "robustness:v05": "node --experimental-strip-types eval/v05-robustness.ts",
+    "robustness:v051": "node --experimental-strip-types eval/v051-independent.ts",
+    "cognition:experiment": "node --experimental-strip-types eval/v06-budget.ts",
+    "cognition:demo": "node --experimental-strip-types examples/cognition-demo.ts",
+    "transfer:demo": "node --experimental-strip-types examples/transfer-demo.ts",
+    "transfer:experiment": "node --experimental-strip-types eval/v07-transfer.ts",
+    "typecheck:v07-core": "tsc -p tsconfig.v07-core.json",
+    "transfer:discover": "node --experimental-strip-types examples/transfer-discovery-demo.ts",
+    "transfer:experiment:v08": "node --experimental-strip-types eval/v08-independent.ts",
+    "knowledge:fixtures": "node --experimental-strip-types eval/v09-offline-fixtures.ts",
+    "spatial:smoke": "node --experimental-strip-types eval/v11-layout-smoke.ts",
+    "review:experiment": "node --experimental-strip-types eval/v14-review-experiment.ts",
+    "review:experiment:v15": "node --experimental-strip-types eval/v15-marginal-experiment.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.8.3"
+  }
+}

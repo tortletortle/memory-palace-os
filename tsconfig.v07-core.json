@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "types": [],
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/cognition/transfer-types.ts",
+    "src/cognition/transfer-library.ts",
+    "src/cognition/transfer-graph.ts",
+    "src/cognition/transfer-engine.ts",
+    "src/cognition/transfer-evolution.ts",
+    "src/cognition/types.ts",
+    "src/cognition/registry.ts",
+    "src/cognition/graph.ts",
+    "src/cognition/runtime.ts",
+    "src/cognition/evolution.ts"
+  ]
+}
