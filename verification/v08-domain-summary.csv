@@ -1,0 +1,7 @@
+domain,n,meanFeatureRecall,meanCoverage,meanCost,invalid
+probability,40,0.666666666666667,1,8,0
+programming,40,0.666666666666667,1,10,0
+history,40,1,1,9,0
+digital_logic,40,1,1,9,0
+language,40,1,1,7,0
+biology,40,1,1,10,0

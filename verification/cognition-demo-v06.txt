@@ -1,0 +1,127 @@
+
+> memory-palace-mnemonic-engine@0.6.0 cognition:demo
+> node --experimental-strip-types examples/cognition-demo.ts
+
+(node:7231) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "capabilities": [
+    "raw_observations",
+    "normalized_evidence",
+    "cause_diagnosis",
+    "memory_forecast",
+    "interference_profile",
+    "review_schedule",
+    "intervention_decision",
+    "intervention_proposal",
+    "validated_proposal"
+  ],
+  "genome": "static-modular-v06",
+  "budget": {
+    "allocated": 40,
+    "consumed": 38,
+    "remaining": 2,
+    "utilization": 0.95
+  },
+  "trace": [
+    {
+      "nodeId": "observe",
+      "geneId": "evidence-normalizer",
+      "status": "executed",
+      "costUnits": 4
+    },
+    {
+      "nodeId": "diagnose",
+      "geneId": "cause-diagnosis-conservative",
+      "status": "executed",
+      "costUnits": 7
+    },
+    {
+      "nodeId": "forecast",
+      "geneId": "memory-forecast-bma",
+      "status": "executed",
+      "costUnits": 9
+    },
+    {
+      "nodeId": "analyze",
+      "geneId": "interference-separated",
+      "status": "executed",
+      "costUnits": 7
+    },
+    {
+      "nodeId": "schedule",
+      "geneId": "review-scheduler",
+      "status": "executed",
+      "costUnits": 2
+    },
+    {
+      "nodeId": "decide",
+      "geneId": "decision-risk-sensitive",
+      "status": "executed",
+      "costUnits": 4
+    },
+    {
+      "nodeId": "intervene",
+      "geneId": "local-intervention",
+      "status": "executed",
+      "costUnits": 2
+    },
+    {
+      "nodeId": "verify",
+      "geneId": "proposal-verifier",
+      "status": "executed",
+      "costUnits": 3
+    }
+  ],
+  "state": {
+    "diagnosis": {
+      "cause": "unknown",
+      "confidence": 0.43333333333333335,
+      "probabilities": {
+        "knowledge_gap": 0.03333333333333333,
+        "forgetting": 0.03333333333333333,
+        "visual_confusion": 0.03333333333333333,
+        "semantic_confusion": 0.5666666666666667,
+        "none": 0.3,
+        "unknown": 0.03333333333333333
+      },
+      "evidenceCount": 8,
+      "status": "weak"
+    },
+    "forecast": {
+      "unaidedRecall": 0.43077722220748843,
+      "cuedRecall": 0.43077722220748843,
+      "evidenceCount": 6,
+      "method": "bma"
+    },
+    "interference": {
+      "visual": 0,
+      "semantic": 0.7040000000000001,
+      "observedVisualConfusions": 0,
+      "observedSemanticConfusions": 8,
+      "identification": "supported"
+    },
+    "schedule": {
+      "suggestedIntervalDays": 2,
+      "basis": "unaided recall estimate 43.1%"
+    },
+    "decision": {
+      "action": "no_action",
+      "expectedUtility": 0,
+      "confidence": 0.43333333333333335,
+      "recommend": false,
+      "rationale": "Evidence or expected utility is insufficient; preserve the current memory structure."
+    },
+    "proposal": {
+      "action": "no_action",
+      "targetId": "poisson-formula-001",
+      "scope": "none",
+      "sourceRevision": "knowledge-rev-3",
+      "requiresUserConfirmation": true
+    },
+    "validation": {
+      "passed": true,
+      "issues": []
+    }
+  }
+}

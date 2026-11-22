@@ -1,0 +1,88 @@
+# V0.6 Equal-Compute-Budget Experiment
+
+Generated: 2026-11-18T12:30:09.143Z
+
+Search budget per tuned strategy: 96040 deterministic units (60 train cases x 40 candidates x 40 reserved inference units, plus one architecture unit per candidate).
+Inference budget: 40 units per held-out episode.
+Held-out episodes per strategy: 1,920.
+
+| Strategy | Action score | Forecast Brier ↓ | Safety | Mean inference units | Efficiency |
+|---|---:|---:|---:|---:|---:|
+| fixed-heuristic | 0.5220 | 0.0646 | 1.0000 | 26.00 | 0.350 |
+| static-modular | 0.5220 | 0.0646 | 1.0000 | 26.00 | 0.350 |
+| evolved-modular | 0.5460 | 0.0646 | 1.0000 | 24.00 | 0.400 |
+| untuned-static-reference | 0.4333 | 0.0398 | 1.0000 | 38.00 | 0.050 |
+
+## Environment breakdown
+
+### balanced
+
+| Strategy | Action score | Brier ↓ | Safety | Mean units |
+|---|---:|---:|---:|---:|
+| fixed-heuristic | 0.5958 | 0.0760 | 1.0000 | 26.00 |
+| static-modular | 0.5958 | 0.0760 | 1.0000 | 26.00 |
+| evolved-modular | 0.6100 | 0.0760 | 1.0000 | 24.00 |
+| untuned-static-reference | 0.4881 | 0.0388 | 1.0000 | 38.00 |
+
+### visual-heavy
+
+| Strategy | Action score | Brier ↓ | Safety | Mean units |
+|---|---:|---:|---:|---:|
+| fixed-heuristic | 0.4008 | 0.0958 | 1.0000 | 26.00 |
+| static-modular | 0.4008 | 0.0958 | 1.0000 | 26.00 |
+| evolved-modular | 0.4069 | 0.0958 | 1.0000 | 24.00 |
+| untuned-static-reference | 0.3520 | 0.0258 | 1.0000 | 38.00 |
+
+### semantic-heavy
+
+| Strategy | Action score | Brier ↓ | Safety | Mean units |
+|---|---:|---:|---:|---:|
+| fixed-heuristic | 0.3987 | 0.0964 | 1.0000 | 26.00 |
+| static-modular | 0.3987 | 0.0964 | 1.0000 | 26.00 |
+| evolved-modular | 0.4252 | 0.0964 | 1.0000 | 24.00 |
+| untuned-static-reference | 0.3500 | 0.0252 | 1.0000 | 38.00 |
+
+### knowledge-gap
+
+| Strategy | Action score | Brier ↓ | Safety | Mean units |
+|---|---:|---:|---:|---:|
+| fixed-heuristic | 0.6587 | 0.0273 | 1.0000 | 26.00 |
+| static-modular | 0.6587 | 0.0273 | 1.0000 | 26.00 |
+| evolved-modular | 0.7380 | 0.0273 | 1.0000 | 24.00 |
+| untuned-static-reference | 0.3825 | 0.0349 | 1.0000 | 38.00 |
+
+### forgetting-heavy
+
+| Strategy | Action score | Brier ↓ | Safety | Mean units |
+|---|---:|---:|---:|---:|
+| fixed-heuristic | 0.4028 | 0.0271 | 1.0000 | 26.00 |
+| static-modular | 0.4028 | 0.0271 | 1.0000 | 26.00 |
+| evolved-modular | 0.4170 | 0.0271 | 1.0000 | 24.00 |
+| untuned-static-reference | 0.3541 | 0.0678 | 1.0000 | 38.00 |
+
+### ambiguous-drift
+
+| Strategy | Action score | Brier ↓ | Safety | Mean units |
+|---|---:|---:|---:|---:|
+| fixed-heuristic | 0.6750 | 0.0648 | 1.0000 | 26.00 |
+| static-modular | 0.6750 | 0.0648 | 1.0000 | 26.00 |
+| evolved-modular | 0.6791 | 0.0648 | 1.0000 | 24.00 |
+| untuned-static-reference | 0.6730 | 0.0465 | 1.0000 | 38.00 |
+
+## Interpretation
+
+These are synthetic benchmark results, not a study of human memory. Compare strategies using the held-out scenarios and report the environment breakdown; do not infer universal superiority from the aggregate alone.
+
+## Paired seed-level comparisons vs fixed heuristic
+
+Positive action-score difference is better; negative Brier difference is better. Confidence intervals use a normal approximation over 32 paired seeds.
+
+### static-modular minus fixed-heuristic
+
+- Action score difference: 0.0000 (95% CI 0.0000 to 0.0000; n=32)
+- Forecast Brier difference: 0.0000 (95% CI 0.0000 to 0.0000; n=32)
+
+### evolved-modular minus fixed-heuristic
+
+- Action score difference: 0.0240 (95% CI 0.0188 to 0.0292; n=32)
+- Forecast Brier difference: 0.0000 (95% CI 0.0000 to 0.0000; n=32)

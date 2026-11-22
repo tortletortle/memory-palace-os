@@ -1,0 +1,5856 @@
+{
+  "version": "0.5.0",
+  "seedsPerScenario": 32,
+  "scenarios": [
+    {
+      "scenario": "stable_exponential",
+      "n": 32,
+      "bmaMAE": 0.13497684481753802,
+      "exponentialMAE": 0.2309370010758504,
+      "meanPrediction": 0.5576282686161338,
+      "meanObserved": 0.59375
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "n": 32,
+      "bmaMAE": 0.13383707644018844,
+      "exponentialMAE": 0.2171200724275754,
+      "meanPrediction": 0.5542512450002052,
+      "meanObserved": 0.5812500000000002
+    },
+    {
+      "scenario": "two_phase",
+      "n": 32,
+      "bmaMAE": 0.1023676300447096,
+      "exponentialMAE": 0.16087007242757537,
+      "meanPrediction": 0.5508723902861838,
+      "meanObserved": 0.525
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "n": 32,
+      "bmaMAE": 0.1851880451322062,
+      "exponentialMAE": 0.11645078594482508,
+      "meanPrediction": 0.5496402755330714,
+      "meanObserved": 0.39375000000000004
+    },
+    {
+      "scenario": "visual_dominant",
+      "n": 32,
+      "bmaMAE": 0.14587216838248135,
+      "exponentialMAE": 0.26399507242757536,
+      "meanPrediction": 0.5591466817988032,
+      "meanObserved": 0.6281250000000002
+    },
+    {
+      "scenario": "semantic_dominant",
+      "n": 32,
+      "bmaMAE": 0.13999499120422187,
+      "exponentialMAE": 0.12352657188965015,
+      "meanPrediction": 0.5460033967093728,
+      "meanObserved": 0.44062500000000004
+    }
+  ],
+  "changePoint": [
+    {
+      "scenario": "stable_exponential",
+      "n": 32,
+      "detectionRate": 0.0625,
+      "meanDetectionDay": 23.5
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "n": 32,
+      "detectionRate": 0,
+      "meanDetectionDay": null
+    },
+    {
+      "scenario": "two_phase",
+      "n": 32,
+      "detectionRate": 0.03125,
+      "meanDetectionDay": 33
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "n": 32,
+      "detectionRate": 0.1875,
+      "meanDetectionDay": 28
+    },
+    {
+      "scenario": "visual_dominant",
+      "n": 32,
+      "detectionRate": 0.03125,
+      "meanDetectionDay": 42
+    },
+    {
+      "scenario": "semantic_dominant",
+      "n": 32,
+      "detectionRate": 0.03125,
+      "meanDetectionDay": 20
+    }
+  ],
+  "rows": [
+    {
+      "scenario": "stable_exponential",
+      "seed": 1,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.24050469740516167,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374685
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270931
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 2,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04502980435055426,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1659702385748006
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367955
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415199
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 3,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1549701956494457,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480064
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367936
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415199
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 4,
+      "bma": 0.5617938469820374,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.06179384698203738,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.24515130147941006
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2821652356902753
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.47268346283031476
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 5,
+      "bma": 0.5432481609340736,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.15675183906592638,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.049552522039842194
+        },
+        {
+          "family": "power_law",
+          "weight": 0.08295529850544696
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8674921794547109
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 6,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04917987986777017,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664477
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1693229636427973
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.708696082040558
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 7,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24576124275415528,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206106
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286905
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 8,
+      "bma": 0.5682817349772415,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.1317182650227584,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3307555228033805
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3402230135869609
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.3290214636096586
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 9,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04502980435055426,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480067
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367947
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415198
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 10,
+      "bma": 0.5701790935443422,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.029820906455657825,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.35859902460873483
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3552996502460818
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.28610132514518355
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 11,
+      "bma": 0.570179093544342,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.12982090645565791,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.35859902460873466
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3552996502460819
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.2861013251451835
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 12,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.23594636624124177,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2735911833238391
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013733
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478774
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 13,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1472747989129356,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 14,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1472747989129356,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472718
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902604
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 15,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04279456275551341,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.19091365110379263
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2368362076848808
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113266
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 16,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.23594636624124177,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2735911833238389
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013734
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4230892035747877
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 17,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05949530259483837,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2174400562937468
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667915996
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270932
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 18,
+      "bma": 0.570179093544342,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.12982090645565791,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.35859902460873466
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3552996502460819
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.28610132514518344
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 19,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15720543724448655,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1909136511037927
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2368362076848807
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113267
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 20,
+      "bma": 0.5617938469820372,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.9,
+      "bmaAbsError": 0.33820615301796286,
+      "expAbsError": 0.5210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.24515130147940978
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2821652356902752
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4726834628303149
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 21,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.15103682020896625,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1032520890265235
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279016
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 22,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.13594636624124168,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2735911833238388
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013737
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4230892035747876
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 23,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15283059866276572,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585277
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895936
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6659809758251879
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 24,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04502980435055426,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480045
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367953
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.62027675104152
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 25,
+      "bma": 0.5734317355336371,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.12656826446636282,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.41110220802742603
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3779146017716017
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.21098319020097223
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 26,
+      "bma": 0.5508201201322297,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04917987986777028,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664494
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1693229636427972
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405578
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 27,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.13594636624124168,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2735911833238387
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013738
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478746
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 28,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.2,
+      "bmaAbsError": 0.3472747989129356,
+      "expAbsError": 0.17892914162759954,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902604
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 29,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05283059866276574,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585264
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895942
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 30,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.24050469740516167,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374696
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667915985
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270932
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 31,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04279456275551341,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.19091365110379266
+        },
+        {
+          "family": "power_law",
+          "weight": 0.23683620768488076
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113266
+        }
+      ]
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 32,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05497019564944572,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1659702385748006
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367944
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415199
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 1,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15082012013222978,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664484
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1693229636427972
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.708696082040558
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 2,
+      "bma": 0.5617938469820374,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.13820615301796257,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.24515130147940967
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2821652356902752
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4726834628303151
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 3,
+      "bma": 0.570179093544342,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.12982090645565791,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.35859902460873444
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3552996502460819
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.28610132514518366
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 4,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.13594636624124168,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2735911833238388
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013737
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4230892035747876
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 5,
+      "bma": 0.5718997513010138,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.12810024869898617,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3854672328528468
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3678766607599529
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.24665610638720029
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 6,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.14050469740516158,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2174400562937468
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270932
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 7,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.15272520108706433,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902602
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 8,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05720543724448657,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.19091365110379271
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2368362076848806
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113267
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 9,
+      "bma": 0.5422307076669807,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.2577692923330194,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.040707319031693674
+        },
+        {
+          "family": "power_law",
+          "weight": 0.07074923925984171
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8885434417084647
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 10,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.14050469740516158,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2174400562937469
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270931
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 11,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.048963179791033706,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652351
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279024
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706862
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 12,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.05103682020896627,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652344
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1487967989027901
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706864
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 13,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.054238757245844815,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.072387732772061
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286903
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 14,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.9,
+      "bmaAbsError": 0.3450298043505543,
+      "expAbsError": 0.5210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480062
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367958
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415198
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 15,
+      "bma": 0.5549701956494458,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.14502980435055413,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1659702385748005
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367944
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415201
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 16,
+      "bma": 0.5444213426840223,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.044421342684022314,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.0600478694815856
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459611005
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 17,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.2444213426840222,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.060047869481585595
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459610998
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 18,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.24050469740516167,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2174400562937468
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270932
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 19,
+      "bma": 0.5617938469820373,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.06179384698203727,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.24515130147940997
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2821652356902752
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4726834628303148
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 20,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.13594636624124168,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2735911833238389
+        },
+        {
+          "family": "power_law",
+          "weight": 0.30331961310137356
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478746
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 21,
+      "bma": 0.5489631797910338,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1489631797910338,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652354
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279013
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706864
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 22,
+      "bma": 0.5508201201322297,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15082012013222967,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664473
+        },
+        {
+          "family": "power_law",
+          "weight": 0.16932296364279725
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405579
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 23,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.048963179791033706,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1032520890265235
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279016
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 24,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.24279456275551348,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.19091365110379255
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2368362076848807
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113267
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 25,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.054238757245844815,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1124350011128691
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150698
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 26,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24727479891293563,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472714
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 27,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15283059866276572,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585288
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895928
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6659809758251879
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 28,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04727479891293562,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472711
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1297805978790261
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 29,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05283059866276574,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1429223598258527
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1910966643489593
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6659809758251879
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 30,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04502980435055426,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480056
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2137530103836796
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415199
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 31,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.25283059866276575,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585272
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1910966643489592
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 32,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.0359463662412417,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.27359118332383886
+        },
+        {
+          "family": "power_law",
+          "weight": 0.30331961310137356
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4230892035747876
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 1,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05497019564944572,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480062
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367972
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415197
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 2,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.045761242754155274,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286903
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 3,
+      "bma": 0.5508201201322297,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.050820120132229696,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1219809543166448
+        },
+        {
+          "family": "power_law",
+          "weight": 0.16932296364279736
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405578
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 4,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04727479891293562,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472711
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 5,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05283059866276574,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585277
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895928
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 6,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15949530259483835,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2174400562937469
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270931
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 7,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.048963179791033706,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652352
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279018
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 8,
+      "bma": 0.5617938469820373,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.16179384698203725,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2451513014794097
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2821652356902752
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.47268346283031504
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 9,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.24050469740516167,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374677
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2598242966791601
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270932
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 10,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24576124275415528,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206101
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286911
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 11,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.05103682020896627,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652355
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279016
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 12,
+      "bma": 0.5489631797910338,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1489631797910338,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652336
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1487967989027901
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706867
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 13,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.054238757245844704,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286911
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150698
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 14,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1472747989129356,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472714
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902604
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 15,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04716940133723424,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585272
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895925
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 16,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05497019564944572,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480042
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367975
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415198
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 17,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04727479891293562,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472714
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902602
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 18,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.055578657315977775,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.06004786948158556
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459610996
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 19,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.045761242754155274,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286917
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150698
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 20,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04716940133723424,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585264
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895936
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 21,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.048963179791033706,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652347
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1487967989027901
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706864
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 22,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24896317979103372,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1032520890265235
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279018
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 23,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04716940133723424,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585272
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895917
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6659809758251881
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 24,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04279456275551341,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.19091365110379258
+        },
+        {
+          "family": "power_law",
+          "weight": 0.23683620768488073
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113267
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 25,
+      "bma": 0.5528305986627658,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04716940133723413,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585283
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895933
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 26,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24727479891293563,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902618
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062466
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 27,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.14576124275415514,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206098
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286905
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 28,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 1,
+      "bmaAbsError": 0.4491798798677702,
+      "expAbsError": 0.6210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664485
+        },
+        {
+          "family": "power_law",
+          "weight": 0.16932296364279734
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405578
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 29,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.048963179791033706,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652361
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1487967989027901
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 30,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04716940133723424,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585264
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895936
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 31,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.054238757245844815,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206101
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286903
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 32,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.040504697405161605,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374685
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270932
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 1,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.2471694013372343,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585277
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895928
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 2,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24727479891293563,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472714
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 3,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.2,
+      "bmaAbsError": 0.3472747989129356,
+      "expAbsError": 0.17892914162759954,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902602
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 4,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05497019564944572,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480064
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367955
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415198
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 5,
+      "bma": 0.5406078895607703,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1406078895607703,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.027169508015111265
+        },
+        {
+          "family": "power_law",
+          "weight": 0.050894735403976495
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9219357565809122
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 6,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04727479891293562,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472714
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902602
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 7,
+      "bma": 0.5444213426840223,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24442134268402232,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.06004786948158562
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459610998
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 8,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15082012013222978,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1219809543166448
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1693229636427973
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405579
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 9,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1472747989129356,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 10,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.2572054372444866,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1909136511037927
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2368362076848807
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113267
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 11,
+      "bma": 0.5662294548571439,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.033770545142856045,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3022807312709138
+        },
+        {
+          "family": "power_law",
+          "weight": 0.32280329061634183
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.3749159781127444
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 12,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.1427945627555134,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1909136511037927
+        },
+        {
+          "family": "power_law",
+          "weight": 0.23683620768488073
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113266
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 13,
+      "bma": 0.5432481609340736,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.2432481609340736,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.04955252203984214
+        },
+        {
+          "family": "power_law",
+          "weight": 0.08295529850544696
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8674921794547109
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 14,
+      "bma": 0.5413555057523884,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.1,
+      "bmaAbsError": 0.44135550575238847,
+      "expAbsError": 0.2789291416275995,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.033311558879342965
+        },
+        {
+          "family": "power_law",
+          "weight": 0.06010562768819767
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9065828134324594
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 15,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05283059866276574,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585275
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1910966643489592
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 16,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04502980435055426,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1659702385748005
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2137530103836794
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415201
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 17,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24727479891293563,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472714
+        },
+        {
+          "family": "power_law",
+          "weight": 0.129780597879026
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 18,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15949530259483835,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374705
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270929
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 19,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.2,
+      "bmaAbsError": 0.3508201201322298,
+      "expAbsError": 0.17892914162759954,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664473
+        },
+        {
+          "family": "power_law",
+          "weight": 0.16932296364279728
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.708696082040558
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 20,
+      "bma": 0.5489631797910338,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04896317979103382,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652355
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1487967989027902
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 21,
+      "bma": 0.5422307076669807,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04223070766698067,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.040707319031693674
+        },
+        {
+          "family": "power_law",
+          "weight": 0.07074923925984161
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8885434417084648
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 22,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24896317979103372,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652343
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1487967989027902
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 23,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.2,
+      "bmaAbsError": 0.34576124275415526,
+      "expAbsError": 0.17892914162759954,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286905
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 24,
+      "bma": 0.5432481609340736,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.2432481609340736,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.04955252203984215
+        },
+        {
+          "family": "power_law",
+          "weight": 0.08295529850544696
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8674921794547109
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 25,
+      "bma": 0.5617938469820373,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.06179384698203727,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.24515130147940997
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2821652356902752
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4726834628303148
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 26,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.14576124275415514,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286907
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150698
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 27,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15283059866276572,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585272
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895936
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 28,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.2,
+      "bmaAbsError": 0.3472747989129356,
+      "expAbsError": 0.17892914162759954,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902604
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 29,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.2444213426840222,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.06004786948158558
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459610998
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 30,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1472747989129356,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472722
+        },
+        {
+          "family": "power_law",
+          "weight": 0.129780597879026
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 31,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.14576124275415514,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1124350011128691
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150698
+        }
+      ]
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 32,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.15082012013222978,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664477
+        },
+        {
+          "family": "power_law",
+          "weight": 0.16932296364279734
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405579
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 1,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.25497019564944573,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480053
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367964
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415199
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 2,
+      "bma": 0.5682817349772415,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.1317182650227584,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3307555228033809
+        },
+        {
+          "family": "power_law",
+          "weight": 0.340223013586961
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.3290214636096582
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 3,
+      "bma": 0.5734317355336371,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.2265682644663629,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.41110220802742586
+        },
+        {
+          "family": "power_law",
+          "weight": 0.37791460177160174
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.21098319020097228
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 4,
+      "bma": 0.5662294548571438,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.13377054514285613,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3022807312709136
+        },
+        {
+          "family": "power_law",
+          "weight": 0.32280329061634194
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.37491597811274446
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 5,
+      "bma": 0.5734317355336372,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.1265682644663627,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.411102208027426
+        },
+        {
+          "family": "power_law",
+          "weight": 0.37791460177160174
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.21098319020097234
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 6,
+      "bma": 0.5682817349772415,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.1317182650227584,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3307555228033806
+        },
+        {
+          "family": "power_law",
+          "weight": 0.34022301358696083
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.32902146360965856
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 7,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.14050469740516158,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374677
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667916024
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.522735647027093
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 8,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.0359463662412417,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.2735911833238388
+        },
+        {
+          "family": "power_law",
+          "weight": 0.30331961310137345
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478774
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 9,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.25557865731597784,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.06004786948158556
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459610996
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 10,
+      "bma": 0.5662294548571438,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.23377054514285622,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3022807312709137
+        },
+        {
+          "family": "power_law",
+          "weight": 0.32280329061634166
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.37491597811274463
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 11,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.14502980435055424,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480053
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367955
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415198
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 12,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04502980435055426,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480062
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367964
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415198
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 13,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.14917987986777015,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664482
+        },
+        {
+          "family": "power_law",
+          "weight": 0.16932296364279725
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.708696082040558
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 14,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 1,
+      "bmaAbsError": 0.4359463662412417,
+      "expAbsError": 0.6210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.27359118332383886
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013737
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478746
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 15,
+      "bma": 0.5549701956494458,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.14502980435055413,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1659702385748005
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367944
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415201
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 16,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.052725201087064355,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472711
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 17,
+      "bma": 0.5472747989129357,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1472747989129357,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472711
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902604
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.783474467706247
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 18,
+      "bma": 0.5682817349772415,
+      "expOnly": 0.37892914162759955,
+      "empirical": 1,
+      "bmaAbsError": 0.43171826502275845,
+      "expAbsError": 0.6210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3307555228033807
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3402230135869609
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.32902146360965834
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 19,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.0359463662412417,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.273591183323839
+        },
+        {
+          "family": "power_law",
+          "weight": 0.30331961310137356
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.4230892035747874
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 20,
+      "bma": 0.5682817349772415,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.1317182650227584,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.3307555228033806
+        },
+        {
+          "family": "power_law",
+          "weight": 0.340223013586961
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.3290214636096584
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 21,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1549701956494457,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1659702385748005
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367964
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415198
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 22,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05949530259483837,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374705
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667915996
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.522735647027093
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 23,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04716940133723424,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585283
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895933
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6659809758251879
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 24,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.8,
+      "bmaAbsError": 0.23594636624124177,
+      "expAbsError": 0.4210708583724005,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.27359118332383886
+        },
+        {
+          "family": "power_law",
+          "weight": 0.30331961310137345
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478774
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 25,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04917987986777017,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1219809543166448
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1693229636427973
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405579
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 26,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.2508201201322298,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.12198095431664494
+        },
+        {
+          "family": "power_law",
+          "weight": 0.16932296364279742
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405577
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 27,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05497019564944572,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1659702385748006
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2137530103836795
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415199
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 28,
+      "bma": 0.5508201201322298,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04917987986777017,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1219809543166449
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1693229636427973
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7086960820405579
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 29,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.05283059866276574,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1429223598258527
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1910966643489593
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6659809758251879
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 30,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.0359463662412417,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.27359118332383897
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013736
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478746
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 31,
+      "bma": 0.5549701956494457,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.25497019564944573,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.16597023857480056
+        },
+        {
+          "family": "power_law",
+          "weight": 0.21375301038367955
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.6202767510415199
+        }
+      ]
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 32,
+      "bma": 0.5682817349772414,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.03171826502275854,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.33075552280338066
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3402230135869609
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.32902146360965845
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 1,
+      "bma": 0.5394364832056627,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.23943648320566274,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.01793075682254322
+        },
+        {
+          "family": "power_law",
+          "weight": 0.0362019129914045
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9458673301860523
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 2,
+      "bma": 0.5594953025948384,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.040504697405161605,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.21744005629374688
+        },
+        {
+          "family": "power_law",
+          "weight": 0.25982429667915985
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5227356470270933
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 3,
+      "bma": 0.5406078895607703,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.2,
+      "bmaAbsError": 0.3406078895607703,
+      "expAbsError": 0.17892914162759954,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.027169508015111223
+        },
+        {
+          "family": "power_law",
+          "weight": 0.05089473540397646
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9219357565809123
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 4,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.054238757245844704,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.072387732772061
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286912
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 5,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.0444213426840222,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.060047869481585595
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459610998
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 6,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.055578657315977775,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.060047869481585574
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459610998
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 7,
+      "bma": 0.5432481609340736,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.2432481609340736,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.049552522039842145
+        },
+        {
+          "family": "power_law",
+          "weight": 0.08295529850544707
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8674921794547109
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 8,
+      "bma": 0.5457612427541553,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.045761242754155274,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206105
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286903
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 9,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.055578657315977775,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.060047869481585574
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459611001
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 10,
+      "bma": 0.5444213426840222,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.0444213426840222,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.06004786948158551
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459611
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 11,
+      "bma": 0.5389849501938292,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.13898495019382917,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.014520617743446193
+        },
+        {
+          "family": "power_law",
+          "weight": 0.03043609274418729
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9550432895123665
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 12,
+      "bma": 0.5444213426840223,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1444213426840223,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.060047869481585595
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459611001
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 13,
+      "bma": 0.5406078895607703,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04060788956077033,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.027169508015111234
+        },
+        {
+          "family": "power_law",
+          "weight": 0.05089473540397646
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9219357565809123
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 14,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.14896317979103368,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652347
+        },
+        {
+          "family": "power_law",
+          "weight": 0.1487967989027902
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 15,
+      "bma": 0.5406078895607703,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1406078895607703,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.02716950801511125
+        },
+        {
+          "family": "power_law",
+          "weight": 0.05089473540397655
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9219357565809122
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 16,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24576124275415517,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206101
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286896
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.81517726611507
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 17,
+      "bma": 0.5413555057523884,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24135550575238846,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.033311558879342985
+        },
+        {
+          "family": "power_law",
+          "weight": 0.06010562768819769
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9065828134324593
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 18,
+      "bma": 0.5489631797910338,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.05103682020896616,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1032520890265235
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279024
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 19,
+      "bma": 0.5422307076669807,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24223070766698068,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.040707319031693674
+        },
+        {
+          "family": "power_law",
+          "weight": 0.07074923925984168
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8885434417084648
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 20,
+      "bma": 0.5406078895607703,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.2,
+      "bmaAbsError": 0.3406078895607703,
+      "expAbsError": 0.17892914162759954,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.027169508015111293
+        },
+        {
+          "family": "power_law",
+          "weight": 0.050894735403976515
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9219357565809122
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 21,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.04727479891293562,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062467
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 22,
+      "bma": 0.5422307076669807,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.14223070766698065,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.040707319031693674
+        },
+        {
+          "family": "power_law",
+          "weight": 0.07074923925984168
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8885434417084648
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 23,
+      "bma": 0.5528305986627657,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04716940133723424,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.14292235982585264
+        },
+        {
+          "family": "power_law",
+          "weight": 0.19109666434895925
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.665980975825188
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 24,
+      "bma": 0.5413555057523886,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24135550575238857,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.03331155887934293
+        },
+        {
+          "family": "power_law",
+          "weight": 0.060105627688197646
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.9065828134324595
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 25,
+      "bma": 0.5489631797910337,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.5,
+      "bmaAbsError": 0.048963179791033706,
+      "expAbsError": 0.12107085837240045,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.10325208902652344
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279013
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706863
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 26,
+      "bma": 0.5489631797910338,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.1489631797910338,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1032520890265235
+        },
+        {
+          "family": "power_law",
+          "weight": 0.14879679890279013
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7479511120706864
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 27,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.7,
+      "bmaAbsError": 0.15272520108706433,
+      "expAbsError": 0.3210708583724004,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.0867449344147271
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902596
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.783474467706247
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 28,
+      "bma": 0.5444213426840223,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24442134268402232,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.06004786948158558
+        },
+        {
+          "family": "power_law",
+          "weight": 0.09682891459611002
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8431232159223044
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 29,
+      "bma": 0.5640536337587583,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.4,
+      "bmaAbsError": 0.16405363375875825,
+      "expAbsError": 0.02107085837240047,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.27359118332383897
+        },
+        {
+          "family": "power_law",
+          "weight": 0.3033196131013733
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.42308920357478763
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 30,
+      "bma": 0.5457612427541552,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.054238757245844815,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.07238773277206097
+        },
+        {
+          "family": "power_law",
+          "weight": 0.11243500111286903
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.8151772661150699
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 31,
+      "bma": 0.5472747989129356,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.3,
+      "bmaAbsError": 0.24727479891293563,
+      "expAbsError": 0.07892914162759956,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.08674493441472717
+        },
+        {
+          "family": "power_law",
+          "weight": 0.12978059787902607
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.7834744677062468
+        }
+      ]
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 32,
+      "bma": 0.5572054372444866,
+      "expOnly": 0.37892914162759955,
+      "empirical": 0.6,
+      "bmaAbsError": 0.04279456275551341,
+      "expAbsError": 0.22107085837240043,
+      "modelWeights": [
+        {
+          "family": "exponential",
+          "weight": 0.1909136511037927
+        },
+        {
+          "family": "power_law",
+          "weight": 0.2368362076848807
+        },
+        {
+          "family": "two_phase",
+          "weight": 0.5722501412113267
+        }
+      ]
+    }
+  ],
+  "changeRows": [
+    {
+      "scenario": "stable_exponential",
+      "seed": 1,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 2,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 3,
+      "detected": true,
+      "firstDetectionDay": 15,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 4,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 5,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 6,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 7,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 8,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 9,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 10,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 11,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 12,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 13,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 14,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 15,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 16,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 17,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 18,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 19,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 20,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 21,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 22,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 23,
+      "detected": true,
+      "firstDetectionDay": 32,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 24,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 25,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 26,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 27,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 28,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 29,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 30,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 31,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_exponential",
+      "seed": 32,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 1,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 2,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 3,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 4,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 5,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 6,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 7,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 8,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 9,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 10,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 11,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 12,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 13,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 14,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 15,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 16,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 17,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 18,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 19,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 20,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 21,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 22,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 23,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 24,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 25,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 26,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 27,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 28,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 29,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 30,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 31,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "seed": 32,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 1,
+      "detected": true,
+      "firstDetectionDay": 33,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 2,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 3,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 4,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 5,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 6,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 7,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 8,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 9,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 10,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 11,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 12,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 13,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 14,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 15,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 16,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 17,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 18,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 19,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 20,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 21,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 22,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 23,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 24,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 25,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 26,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 27,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 28,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 29,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 30,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 31,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "two_phase",
+      "seed": 32,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 1,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 2,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 3,
+      "detected": true,
+      "firstDetectionDay": 15,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 4,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 5,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 6,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 7,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 8,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 9,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 10,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 11,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 12,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 13,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 14,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 15,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 16,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 17,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 18,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 19,
+      "detected": true,
+      "firstDetectionDay": 23,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 20,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 21,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 22,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 23,
+      "detected": true,
+      "firstDetectionDay": 31,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 24,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 25,
+      "detected": true,
+      "firstDetectionDay": 34,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 26,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 27,
+      "detected": true,
+      "firstDetectionDay": 31,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 28,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 29,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 30,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 31,
+      "detected": true,
+      "firstDetectionDay": 34,
+      "abrupt": true
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "seed": 32,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": true
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 1,
+      "detected": true,
+      "firstDetectionDay": 42,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 2,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 3,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 4,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 5,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 6,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 7,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 8,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 9,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 10,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 11,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 12,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 13,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 14,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 15,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 16,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 17,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 18,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 19,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 20,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 21,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 22,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 23,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 24,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 25,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 26,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 27,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 28,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 29,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 30,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 31,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "visual_dominant",
+      "seed": 32,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 1,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 2,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 3,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 4,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 5,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 6,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 7,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 8,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 9,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 10,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 11,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 12,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 13,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 14,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 15,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 16,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 17,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 18,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 19,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 20,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 21,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 22,
+      "detected": true,
+      "firstDetectionDay": 20,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 23,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 24,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 25,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 26,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 27,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 28,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 29,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 30,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 31,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    },
+    {
+      "scenario": "semantic_dominant",
+      "seed": 32,
+      "detected": false,
+      "firstDetectionDay": -1,
+      "abrupt": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+
+> memory-palace-mnemonic-engine@1.4.0 spatial:smoke
+> node --experimental-strip-types eval/v11-layout-smoke.ts
+
+(node:911) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "fixture": "18 concepts / 6 knowledge types / chain-like cross-type relations",
+  "baseline": {
+    "meanRelatedDistance": 16.38,
+    "routeLength": 81.705,
+    "roomOverlapViolations": 0,
+    "objective": 17.3603
+  },
+  "optimized": {
+    "meanRelatedDistance": 12.953,
+    "routeLength": 88.473,
+    "roomOverlapViolations": 0,
+    "objective": 14.0148
+  },
+  "delta": {
+    "meanRelatedDistance": 3.427,
+    "objective": 3.3455
+  },
+  "stress40": {
+    "concepts": 40,
+    "rooms": 7,
+    "interRoomLinks": 15,
+    "isolatedConcepts": 0,
+    "objectOverlapViolations": 0,
+    "roomOverlapViolations": 0,
+    "routeLength": 83.74,
+    "objective": 15.8501
+  }
+}

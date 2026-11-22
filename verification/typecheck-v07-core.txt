@@ -1,0 +1,4 @@
+
+> memory-palace-mnemonic-engine@0.7.0 typecheck:v07-core
+> tsc -p tsconfig.v07-core.json
+

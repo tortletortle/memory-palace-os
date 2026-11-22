@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memory Palace OS V1.7 — Evidence-Driven Learning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark"><span></span><span></span><span></span></div><div><b>MEMORY PALACE</b><small>COGNITIVE SPACES / 01</small></div></div>
+    <div class="workspace-label">WORKSPACE</div>
+    <button class="nav-item active"><span class="nav-icon">◈</span> 我的宫殿 <kbd>⌘ 1</kbd></button>
+    <button class="nav-item" id="nav-library"><span class="nav-icon">▤</span> 知识库</button>
+    <a class="nav-item" href="/assessment.html" style="text-decoration:none"><span class="nav-icon">◇</span> 独立知识测评</a>
+    <a class="nav-item" href="/lab.html" style="text-decoration:none"><span class="nav-icon">⚙</span> 动态知识实验台</a>
+    <a class="nav-item" href="/simulation.html" style="text-decoration:none"><span class="nav-icon">◇</span> 通用公式仿真</a>
+    <button class="nav-item" id="nav-training"><span class="nav-icon">◎</span> 记忆训练</button>
+    <div class="sidebar-divider"></div>
+    <div class="workspace-label">YOUR SPACES <button id="new-palace" class="tiny-plus">＋</button></div>
+    <div id="palace-list" class="palace-list"><div class="space-link active"><i class="space-dot"></i> 第一座记忆宫殿</div></div>
+    <div class="sidebar-bottom"><div class="avatar">MP</div><div><b>个人工作区</b><small>本地私有空间</small></div><span class="online-dot"></span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="breadcrumbs"><span>WORKSPACE</span><i>/</i><b id="breadcrumb-title">第一座记忆宫殿</b></div>
+      <div class="top-actions"><span class="save-state" id="save-state">● 本地已连接</span><button class="icon-btn" title="帮助">?</button><button class="share-btn" id="save-palace">保存宫殿 <span>↗</span></button></div>
+    </header>
+    <section class="content">
+      <div class="page-heading">
+        <div><div class="eyebrow">YOUR KNOWLEDGE, IN SPACE</div><h1 id="page-title">第一座记忆宫殿<span class="title-dot">.</span></h1><p>AI根据知识关系设计房间、路线与空间锚点，让记忆变得可探索。</p></div>
+        <div class="heading-meta"><span class="live-pulse"></span> 3D WORLD ACTIVE <span class="meta-divider"></span><span id="object-count">03 OBJECTS</span></div>
+      </div>
+      <div class="workspace-grid">
+        <section class="world-panel">
+          <div class="world-toolbar"><div class="world-label"><span class="world-glyph">✳</span><div><b>空间视图</b><small>拖拽旋转 · 滚轮缩放 · 点击查看</small></div></div><div class="view-actions"><button id="reset-camera" class="tool-btn" title="重置视角">⌗</button><button id="toggle-labels" class="tool-btn active" title="显示标签">Aa</button><button id="fullscreen" class="tool-btn" title="全屏">⛶</button></div></div>
+          <div id="world-container" class="world-container"><div class="world-loading" id="world-loading"><div class="loader-ring"></div><span>正在构建你的记忆空间…</span></div><div class="world-hud"><span>WORLD 01</span><span id="world-coords">X 00 · Z 00</span></div><div class="world-legend"><span><i class="legend-dot concept"></i>概念</span><span><i class="legend-dot formula"></i>公式</span><span><i class="legend-dot mechanism"></i>机制</span></div><div class="world-help">左键拖动旋转 <b>·</b> 滚轮缩放 <b>·</b> 点击物体选中</div></div>
+          <div class="world-footer"><div><span class="status-dot"></span><b>自由探索模式</b><small> · 你的空间由知识结构生成</small></div><button id="enter-recall" class="recall-btn"><span>◎</span> 开始记忆训练 <i>→</i></button></div>
+        </section>
+        <aside class="right-column">
+          <section class="inspector panel">
+            <div class="panel-head"><div><div class="eyebrow">OBJECT INSPECTOR</div><h3>知识锚点</h3></div><span class="count-pill" id="selected-index">01 / 03</span></div>
+            <div id="empty-selection" class="empty-selection" hidden>选择场景中的一个物体<br>查看它对应的知识内容。</div>
+            <div id="object-details">
+              <div class="object-preview" id="object-preview"><div class="preview-orbit"></div><div class="preview-shape">λ</div></div>
+              <div class="object-type" id="object-type">FORMULA ANCHOR</div>
+              <h2 id="object-title">泊松分布</h2>
+              <p id="object-metaphor" class="object-metaphor">一座逐层叠起的概率塔</p>
+              <div class="detail-divider"></div>
+              <div class="detail-label">SOURCE KNOWLEDGE</div>
+              <div id="object-evidence" class="evidence">P(X=k) = λᵏe⁻λ / k!</div>
+              <div class="detail-label memory-cue-label">MEMORY CUE</div>
+              <p id="object-cue" class="cue-text">塔的每一层提醒你恢复指数 k。</p>
+              <a id="object-lab" href="/lab.html" class="detail-label" style="display:block;margin:12px 0;color:inherit">打开已保存锚点的动态实验台 ↗</a>
+              <a id="object-sim" href="/simulation.html" class="detail-label" style="display:block;margin:12px 0;color:inherit">打开通用公式仿真 ↗</a>
+              <div class="object-controls"><button id="move-left" title="向左移动">←</button><button id="move-forward" title="向前移动">↑</button><button id="move-back" title="向后移动">↓</button><button id="move-right" title="向右移动">→</button><button id="remove-object" class="remove-btn" title="移除物体">⌫</button></div>
+            </div>
+          </section>
+          <section class="knowledge-panel panel">
+            <div class="panel-head"><div><div class="eyebrow">KNOWLEDGE MAP</div><h3>空间中的知识</h3></div><button id="add-object" class="add-btn">＋ 添加</button></div>
+            <div id="knowledge-list" class="knowledge-list"></div>
+          </section>
+          <section class="panel architecture-panel">
+            <div class="panel-head"><div><div class="eyebrow">SPATIAL ARCHITECTURE</div><h3>建筑结构</h3></div><span class="count-pill" id="room-count">01 ROOMS</span></div>
+            <div id="room-list" class="room-list"><div class="room-row"><i class="room-symbol"></i><span>中央记忆中庭</span><small>主空间</small></div></div>
+            <div class="architecture-foot"><span id="route-length">记忆路线待生成</span><span id="architecture-score">—</span></div>
+          </section>
+        </aside>
+      </div>
+      <section class="bottom-grid">
+        <div class="panel import-panel"><div class="panel-head"><div><div class="eyebrow">AI KNOWLEDGE INGESTION</div><h3>导入新知识</h3></div><span class="ai-badge">✦ AI POWERED</span></div><textarea id="source-input" placeholder="粘贴一段教材、公式解释或你想记住的知识…&#10;&#10;例如：泊松分布描述单位时间内随机事件发生次数的概率分布。"></textarea><div class="import-footer"><span>最多 20,000 字 · 原文证据可追溯</span><button id="analyze-source" class="primary-btn">AI规划并建造宫殿 <span>→</span></button></div><div id="import-status" class="import-status"></div></div>
+        <div class="panel progress-panel"><div class="panel-head"><div><div class="eyebrow">MEMORY SIGNALS</div><h3>记忆状态</h3></div><button id="export-learning" class="export-btn" type="button">导出记录 ↓</button></div><div class="stats-row"><div><strong id="stat-objects">03</strong><small>空间锚点</small></div><div><strong id="stat-recall">—</strong><small>空间定位正确率</small></div><div><strong id="stat-days">00</strong><small>训练天数</small></div></div><div class="progress-track"><div id="progress-fill"></div></div><p id="progress-note" class="progress-note">完成主动回忆训练后，这里会显示你的记忆表现。</p><div id="learning-insights" class="learning-insights">暂无个性化建议。先完成几次跨时间的回忆训练。</div><div class="review-plan"><div class="eyebrow">REVIEW PLANNER</div><label for="review-budget">本轮预算（分钟）</label><select id="review-budget"><option value="120">2</option><option value="300" selected>5</option><option value="600">10</option></select><label for="review-policy">复习策略</label><select id="review-policy"><option value="fixed" selected>固定间隔优先（默认）</option><option value="adaptive">风险优先（实验）</option><option value="marginal">边际收益 + 覆盖保护（实验）</option></select><button id="start-planned-review" class="primary-btn" type="button">生成并开始复习</button><p id="review-plan-note" class="progress-note">按风险和证据安排空间定位练习；预计时长，不代表真实知识掌握。</p></div></div>
+      </section>
+      <footer class="footer-note"><span>MEMORY PALACE OS <b>V1.7</b></span><span>DESIGNED FOR DEEP RECALL <i>✳</i></span></footer>
+    </section>
+  </main>
+</div>
+<div id="modal-backdrop" class="modal-backdrop" hidden><div class="modal"><button id="close-modal" class="modal-close">×</button><div class="eyebrow">ADD KNOWLEDGE ANCHOR</div><h2>放置一个新知识</h2><label>知识名称<input id="new-label" placeholder="例如：条件概率"></label><label>知识类型<select id="new-kind"><option value="concept">概念</option><option value="formula">公式</option><option value="condition">条件</option><option value="procedure">步骤</option><option value="mechanism">机制</option><option value="example">例子</option></select></label><label>原文 / 证据<textarea id="new-evidence" placeholder="输入需要记住的内容"></textarea></label><label>联想提示<input id="new-metaphor" placeholder="例如：一座分岔路口"></label><button id="create-object" class="primary-btn modal-submit">放入空间 →</button></div></div>
+<div id="recall-overlay" class="recall-overlay" hidden><div class="recall-card"><div class="eyebrow">ACTIVE RECALL / ROUND <span id="recall-round">01</span></div><button id="exit-recall" class="modal-close">×</button><h2>回忆挑战</h2><div class="recall-mode-switch"><button id="recall-cued" class="active" type="button">线索辅助</button><button id="recall-unaided" type="button">无标签定位</button></div><p id="recall-mode-note" class="recall-mode-note">显示原文线索和锚点名称，测试知识与空间的匹配。</p><div id="recall-question" class="recall-question"></div><label class="recall-confidence-label" for="recall-confidence">作答前估计把握程度（可选）</label><select id="recall-confidence" class="recall-confidence"><option value="">暂不评价</option><option value="1">1 · 几乎没把握</option><option value="2">2 · 不太确定</option><option value="3">3 · 一般</option><option value="4">4 · 比较确定</option><option value="5">5 · 非常确定</option></select><div id="recall-feedback" class="recall-feedback"></div><button id="next-recall" class="primary-btn" disabled>下一题 →</button></div></div>
+<div id="toast" class="toast"></div>
+<script type="module" src="/app.js"></script>
+</body></html>

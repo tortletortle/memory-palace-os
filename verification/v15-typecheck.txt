@@ -1,0 +1,4 @@
+
+> memory-palace-mnemonic-engine@1.5.0 typecheck
+> tsc --noEmit
+

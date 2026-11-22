@@ -1,0 +1,1 @@
+全量自动化测试：112/112通过\n命令：node --experimental-strip-types --test test/*.test.ts\n前端JS语法检查：通过（node --check public/app.js）\n静态资源HTTP集成：通过\n宫殿创建/读取/更新/列表：通过\n完整TypeScript typecheck：未通过（环境缺少 @types/node）\nWebGL真实浏览器E2E：未执行\n

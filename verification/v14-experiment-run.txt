@@ -1,0 +1,59 @@
+
+> memory-palace-mnemonic-engine@1.4.0 review:experiment
+> node --experimental-strip-types eval/v14-review-experiment.ts
+
+(node:610) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[
+  {
+    "scenario": "heterogeneous",
+    "seeds": 24,
+    "reviewCountsEqual": true,
+    "fixed": 0.4982808628836383,
+    "adaptive": 0.4543615693339968,
+    "pairedDelta": -0.04391929354964142,
+    "approx95CI": [
+      -0.06052262159669828,
+      -0.027315965502584562
+    ],
+    "observedFixed": 0.5104166666666666,
+    "observedAdaptive": 0.4461805555555556,
+    "fixedBrier": 0.20385696482245477,
+    "adaptiveBrier": 0.22363249384768946,
+    "reviewsPerRun": 126
+  },
+  {
+    "scenario": "homogeneous",
+    "seeds": 24,
+    "reviewCountsEqual": true,
+    "fixed": 0.5982840601970781,
+    "adaptive": 0.5736704122271142,
+    "pairedDelta": -0.024613647969963775,
+    "approx95CI": [
+      -0.038017209862464006,
+      -0.011210086077463542
+    ],
+    "observedFixed": 0.6041666666666665,
+    "observedAdaptive": 0.560763888888889,
+    "fixedBrier": 0.24654547111391376,
+    "adaptiveBrier": 0.2267857023023324,
+    "reviewsPerRun": 126
+  },
+  {
+    "scenario": "abrupt_shift",
+    "seeds": 24,
+    "reviewCountsEqual": true,
+    "fixed": 0.41678926850092163,
+    "adaptive": 0.3500383705371685,
+    "pairedDelta": -0.06675089796375305,
+    "approx95CI": [
+      -0.08283362682419147,
+      -0.050668169103314634
+    ],
+    "observedFixed": 0.42534722222222227,
+    "observedAdaptive": 0.34722222222222227,
+    "fixedBrier": 0.20745908322201542,
+    "adaptiveBrier": 0.22561471198261232,
+    "reviewsPerRun": 126
+  }
+]

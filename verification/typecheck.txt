@@ -1,0 +1,1 @@
+TypeScript static typecheck: PASS (tsc --noEmit --typeRoots /usr/local/slides_js/node_modules/@types)

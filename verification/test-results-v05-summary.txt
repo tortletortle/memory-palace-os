@@ -1,0 +1,8 @@
+V0.5 regression test result
+Node.js 22.16.0
+Tests: 67
+Passed: 67
+Failed: 0
+New V0.5 tests: 10
+Focused TypeScript check for src/model-selection.ts: passed (TypeScript 5.8.3)
+Full-project typecheck: not claimed; npm dependency installation timed out in this environment.

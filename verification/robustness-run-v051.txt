@@ -1,0 +1,341 @@
+
+> memory-palace-mnemonic-engine@0.5.1 robustness:v051
+> node --experimental-strip-types eval/v051-independent.ts
+
+{
+  "selectedThreshold": 3.9,
+  "thresholdScores": [
+    {
+      "threshold": 1.8,
+      "stableFalseAlarmRate": 0.859375,
+      "abruptDetectionWithin5Sessions": 0.875
+    },
+    {
+      "threshold": 2.1,
+      "stableFalseAlarmRate": 0.703125,
+      "abruptDetectionWithin5Sessions": 0.875
+    },
+    {
+      "threshold": 2.4,
+      "stableFalseAlarmRate": 0.453125,
+      "abruptDetectionWithin5Sessions": 0.875
+    },
+    {
+      "threshold": 2.7,
+      "stableFalseAlarmRate": 0.3125,
+      "abruptDetectionWithin5Sessions": 0.8125
+    },
+    {
+      "threshold": 3,
+      "stableFalseAlarmRate": 0.25,
+      "abruptDetectionWithin5Sessions": 0.75
+    },
+    {
+      "threshold": 3.3,
+      "stableFalseAlarmRate": 0.15625,
+      "abruptDetectionWithin5Sessions": 0.625
+    },
+    {
+      "threshold": 3.6,
+      "stableFalseAlarmRate": 0.125,
+      "abruptDetectionWithin5Sessions": 0.5
+    },
+    {
+      "threshold": 3.9,
+      "stableFalseAlarmRate": 0.078125,
+      "abruptDetectionWithin5Sessions": 0.25
+    }
+  ],
+  "holdoutSummary": [
+    {
+      "scenario": "stable_exponential",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.17769363324523685,
+        "adaptiveUnaided": 0.17826785022768138,
+        "fixedExpUnaided": 0.17726911932849024,
+        "legacyCued": 0.1582113678098033,
+        "separatedCued": 0.17074364809682324
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.5367922254923478,
+        "adaptiveUnaidedLogLoss": 0.5382811055317402,
+        "legacyCuedLogLoss": 0.49619330651080223,
+        "separatedCuedLogLoss": 0.5250130864788181
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.0625,
+        "semanticAnyRate": 0.03125,
+        "visualAnyRate": 0,
+        "legacyAnyRate": 0.03125,
+        "knowledgeFalseAlarmRate": 0.03125,
+        "knowledgeDetectWithin5": null,
+        "knowledgeDelayAfter21": null,
+        "semanticFalseAlarmRate": 0,
+        "semanticDetectWithin5": null,
+        "semanticDelayAfter21": null,
+        "visualFalseAlarmRate": 0,
+        "visualDetectWithin5": null,
+        "visualDelayAfter21": null
+      }
+    },
+    {
+      "scenario": "stable_power_law",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.19998527746384478,
+        "adaptiveUnaided": 0.19919832808496996,
+        "fixedExpUnaided": 0.19986329463073113,
+        "legacyCued": 0.17066868521312267,
+        "separatedCued": 0.18340407606969147
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.5878291155825038,
+        "adaptiveUnaidedLogLoss": 0.585609357193082,
+        "legacyCuedLogLoss": 0.5251233127281508,
+        "separatedCuedLogLoss": 0.5545647117759666
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.15625,
+        "semanticAnyRate": 0.046875,
+        "visualAnyRate": 0.015625,
+        "legacyAnyRate": 0.0625,
+        "knowledgeFalseAlarmRate": 0.078125,
+        "knowledgeDetectWithin5": null,
+        "knowledgeDelayAfter21": null,
+        "semanticFalseAlarmRate": 0,
+        "semanticDetectWithin5": null,
+        "semanticDelayAfter21": null,
+        "visualFalseAlarmRate": 0,
+        "visualDetectWithin5": null,
+        "visualDelayAfter21": null
+      }
+    },
+    {
+      "scenario": "abrupt_forgetting_shift",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.26180338735516195,
+        "adaptiveUnaided": 0.2441423150336346,
+        "fixedExpUnaided": 0.2562780031864002,
+        "legacyCued": 0.18816432249619955,
+        "separatedCued": 0.20195146016128962
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.7241983731313729,
+        "adaptiveUnaidedLogLoss": 0.682347229387929,
+        "legacyCuedLogLoss": 0.5626758965701721,
+        "separatedCuedLogLoss": 0.594870691683188
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.78125,
+        "semanticAnyRate": 0.03125,
+        "visualAnyRate": 0,
+        "legacyAnyRate": 0.46875,
+        "knowledgeFalseAlarmRate": 0.0625,
+        "knowledgeDetectWithin5": 0.34375,
+        "knowledgeDelayAfter21": 3.3181818181818183,
+        "semanticFalseAlarmRate": 0,
+        "semanticDetectWithin5": null,
+        "semanticDelayAfter21": null,
+        "visualFalseAlarmRate": 0,
+        "visualDetectWithin5": null,
+        "visualDelayAfter21": null
+      }
+    },
+    {
+      "scenario": "gradual_forgetting_shift",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.23920616770243977,
+        "adaptiveUnaided": 0.234773377578021,
+        "fixedExpUnaided": 0.2350692526723736,
+        "legacyCued": 0.1769698405665368,
+        "separatedCued": 0.19074784072962236
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.6762972427929845,
+        "adaptiveUnaidedLogLoss": 0.6659567122787597,
+        "legacyCuedLogLoss": 0.537301167334257,
+        "separatedCuedLogLoss": 0.5703257841281426
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.484375,
+        "semanticAnyRate": 0.03125,
+        "visualAnyRate": 0.046875,
+        "legacyAnyRate": 0.28125,
+        "knowledgeFalseAlarmRate": 0.109375,
+        "knowledgeDetectWithin5": null,
+        "knowledgeDelayAfter21": null,
+        "semanticFalseAlarmRate": 0,
+        "semanticDetectWithin5": null,
+        "semanticDelayAfter21": null,
+        "visualFalseAlarmRate": 0,
+        "visualDetectWithin5": null,
+        "visualDelayAfter21": null
+      }
+    },
+    {
+      "scenario": "visual_shift",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.1731458993318504,
+        "adaptiveUnaided": 0.17351465725084808,
+        "fixedExpUnaided": 0.1719636250713035,
+        "legacyCued": 0.25049900224589666,
+        "separatedCued": 0.24176771367316424
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.5250697384098307,
+        "adaptiveUnaidedLogLoss": 0.526192278304502,
+        "legacyCuedLogLoss": 0.7110633790858483,
+        "separatedCuedLogLoss": 0.6798122566500191
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.109375,
+        "semanticAnyRate": 0,
+        "visualAnyRate": 0.71875,
+        "legacyAnyRate": 0.015625,
+        "knowledgeFalseAlarmRate": 0.03125,
+        "knowledgeDetectWithin5": null,
+        "knowledgeDelayAfter21": null,
+        "semanticFalseAlarmRate": 0,
+        "semanticDetectWithin5": null,
+        "semanticDelayAfter21": null,
+        "visualFalseAlarmRate": 0,
+        "visualDetectWithin5": 0.3125,
+        "visualDelayAfter21": 3.4
+      }
+    },
+    {
+      "scenario": "semantic_shift",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.1689327026675715,
+        "adaptiveUnaided": 0.1693543461452703,
+        "fixedExpUnaided": 0.16782782478940186,
+        "legacyCued": 0.2711599141696096,
+        "separatedCued": 0.25133541731718884
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.5148958885782123,
+        "adaptiveUnaidedLogLoss": 0.515922983963268,
+        "legacyCuedLogLoss": 0.7601442191282473,
+        "separatedCuedLogLoss": 0.6991607031663868
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.09375,
+        "semanticAnyRate": 0.6875,
+        "visualAnyRate": 0.015625,
+        "legacyAnyRate": 0.015625,
+        "knowledgeFalseAlarmRate": 0.015625,
+        "knowledgeDetectWithin5": null,
+        "knowledgeDelayAfter21": null,
+        "semanticFalseAlarmRate": 0.015625,
+        "semanticDetectWithin5": 0.203125,
+        "semanticDelayAfter21": 3.3076923076923075,
+        "visualFalseAlarmRate": 0,
+        "visualDetectWithin5": null,
+        "visualDelayAfter21": null
+      }
+    },
+    {
+      "scenario": "stable_visual_dominant",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.1709292779080503,
+        "adaptiveUnaided": 0.17127631502286156,
+        "fixedExpUnaided": 0.17022168404267307,
+        "legacyCued": 0.3173914428094499,
+        "separatedCued": 0.2646644743531225
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.51978788438855,
+        "adaptiveUnaidedLogLoss": 0.5205005747999686,
+        "legacyCuedLogLoss": 0.8645756963208867,
+        "separatedCuedLogLoss": 0.7256839828288304
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.0625,
+        "semanticAnyRate": 0,
+        "visualAnyRate": 0.09375,
+        "legacyAnyRate": 0.015625,
+        "knowledgeFalseAlarmRate": 0.046875,
+        "knowledgeDetectWithin5": null,
+        "knowledgeDelayAfter21": null,
+        "semanticFalseAlarmRate": 0,
+        "semanticDetectWithin5": null,
+        "semanticDelayAfter21": null,
+        "visualFalseAlarmRate": 0.0625,
+        "visualDetectWithin5": null,
+        "visualDelayAfter21": null
+      }
+    },
+    {
+      "scenario": "stable_semantic_dominant",
+      "n": 64,
+      "brier": {
+        "legacyUnaided": 0.17777441211155776,
+        "adaptiveUnaided": 0.17864659821211573,
+        "fixedExpUnaided": 0.17681713376326313,
+        "legacyCued": 0.3175075432395359,
+        "separatedCued": 0.26086657270401953
+      },
+      "logLoss": {
+        "legacyUnaidedLogLoss": 0.5344645297954945,
+        "adaptiveUnaidedLogLoss": 0.5370989835635119,
+        "legacyCuedLogLoss": 0.8656824965031105,
+        "separatedCuedLogLoss": 0.7174467994485865
+      },
+      "changeDetection": {
+        "knowledgeAnyRate": 0.125,
+        "semanticAnyRate": 0.078125,
+        "visualAnyRate": 0.046875,
+        "legacyAnyRate": 0.015625,
+        "knowledgeFalseAlarmRate": 0.078125,
+        "knowledgeDetectWithin5": null,
+        "knowledgeDelayAfter21": null,
+        "semanticFalseAlarmRate": 0.03125,
+        "semanticDetectWithin5": null,
+        "semanticDelayAfter21": null,
+        "visualFalseAlarmRate": 0,
+        "visualDetectWithin5": null,
+        "visualDelayAfter21": null
+      }
+    }
+  ],
+  "paired": {
+    "adaptiveVsLegacyUnaided": {
+      "meanDifference": -0.017661072321527433,
+      "ci95": [
+        -0.023034264108043972,
+        -0.012287880535010894
+      ],
+      "n": 64
+    },
+    "adaptiveVsFixedUnaided": {
+      "meanDifference": -0.01213568815276568,
+      "ci95": [
+        -0.017456294668455944,
+        -0.006815081637075417
+      ],
+      "n": 64
+    },
+    "separatedVsLegacyCuedSemantic": {
+      "meanDifference": -0.05664097053551627,
+      "ci95": [
+        -0.06973746509562807,
+        -0.043544475975404465
+      ],
+      "n": 64
+    },
+    "separatedVsLegacyCuedVisual": {
+      "meanDifference": -0.05272696845632729,
+      "ci95": [
+        -0.06558885161023799,
+        -0.03986508530241658
+      ],
+      "n": 64
+    }
+  }
+}

@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {bayesianModelAverage,OnlineChangePointDetector,splitInterference} from '../src/model-selection.ts';
+import type {CueFeature} from '../src/adaptive.ts';
+const cue=(id:string,asset:string,meaning=id,shape=asset,color=asset,action=asset):CueFeature=>({id,meaning,asset,shape,color,action,position:[0,0,0]});
+test('BMA posterior weights normalize and predictions remain bounded',()=>{const r=bayesianModelAverage(Array.from({length:12},(_,i)=>({ageDays:i+1,mode:'cued' as const,grade:i%3?'correct' as const:'missed' as const})), 'cued',20);assert.ok(Math.abs(r.weights.reduce((s,x)=>s+x.weight,0)-1)<1e-10);assert.ok(r.probability>=0&&r.probability<=1);assert.equal(r.evidence,'observed');});
+test('BMA excludes other retrieval mode and uncertain trials',()=>{const r=bayesianModelAverage([{ageDays:1,mode:'unaided',grade:'missed'},{ageDays:2,mode:'cued',grade:'uncertain'}],'cued',5);assert.equal(r.observations,0);assert.equal(r.evidence,'sparse');});
+test('BMA rejects invalid forecast age',()=>assert.throws(()=>bayesianModelAverage([],'cued',-1)));
+test('split interference separates perceptual and semantic channels',()=>{const a=cue('a','red-ball','concept-a'),b=cue('b','blue-cube','concept-b');const cells=splitInterference([a,b],[{targetId:'a',confusedWith:'b',visualSimilarity:.1,semanticSimilarity:.95,grade:'missed'}]);const ab=cells.find(x=>x.from==='a'&&x.to==='b')!;assert.ok(ab.semanticWeight>ab.visualWeight);});
+test('split interference caps matrix size',()=>assert.throws(()=>splitInterference(Array.from({length:129},(_,i)=>cue(String(i),'x')),[])));
+test('change detector does not trigger on stable high success',()=>{const d=new OnlineChangePointDetector();let last:any;for(let i=0;i<30;i++)last=d.update(true);assert.equal(last.detected,false);});
+test('change detector flags abrupt sustained degradation',()=>{const d=new OnlineChangePointDetector(8,.75);for(let i=0;i<24;i++)d.update(true);let last:any;for(let i=0;i<12;i++)last=d.update(false);assert.equal(last.detected,true);});
+test('change detector ignores isolated error',()=>{const d=new OnlineChangePointDetector(8,.95);for(let i=0;i<20;i++)d.update(true);const r=d.update(false);assert.equal(r.detected,false);});
+test('change detector validates configuration',()=>assert.throws(()=>new OnlineChangePointDetector(2,.5)));
+test('change detector reset clears history',()=>{const d=new OnlineChangePointDetector();for(let i=0;i<10;i++)d.update(false);d.reset();assert.equal(d.update(true).index,1);});

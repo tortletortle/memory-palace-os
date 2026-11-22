@@ -1,0 +1,7 @@
+V0.6 cognition core + experiment runner strict TypeScript check: PASS
+
+Command:
+tsc --noEmit --strict --target ES2022 --lib ES2022,DOM --module NodeNext --moduleResolution NodeNext --allowImportingTsExtensions --skipLibCheck /tmp/v06-node-shim.d.ts src/cognition/types.ts src/cognition/registry.ts src/cognition/graph.ts src/cognition/runtime.ts src/cognition/evolution.ts eval/v06-budget.ts
+
+A temporary minimal declaration was used only for the two Node built-in APIs in the experiment runner. The complete repository typecheck was not completed.
+`npm run typecheck` exits with TS2688 because @types/node is absent. Installing dependencies timed out in this environment. Do not infer full-repository typecheck success from the core check.

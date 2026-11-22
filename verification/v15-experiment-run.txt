@@ -1,0 +1,440 @@
+[
+  {
+    "scenario": "heterogeneous",
+    "arms": [
+      {
+        "arm": "fixed",
+        "expected1": 0.7294666457208664,
+        "expected7": 0.4738751021912397,
+        "expected28": 0.2282372035935055,
+        "observed7": 0.4756944444444444,
+        "pairedDelta7": 0,
+        "approx95CI7": [
+          0,
+          0
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 5,
+        "meanMaxGap": 4,
+        "unreviewed": 0
+      },
+      {
+        "arm": "adaptive",
+        "expected1": 0.7420246899370947,
+        "expected7": 0.43605644427235046,
+        "expected28": 0.15678034483406247,
+        "observed7": 0.4461805555555556,
+        "pairedDelta7": -0.037818657918889206,
+        "approx95CI7": [
+          -0.05076759524452013,
+          -0.02486972059325828
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3.1666666666666665,
+        "meanMaxGap": 12.208333333333334,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal",
+        "expected1": 0.6829743153058371,
+        "expected7": 0.4809203006150436,
+        "expected28": 0.25240772651613325,
+        "observed7": 0.4895833333333333,
+        "pairedDelta7": 0.007045198423803745,
+        "approx95CI7": [
+          -0.005639674310781155,
+          0.019730071158388644
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3,
+        "meanMaxGap": 7,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal_unprotected",
+        "expected1": 0.6930049065734915,
+        "expected7": 0.48551239901506604,
+        "expected28": 0.25809087290324983,
+        "observed7": 0.5034722222222222,
+        "pairedDelta7": 0.011637296823826302,
+        "approx95CI7": [
+          -0.00026607243932425494,
+          0.023540666086976858
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 2.6666666666666665,
+        "meanMaxGap": 12.583333333333334,
+        "unreviewed": 0
+      }
+    ]
+  },
+  {
+    "scenario": "homogeneous",
+    "arms": [
+      {
+        "arm": "fixed",
+        "expected1": 0.8491075229599149,
+        "expected7": 0.5884887930705899,
+        "expected28": 0.18758534043458763,
+        "observed7": 0.5989583333333334,
+        "pairedDelta7": 0,
+        "approx95CI7": [
+          0,
+          0
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 5,
+        "meanMaxGap": 4,
+        "unreviewed": 0
+      },
+      {
+        "arm": "adaptive",
+        "expected1": 0.834104469661546,
+        "expected7": 0.5654063381886903,
+        "expected28": 0.15332876668160647,
+        "observed7": 0.5868055555555556,
+        "pairedDelta7": -0.02308245488189936,
+        "approx95CI7": [
+          -0.03237921328212017,
+          -0.013785696481678553
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3.8333333333333335,
+        "meanMaxGap": 10.5,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal",
+        "expected1": 0.7878975512042681,
+        "expected7": 0.5521407624363004,
+        "expected28": 0.20300628690281688,
+        "observed7": 0.5850694444444444,
+        "pairedDelta7": -0.036348030634289534,
+        "approx95CI7": [
+          -0.04745827488360319,
+          -0.025237786384975876
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3,
+        "meanMaxGap": 7,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal_unprotected",
+        "expected1": 0.7828662985198053,
+        "expected7": 0.5474653885426514,
+        "expected28": 0.2154803168488496,
+        "observed7": 0.5434027777777778,
+        "pairedDelta7": -0.04102340452793849,
+        "approx95CI7": [
+          -0.05305559733299332,
+          -0.028991211722883655
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 2.2916666666666665,
+        "meanMaxGap": 14.083333333333334,
+        "unreviewed": 0
+      }
+    ]
+  },
+  {
+    "scenario": "abrupt_shift",
+    "arms": [
+      {
+        "arm": "fixed",
+        "expected1": 0.6496939272152586,
+        "expected7": 0.39618490340135976,
+        "expected28": 0.1781527635789336,
+        "observed7": 0.407986111111111,
+        "pairedDelta7": 0,
+        "approx95CI7": [
+          0,
+          0
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 5,
+        "meanMaxGap": 4,
+        "unreviewed": 0
+      },
+      {
+        "arm": "adaptive",
+        "expected1": 0.6294894521169941,
+        "expected7": 0.3243134141378767,
+        "expected28": 0.1066826210454082,
+        "observed7": 0.3385416666666667,
+        "pairedDelta7": -0.07187148926348315,
+        "approx95CI7": [
+          -0.08304822025962362,
+          -0.06069475826734268
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3.0416666666666665,
+        "meanMaxGap": 12.666666666666666,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal",
+        "expected1": 0.6256452378602666,
+        "expected7": 0.4190851885948925,
+        "expected28": 0.19668317307722097,
+        "observed7": 0.423611111111111,
+        "pairedDelta7": 0.022900285193532766,
+        "approx95CI7": [
+          0.009606569225189956,
+          0.03619400116187557
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3,
+        "meanMaxGap": 7,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal_unprotected",
+        "expected1": 0.633773981995931,
+        "expected7": 0.42324645690736556,
+        "expected28": 0.20157335707420163,
+        "observed7": 0.4270833333333333,
+        "pairedDelta7": 0.02706155350600582,
+        "approx95CI7": [
+          0.015055987455752403,
+          0.03906711955625924
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 2.7083333333333335,
+        "meanMaxGap": 12.541666666666666,
+        "unreviewed": 0
+      }
+    ]
+  },
+  {
+    "scenario": "power_law",
+    "arms": [
+      {
+        "arm": "fixed",
+        "expected1": 0.7350835142427984,
+        "expected7": 0.5105570781220593,
+        "expected28": 0.2836483633180773,
+        "observed7": 0.5,
+        "pairedDelta7": 0,
+        "approx95CI7": [
+          0,
+          0
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 5,
+        "meanMaxGap": 4,
+        "unreviewed": 0
+      },
+      {
+        "arm": "adaptive",
+        "expected1": 0.7292986503888229,
+        "expected7": 0.48204419748969873,
+        "expected28": 0.24838146583785434,
+        "observed7": 0.48090277777777773,
+        "pairedDelta7": -0.028512880632360505,
+        "approx95CI7": [
+          -0.036596195127822626,
+          -0.020429566136898385
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3.0833333333333335,
+        "meanMaxGap": 11.583333333333334,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal",
+        "expected1": 0.7072927258295484,
+        "expected7": 0.5119991950333663,
+        "expected28": 0.29233270324841115,
+        "observed7": 0.5416666666666667,
+        "pairedDelta7": 0.0014421169113070832,
+        "approx95CI7": [
+          -0.006322882508268924,
+          0.00920711633088309
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3,
+        "meanMaxGap": 7,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal_unprotected",
+        "expected1": 0.7021057025958667,
+        "expected7": 0.5073272403942056,
+        "expected28": 0.2925764262978098,
+        "observed7": 0.5156250000000001,
+        "pairedDelta7": -0.0032298377278536495,
+        "approx95CI7": [
+          -0.009667298474259973,
+          0.0032076230185526743
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 2.0833333333333335,
+        "meanMaxGap": 14.333333333333334,
+        "unreviewed": 0
+      }
+    ]
+  },
+  {
+    "scenario": "reset_only",
+    "arms": [
+      {
+        "arm": "fixed",
+        "expected1": 0.5107245971056965,
+        "expected7": 0.18191065858015867,
+        "expected28": 0.019653482210396523,
+        "observed7": 0.19270833333333334,
+        "pairedDelta7": 0,
+        "approx95CI7": [
+          0,
+          0
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 5,
+        "meanMaxGap": 4,
+        "unreviewed": 0
+      },
+      {
+        "arm": "adaptive",
+        "expected1": 0.45343166210016533,
+        "expected7": 0.14257127271711414,
+        "expected28": 0.014992857305792737,
+        "observed7": 0.16145833333333334,
+        "pairedDelta7": -0.03933938586304459,
+        "approx95CI7": [
+          -0.04478518601676143,
+          -0.03389358570932775
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3.0416666666666665,
+        "meanMaxGap": 12.958333333333334,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal",
+        "expected1": 0.4839071119433764,
+        "expected7": 0.18144806362607355,
+        "expected28": 0.019595528244922,
+        "observed7": 0.20312500000000003,
+        "pairedDelta7": -0.0004625949540851832,
+        "approx95CI7": [
+          -0.0034007743400473914,
+          0.0024755844318770253
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3,
+        "meanMaxGap": 7,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal_unprotected",
+        "expected1": 0.4788576459051561,
+        "expected7": 0.178381412685084,
+        "expected28": 0.019241560775700984,
+        "observed7": 0.1875,
+        "pairedDelta7": -0.003529245895074704,
+        "approx95CI7": [
+          -0.006832923801620204,
+          -0.00022556798852920367
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 2.375,
+        "meanMaxGap": 13.291666666666666,
+        "unreviewed": 0
+      }
+    ]
+  },
+  {
+    "scenario": "retrieval_strong",
+    "arms": [
+      {
+        "arm": "fixed",
+        "expected1": 0.7202984861234479,
+        "expected7": 0.5315525418430739,
+        "expected28": 0.32895098896715597,
+        "observed7": 0.5416666666666669,
+        "pairedDelta7": 0,
+        "approx95CI7": [
+          0,
+          0
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 5,
+        "meanMaxGap": 4,
+        "unreviewed": 0
+      },
+      {
+        "arm": "adaptive",
+        "expected1": 0.7976065486963367,
+        "expected7": 0.5467250762067511,
+        "expected28": 0.28284842465895327,
+        "observed7": 0.5590277777777777,
+        "pairedDelta7": 0.015172534363677277,
+        "approx95CI7": [
+          -0.007916309173756238,
+          0.038261377901110796
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3.0833333333333335,
+        "meanMaxGap": 12.333333333333334,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal",
+        "expected1": 0.6979408659155033,
+        "expected7": 0.5350000275590643,
+        "expected28": 0.3584291342669809,
+        "observed7": 0.5399305555555556,
+        "pairedDelta7": 0.003447485715990503,
+        "approx95CI7": [
+          -0.01881622419445837,
+          0.025711195626439375
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 3.0416666666666665,
+        "meanMaxGap": 7,
+        "unreviewed": 0
+      },
+      {
+        "arm": "marginal_unprotected",
+        "expected1": 0.7000247900109787,
+        "expected7": 0.5423535102070797,
+        "expected28": 0.36708545802317943,
+        "observed7": 0.5468749999999999,
+        "pairedDelta7": 0.010800968364005918,
+        "approx95CI7": [
+          -0.008524143820948257,
+          0.030126080548960092
+        ],
+        "matchedReviewCounts": true,
+        "reviewsPerRun": 126,
+        "minReviews": 2.9583333333333335,
+        "meanMaxGap": 11.958333333333334,
+        "unreviewed": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,713 @@
+
+> memory-palace-mnemonic-engine@0.4.0 robustness
+> node --experimental-strip-types examples/robustness.ts --pilot
+
+(node:3066) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+complete visual_power
+complete weak_exponential
+complete high_cost
+complete mixed_heterogeneous
+{
+  "protocol": {
+    "pilot": true,
+    "seeds": [
+      31001,
+      38920,
+      46839,
+      54758,
+      62677,
+      70596,
+      78515,
+      86434,
+      94353,
+      102272,
+      110191,
+      118110
+    ],
+    "profiles": [
+      "visual_power",
+      "weak_exponential",
+      "high_cost",
+      "mixed_heterogeneous"
+    ],
+    "strategies": [
+      "fixed",
+      "miss_only",
+      "guarded_v3",
+      "bayes_prior",
+      "bayes_adaptive"
+    ],
+    "items": 24,
+    "days": 42,
+    "perDay": 8,
+    "primary": "unaided28",
+    "secondary": "cued28; Brier; changes; cost MAE",
+    "budget": "336 training reviews + 128 external calibration probes per run, identical across policies; no delayed probe feedback",
+    "design": "paired keyed RNG; 64 new seeds and 2 extra mechanism stress profiles in holdout; no latent truth supplied to decision",
+    "criteria": "vs fixed per-profile 95% lower CI >= -0.02; visual_power cued28 improvement lower CI > 0; descriptive unadjusted t intervals",
+    "scope": "synthetic only; model/seed holdout not human validation"
+  },
+  "groups": [
+    {
+      "profile": "visual_power",
+      "strategies": [
+        {
+          "strategy": "fixed",
+          "means": {
+            "unaided7": 0.7638888888888888,
+            "cued7": 0.39236111111111116,
+            "unaided28": 0.5520833333333334,
+            "cued28": 0.2569444444444444,
+            "trainingAccuracy": 0.4437003968253968,
+            "changes": 0,
+            "confusions": 137.33333333333334,
+            "brierDual": 0.3433715432934339,
+            "brierV3": 0.27505122150417183
+          }
+        },
+        {
+          "strategy": "miss_only",
+          "means": {
+            "unaided7": 0.7743055555555555,
+            "cued7": 0.4548611111111111,
+            "unaided28": 0.5729166666666666,
+            "cued28": 0.3194444444444444,
+            "trainingAccuracy": 0.47172619047619047,
+            "changes": 5,
+            "confusions": 122.91666666666667,
+            "brierDual": 0.3322142235728305,
+            "brierV3": 0.27092957899498826
+          }
+        },
+        {
+          "strategy": "guarded_v3",
+          "means": {
+            "unaided7": 0.7777777777777777,
+            "cued7": 0.46874999999999994,
+            "unaided28": 0.579861111111111,
+            "cued28": 0.3229166666666667,
+            "trainingAccuracy": 0.47197420634920634,
+            "changes": 5,
+            "confusions": 122.66666666666667,
+            "brierDual": 0.3297995713504381,
+            "brierV3": 0.26873945044744857
+          }
+        },
+        {
+          "strategy": "bayes_prior",
+          "means": {
+            "unaided7": 0.7743055555555555,
+            "cued7": 0.4548611111111111,
+            "unaided28": 0.5694444444444443,
+            "cued28": 0.3159722222222222,
+            "trainingAccuracy": 0.46478174603174605,
+            "changes": 4,
+            "confusions": 125.91666666666667,
+            "brierDual": 0.33452563401138496,
+            "brierV3": 0.2711750599880466
+          }
+        },
+        {
+          "strategy": "bayes_adaptive",
+          "means": {
+            "unaided7": 0.7777777777777777,
+            "cued7": 0.4618055555555555,
+            "unaided28": 0.5659722222222221,
+            "cued28": 0.3368055555555556,
+            "trainingAccuracy": 0.4650297619047619,
+            "changes": 4,
+            "confusions": 126.25,
+            "brierDual": 0.33292053884518064,
+            "brierV3": 0.2694585145208089
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "baseline": "fixed",
+          "primary": {
+            "difference": 0.01388888888888889,
+            "ci95": [
+              0.0008540339805917039,
+              0.026923743797186074
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0.07986111111111112,
+            "ci95": [
+              0.051173323212525434,
+              0.1085488990096968
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "miss_only",
+          "primary": {
+            "difference": -0.006944444444444438,
+            "ci95": [
+              -0.02222916666666667,
+              0.008340277777777794
+            ],
+            "lossFraction": 0.25,
+            "worst": -0.04166666666666674
+          },
+          "cued28": {
+            "difference": 0.017361111111111122,
+            "ci95": [
+              -0.020850694444444446,
+              0.055572916666666694
+            ],
+            "lossFraction": 0.25,
+            "worst": -0.08333333333333337
+          }
+        },
+        {
+          "baseline": "guarded_v3",
+          "primary": {
+            "difference": -0.013888888888888895,
+            "ci95": [
+              -0.026923743797186084,
+              -0.0008540339805917056
+            ],
+            "lossFraction": 0.3333333333333333,
+            "worst": -0.04166666666666674
+          },
+          "cued28": {
+            "difference": 0.013888888888888897,
+            "ci95": [
+              -0.00961002998116058,
+              0.03738780775893837
+            ],
+            "lossFraction": 0.16666666666666666,
+            "worst": -0.041666666666666685
+          }
+        },
+        {
+          "baseline": "bayes_prior",
+          "primary": {
+            "difference": -0.003472222222222219,
+            "ci95": [
+              -0.011114583333333325,
+              0.004170138888888886
+            ],
+            "lossFraction": 0.08333333333333333,
+            "worst": -0.04166666666666663
+          },
+          "cued28": {
+            "difference": 0.020833333333333332,
+            "ci95": [
+              0.0029846231656300744,
+              0.038682043501036587
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        }
+      ],
+      "cost": {
+        "knowledgeMAE": 0.06010609168568388,
+        "visualMAE": 0.048194799733323516
+      }
+    },
+    {
+      "profile": "weak_exponential",
+      "strategies": [
+        {
+          "strategy": "fixed",
+          "means": {
+            "unaided7": 0.8958333333333334,
+            "cued7": 0.9791666666666666,
+            "unaided28": 0.6909722222222222,
+            "cued28": 0.8958333333333334,
+            "trainingAccuracy": 0.8464781746031745,
+            "changes": 0,
+            "confusions": 1.4166666666666667,
+            "brierDual": 0.11015404878703994,
+            "brierV3": 0.11469371658534283
+          }
+        },
+        {
+          "strategy": "miss_only",
+          "means": {
+            "unaided7": 0.8854166666666666,
+            "cued7": 0.9687499999999999,
+            "unaided28": 0.6805555555555555,
+            "cued28": 0.8819444444444445,
+            "trainingAccuracy": 0.8400297619047619,
+            "changes": 3.4166666666666665,
+            "confusions": 1.3333333333333333,
+            "brierDual": 0.11312382101677802,
+            "brierV3": 0.11734655858521133
+          }
+        },
+        {
+          "strategy": "guarded_v3",
+          "means": {
+            "unaided7": 0.8958333333333334,
+            "cued7": 0.9791666666666666,
+            "unaided28": 0.6909722222222222,
+            "cued28": 0.8958333333333334,
+            "trainingAccuracy": 0.8464781746031745,
+            "changes": 0,
+            "confusions": 1.4166666666666667,
+            "brierDual": 0.11015404878703994,
+            "brierV3": 0.11469371658534283
+          }
+        },
+        {
+          "strategy": "bayes_prior",
+          "means": {
+            "unaided7": 0.8958333333333334,
+            "cued7": 0.9791666666666666,
+            "unaided28": 0.6909722222222222,
+            "cued28": 0.8958333333333334,
+            "trainingAccuracy": 0.8464781746031745,
+            "changes": 0,
+            "confusions": 1.4166666666666667,
+            "brierDual": 0.11015404878703994,
+            "brierV3": 0.11469371658534283
+          }
+        },
+        {
+          "strategy": "bayes_adaptive",
+          "means": {
+            "unaided7": 0.8958333333333334,
+            "cued7": 0.9791666666666666,
+            "unaided28": 0.6909722222222222,
+            "cued28": 0.8958333333333334,
+            "trainingAccuracy": 0.8464781746031745,
+            "changes": 0,
+            "confusions": 1.4166666666666667,
+            "brierDual": 0.11015404878703994,
+            "brierV3": 0.11469371658534283
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "baseline": "fixed",
+          "primary": {
+            "difference": 0,
+            "ci95": [
+              0,
+              0
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0,
+            "ci95": [
+              0,
+              0
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "miss_only",
+          "primary": {
+            "difference": 0.010416666666666666,
+            "ci95": [
+              -0.0060390310229808935,
+              0.026872364356314224
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0.013888888888888886,
+            "ci95": [
+              0.0008540339805917074,
+              0.026923743797186067
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "guarded_v3",
+          "primary": {
+            "difference": 0,
+            "ci95": [
+              0,
+              0
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0,
+            "ci95": [
+              0,
+              0
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "bayes_prior",
+          "primary": {
+            "difference": 0,
+            "ci95": [
+              0,
+              0
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0,
+            "ci95": [
+              0,
+              0
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        }
+      ],
+      "cost": {
+        "knowledgeMAE": 0.08416448657140176,
+        "visualMAE": 0.13124892860827655
+      }
+    },
+    {
+      "profile": "high_cost",
+      "strategies": [
+        {
+          "strategy": "fixed",
+          "means": {
+            "unaided7": 0.888888888888889,
+            "cued7": 0.9270833333333334,
+            "unaided28": 0.7013888888888888,
+            "cued28": 0.8333333333333334,
+            "trainingAccuracy": 0.8152281746031745,
+            "changes": 0,
+            "confusions": 21.666666666666668,
+            "brierDual": 0.13684183916775447,
+            "brierV3": 0.13657146841832715
+          }
+        },
+        {
+          "strategy": "miss_only",
+          "means": {
+            "unaided7": 0.8506944444444443,
+            "cued7": 0.90625,
+            "unaided28": 0.6423611111111112,
+            "cued28": 0.8125,
+            "trainingAccuracy": 0.7938988095238094,
+            "changes": 4.333333333333333,
+            "confusions": 20.416666666666668,
+            "brierDual": 0.1445333203953785,
+            "brierV3": 0.14503951497462486
+          }
+        },
+        {
+          "strategy": "guarded_v3",
+          "means": {
+            "unaided7": 0.8645833333333334,
+            "cued7": 0.9166666666666666,
+            "unaided28": 0.6631944444444445,
+            "cued28": 0.8263888888888888,
+            "trainingAccuracy": 0.8038194444444445,
+            "changes": 2.6666666666666665,
+            "confusions": 20,
+            "brierDual": 0.14083255338994105,
+            "brierV3": 0.14128409420052546
+          }
+        },
+        {
+          "strategy": "bayes_prior",
+          "means": {
+            "unaided7": 0.8819444444444443,
+            "cued7": 0.9201388888888888,
+            "unaided28": 0.6840277777777777,
+            "cued28": 0.8298611111111112,
+            "trainingAccuracy": 0.8102678571428572,
+            "changes": 1.5833333333333333,
+            "confusions": 20.75,
+            "brierDual": 0.13781538677753805,
+            "brierV3": 0.13815335533005021
+          }
+        },
+        {
+          "strategy": "bayes_adaptive",
+          "means": {
+            "unaided7": 0.888888888888889,
+            "cued7": 0.923611111111111,
+            "unaided28": 0.6944444444444443,
+            "cued28": 0.8368055555555555,
+            "trainingAccuracy": 0.8129960317460317,
+            "changes": 0.5,
+            "confusions": 21.333333333333332,
+            "brierDual": 0.1367742397271767,
+            "brierV3": 0.13687879402902572
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "baseline": "fixed",
+          "primary": {
+            "difference": -0.0069444444444444475,
+            "ci95": [
+              -0.01724940206445554,
+              0.0033605131755666436
+            ],
+            "lossFraction": 0.16666666666666666,
+            "worst": -0.04166666666666674
+          },
+          "cued28": {
+            "difference": 0.003472222222222219,
+            "ci95": [
+              -0.00417013888888889,
+              0.011114583333333327
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "miss_only",
+          "primary": {
+            "difference": 0.05208333333333335,
+            "ci95": [
+              0.017983420437917362,
+              0.08618324622874934
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0.024305555555555552,
+            "ci95": [
+              0.006606209605121056,
+              0.04200490150599005
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "guarded_v3",
+          "primary": {
+            "difference": 0.03125000000000001,
+            "ci95": [
+              0.01479430231035243,
+              0.04770569768964758
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0.010416666666666666,
+            "ci95": [
+              -0.0015566121070361774,
+              0.02238994544036951
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "bayes_prior",
+          "primary": {
+            "difference": 0.010416666666666657,
+            "ci95": [
+              -0.001556612107036174,
+              0.02238994544036949
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0.0069444444444444475,
+            "ci95": [
+              -0.003360513175566642,
+              0.017249402064455535
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        }
+      ],
+      "cost": {
+        "knowledgeMAE": 0.1468493511005041,
+        "visualMAE": 0.2212311039374393
+      }
+    },
+    {
+      "profile": "mixed_heterogeneous",
+      "strategies": [
+        {
+          "strategy": "fixed",
+          "means": {
+            "unaided7": 0.8645833333333334,
+            "cued7": 0.7847222222222222,
+            "unaided28": 0.6493055555555556,
+            "cued28": 0.6840277777777778,
+            "trainingAccuracy": 0.7237103174603176,
+            "changes": 0,
+            "confusions": 48.833333333333336,
+            "brierDual": 0.18916260120762396,
+            "brierV3": 0.17574911390414205
+          }
+        },
+        {
+          "strategy": "miss_only",
+          "means": {
+            "unaided7": 0.84375,
+            "cued7": 0.7951388888888888,
+            "unaided28": 0.6250000000000001,
+            "cued28": 0.701388888888889,
+            "trainingAccuracy": 0.7177579365079366,
+            "changes": 4.916666666666667,
+            "confusions": 44.166666666666664,
+            "brierDual": 0.18961498574239774,
+            "brierV3": 0.17741575307571503
+          }
+        },
+        {
+          "strategy": "guarded_v3",
+          "means": {
+            "unaided7": 0.8368055555555555,
+            "cued7": 0.8020833333333334,
+            "unaided28": 0.638888888888889,
+            "cued28": 0.6979166666666666,
+            "trainingAccuracy": 0.7185019841269841,
+            "changes": 4.416666666666667,
+            "confusions": 44.166666666666664,
+            "brierDual": 0.1887421043786691,
+            "brierV3": 0.17665265124043358
+          }
+        },
+        {
+          "strategy": "bayes_prior",
+          "means": {
+            "unaided7": 0.8541666666666666,
+            "cued7": 0.7916666666666666,
+            "unaided28": 0.6354166666666666,
+            "cued28": 0.6979166666666666,
+            "trainingAccuracy": 0.7217261904761906,
+            "changes": 3.0833333333333335,
+            "confusions": 44.666666666666664,
+            "brierDual": 0.18902340783778304,
+            "brierV3": 0.17689944877932706
+          }
+        },
+        {
+          "strategy": "bayes_adaptive",
+          "means": {
+            "unaided7": 0.8506944444444443,
+            "cued7": 0.7951388888888888,
+            "unaided28": 0.6388888888888888,
+            "cued28": 0.7013888888888888,
+            "trainingAccuracy": 0.7232142857142857,
+            "changes": 3,
+            "confusions": 44.666666666666664,
+            "brierDual": 0.1876670334941244,
+            "brierV3": 0.17584611024276742
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "baseline": "fixed",
+          "primary": {
+            "difference": -0.010416666666666676,
+            "ci95": [
+              -0.022389945440369527,
+              0.0015566121070361757
+            ],
+            "lossFraction": 0.25,
+            "worst": -0.04166666666666674
+          },
+          "cued28": {
+            "difference": 0.017361111111111115,
+            "ci95": [
+              0.00372893354430643,
+              0.0309932886779158
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          }
+        },
+        {
+          "baseline": "miss_only",
+          "primary": {
+            "difference": 0.013888888888888881,
+            "ci95": [
+              -0.006721026351133287,
+              0.03449880412891105
+            ],
+            "lossFraction": 0.08333333333333333,
+            "worst": -0.04166666666666674
+          },
+          "cued28": {
+            "difference": 4.625929269271485e-18,
+            "ci95": [
+              -0.019552282362445786,
+              0.019552282362445793
+            ],
+            "lossFraction": 0.25,
+            "worst": -0.04166666666666674
+          }
+        },
+        {
+          "baseline": "guarded_v3",
+          "primary": {
+            "difference": -9.25185853854297e-18,
+            "ci95": [
+              -0.011288515485229654,
+              0.011288515485229637
+            ],
+            "lossFraction": 0.08333333333333333,
+            "worst": -0.04166666666666674
+          },
+          "cued28": {
+            "difference": 0.0034722222222222285,
+            "ci95": [
+              -0.014227123728212289,
+              0.021171568172656745
+            ],
+            "lossFraction": 0.16666666666666666,
+            "worst": -0.04166666666666674
+          }
+        },
+        {
+          "baseline": "bayes_prior",
+          "primary": {
+            "difference": 0.003472222222222219,
+            "ci95": [
+              -0.004170138888888886,
+              0.011114583333333325
+            ],
+            "lossFraction": 0,
+            "worst": 0
+          },
+          "cued28": {
+            "difference": 0.0034722222222222285,
+            "ci95": [
+              -0.010159955344582451,
+              0.01710439978902691
+            ],
+            "lossFraction": 0.08333333333333333,
+            "worst": -0.04166666666666663
+          }
+        }
+      ],
+      "cost": {
+        "knowledgeMAE": 0.12491002979547346,
+        "visualMAE": 0.19236661100935712
+      }
+    }
+  ]
+}

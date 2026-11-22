@@ -1,0 +1,89 @@
+{
+  "seedCount": 40,
+  "caseCount": 240,
+  "summary": [
+    {
+      "domain": "probability",
+      "n": 40,
+      "meanFeatureRecall": 0.666666666666667,
+      "meanCoverage": 1,
+      "meanCost": 8,
+      "invalid": 0
+    },
+    {
+      "domain": "programming",
+      "n": 40,
+      "meanFeatureRecall": 0.666666666666667,
+      "meanCoverage": 1,
+      "meanCost": 10,
+      "invalid": 0
+    },
+    {
+      "domain": "history",
+      "n": 40,
+      "meanFeatureRecall": 1,
+      "meanCoverage": 1,
+      "meanCost": 9,
+      "invalid": 0
+    },
+    {
+      "domain": "digital_logic",
+      "n": 40,
+      "meanFeatureRecall": 1,
+      "meanCoverage": 1,
+      "meanCost": 9,
+      "invalid": 0
+    },
+    {
+      "domain": "language",
+      "n": 40,
+      "meanFeatureRecall": 1,
+      "meanCoverage": 1,
+      "meanCost": 7,
+      "invalid": 0
+    },
+    {
+      "domain": "biology",
+      "n": 40,
+      "meanFeatureRecall": 1,
+      "meanCoverage": 1,
+      "meanCost": 10,
+      "invalid": 0
+    }
+  ],
+  "negativeTransfer": [
+    {
+      "sourceDomain": "history",
+      "targetDomain": "biology",
+      "geneId": "spatial-route",
+      "sourceUtility": 0.82,
+      "targetUtility": 0.65,
+      "sampleCount": 24,
+      "negativeTransfer": true,
+      "delta": -0.16999999999999993,
+      "confidence": 0.75
+    },
+    {
+      "sourceDomain": "programming",
+      "targetDomain": "language",
+      "geneId": "mechanism-simulation",
+      "sourceUtility": 0.78,
+      "targetUtility": 0.76,
+      "sampleCount": 24,
+      "negativeTransfer": false,
+      "delta": -0.020000000000000018,
+      "confidence": 0.75
+    },
+    {
+      "sourceDomain": "probability",
+      "targetDomain": "digital_logic",
+      "geneId": "symbol-anchor",
+      "sourceUtility": 0.8,
+      "targetUtility": 0.71,
+      "sampleCount": 24,
+      "negativeTransfer": true,
+      "delta": -0.09000000000000008,
+      "confidence": 0.75
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Focused strict TypeScript check:
+PASS: tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck --allowImportingTsExtensions src/adaptive-model-selection.ts src/model-selection.ts src/adaptive.ts
+
+Full-project check:
+NOT COMPLETED. `tsc --noEmit` reports TS2688: Cannot find type definition file for 'node'. `npm install --no-audit --no-fund` timed out in this environment. This is an environment/dependency limitation; no full-project typecheck is claimed.

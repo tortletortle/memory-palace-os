@@ -1,0 +1,11 @@
+import {compareMath} from '../src/math.ts';
+import {mathCases,generatedCases} from '../eval/cases.ts';
+import {conflictCases,classify} from '../eval/conflict-cases.ts';
+const start=performance.now();
+const fixed=mathCases.map(c=>({...c,actual:compareMath(c.left,c.right).status}));
+const generated=generatedCases().map(c=>({...c,actual:compareMath(c.left,c.right).status}));
+const conflicts=conflictCases.map(c=>({id:c.id,expected:c.expected,actual:classify(c.run())}));
+const summarize=<T extends {expected:string;actual:string}>(rows:T[])=>({total:rows.length,passed:rows.filter(x=>x.actual===x.expected).length,failures:rows.filter(x=>x.actual!==x.expected)});
+const confusionMatrix=Object.fromEntries(['equivalent','not_equivalent','inconclusive'].map(expected=>[expected,Object.fromEntries(['equivalent','not_equivalent','inconclusive'].map(actual=>[actual,fixed.filter(x=>x.expected===expected&&x.actual===actual).length]))]));
+const result={note:'Hand-authored regression corpus and deterministic generated checks; not independent model or human-memory validation.',fixed: summarize(fixed),generated:summarize(generated),conflicts:summarize(conflicts),confusionMatrix,elapsedMs:Number((performance.now()-start).toFixed(2)),cases:fixed,conflictCases:conflicts};
+console.log(JSON.stringify(result,null,2));if(result.fixed.failures.length||result.generated.failures.length||result.conflicts.failures.length)process.exitCode=1;

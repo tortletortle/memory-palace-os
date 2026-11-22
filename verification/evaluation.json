@@ -1,0 +1,614 @@
+{
+  "note": "Hand-authored regression corpus and deterministic generated checks; not independent model or human-memory validation.",
+  "fixed": {
+    "total": 63,
+    "passed": 63,
+    "failures": []
+  },
+  "generated": {
+    "total": 200,
+    "passed": 200,
+    "failures": []
+  },
+  "conflicts": {
+    "total": 14,
+    "passed": 14,
+    "failures": []
+  },
+  "confusionMatrix": {
+    "equivalent": {
+      "equivalent": 27,
+      "not_equivalent": 0,
+      "inconclusive": 0
+    },
+    "not_equivalent": {
+      "equivalent": 0,
+      "not_equivalent": 16,
+      "inconclusive": 0
+    },
+    "inconclusive": {
+      "equivalent": 0,
+      "not_equivalent": 0,
+      "inconclusive": 20
+    }
+  },
+  "elapsedMs": 31.69,
+  "cases": [
+    {
+      "id": "M01",
+      "left": "x+x",
+      "right": "2*x",
+      "expected": "equivalent",
+      "category": "polynomial",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M02",
+      "left": "(x+1)^2",
+      "right": "x^2+2*x+1",
+      "expected": "equivalent",
+      "category": "polynomial",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M03",
+      "left": "(x-2)*(x+2)",
+      "right": "x^2-4",
+      "expected": "equivalent",
+      "category": "polynomial",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M04",
+      "left": "a*(b+c)",
+      "right": "a*b+a*c",
+      "expected": "equivalent",
+      "category": "polynomial",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M05",
+      "left": "-x^2",
+      "right": "-(x*x)",
+      "expected": "equivalent",
+      "category": "precedence",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M06",
+      "left": "(-x)^2",
+      "right": "x^2",
+      "expected": "equivalent",
+      "category": "precedence",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M07",
+      "left": "2^3^2",
+      "right": "512",
+      "expected": "equivalent",
+      "category": "precedence",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M08",
+      "left": "0.1+0.2",
+      "right": "0.3",
+      "expected": "equivalent",
+      "category": "exact decimal",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M09",
+      "left": ".5*x",
+      "right": "x/2",
+      "expected": "equivalent",
+      "category": "exact decimal",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M10",
+      "left": "3/7+4/7",
+      "right": "1",
+      "expected": "equivalent",
+      "category": "rational",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M11",
+      "left": "x/x",
+      "right": "2*x/(2*x)",
+      "expected": "equivalent",
+      "category": "domain",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M12",
+      "left": "x/(x+1)",
+      "right": "(2*x)/(2*x+2)",
+      "expected": "equivalent",
+      "category": "domain",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M13",
+      "left": "x^-2",
+      "right": "1/(x*x)",
+      "expected": "equivalent",
+      "category": "domain",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M14",
+      "left": "1/(x*y)",
+      "right": "1/x/y",
+      "expected": "equivalent",
+      "category": "domain",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M15",
+      "left": "(x^2-1)/(x-1)",
+      "right": "(x-1)*(x+1)/(x-1)",
+      "expected": "equivalent",
+      "category": "domain",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M16",
+      "left": "e^(-2)",
+      "right": "1/e^2",
+      "expected": "equivalent",
+      "category": "exp",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M17",
+      "left": "exp(0)",
+      "right": "1",
+      "expected": "equivalent",
+      "category": "exp",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M18",
+      "left": "exp(x)",
+      "right": "e^x",
+      "expected": "equivalent",
+      "category": "exp",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M19",
+      "left": "5!",
+      "right": "120",
+      "expected": "equivalent",
+      "category": "factorial",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M20",
+      "left": "(2+3)!",
+      "right": "120",
+      "expected": "equivalent",
+      "category": "factorial",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M21",
+      "left": "k!+k!",
+      "right": "2*k!",
+      "expected": "equivalent",
+      "category": "factorial",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M22",
+      "left": "\\frac{\\lambda^k}{k!}",
+      "right": "\\lambda^k/k!",
+      "expected": "equivalent",
+      "category": "latex",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M23",
+      "left": "\\left(x+1\\right)^2",
+      "right": "x^2+2*x+1",
+      "expected": "equivalent",
+      "category": "latex",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M24",
+      "left": "\\frac{1}{2}x",
+      "right": "x/2",
+      "expected": "equivalent",
+      "category": "latex",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M25",
+      "left": "λ+λ",
+      "right": "2\\lambda",
+      "expected": "equivalent",
+      "category": "latex",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M26",
+      "left": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k!}",
+      "right": "P(X=k)=\\frac{e^{-\\lambda}\\lambda^k}{k!}",
+      "expected": "equivalent",
+      "category": "poisson",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M27",
+      "left": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k!}",
+      "right": "P(X=k)=\\frac{\\lambda^k\\exp(-\\lambda)}{k!}",
+      "expected": "equivalent",
+      "category": "poisson",
+      "actual": "equivalent"
+    },
+    {
+      "id": "M28",
+      "left": "x^2",
+      "right": "x^3",
+      "expected": "not_equivalent",
+      "category": "polynomial",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M29",
+      "left": "(x+1)^2",
+      "right": "x^2+1",
+      "expected": "not_equivalent",
+      "category": "polynomial",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M30",
+      "left": "-x^2",
+      "right": "(-x)^2",
+      "expected": "not_equivalent",
+      "category": "precedence",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M31",
+      "left": "x",
+      "right": "X",
+      "expected": "not_equivalent",
+      "category": "case sensitive",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M32",
+      "left": "1/3",
+      "right": "0.3333333333333333",
+      "expected": "not_equivalent",
+      "category": "exact decimal",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M33",
+      "left": "1/(x+1)",
+      "right": "2/(x+1)",
+      "expected": "not_equivalent",
+      "category": "rational",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M34",
+      "left": "x/x",
+      "right": "0",
+      "expected": "not_equivalent",
+      "category": "domain witness",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M35",
+      "left": "(x^2-1)/(x-1)",
+      "right": "x-1",
+      "expected": "not_equivalent",
+      "category": "domain witness",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M36",
+      "left": "exp(x)",
+      "right": "exp(-x)",
+      "expected": "not_equivalent",
+      "category": "exp witness",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M37",
+      "left": "e^2",
+      "right": "e+1",
+      "expected": "not_equivalent",
+      "category": "exp witness",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M38",
+      "left": "k!",
+      "right": "k",
+      "expected": "not_equivalent",
+      "category": "factorial witness",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M39",
+      "left": "5!",
+      "right": "24",
+      "expected": "not_equivalent",
+      "category": "factorial",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M40",
+      "left": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k!}",
+      "right": "P(X=k)=\\frac{\\lambda^k e^{\\lambda}}{k!}",
+      "expected": "not_equivalent",
+      "category": "poisson mutation",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M41",
+      "left": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k!}",
+      "right": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k}",
+      "expected": "not_equivalent",
+      "category": "poisson mutation",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M42",
+      "left": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k!}",
+      "right": "P(X=k)=\\frac{\\lambda e^{-\\lambda}}{k!}",
+      "expected": "not_equivalent",
+      "category": "poisson mutation",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M43",
+      "left": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k!}",
+      "right": "P(X=k)=\\frac{k!}{\\lambda^k e^{-\\lambda}}",
+      "expected": "not_equivalent",
+      "category": "poisson mutation",
+      "actual": "not_equivalent"
+    },
+    {
+      "id": "M44",
+      "left": "x/x",
+      "right": "1",
+      "expected": "inconclusive",
+      "category": "domain loss",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M45",
+      "left": "(x^2-1)/(x-1)",
+      "right": "x+1",
+      "expected": "inconclusive",
+      "category": "domain loss",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M46",
+      "left": "x^0",
+      "right": "1",
+      "expected": "inconclusive",
+      "category": "domain loss",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M47",
+      "left": "0^0",
+      "right": "1",
+      "expected": "inconclusive",
+      "category": "undefined",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M48",
+      "left": "1/0",
+      "right": "1/0",
+      "expected": "inconclusive",
+      "category": "undefined",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M49",
+      "left": "1/(x-x)",
+      "right": "0",
+      "expected": "inconclusive",
+      "category": "undefined",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M50",
+      "left": "(-1)!",
+      "right": "1",
+      "expected": "inconclusive",
+      "category": "undefined",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M51",
+      "left": "sin(x)^2+cos(x)^2",
+      "right": "1",
+      "expected": "inconclusive",
+      "category": "unsupported",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M52",
+      "left": "\\int x dx",
+      "right": "x^2/2",
+      "expected": "inconclusive",
+      "category": "unsupported",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M53",
+      "left": "sqrt(x^2)",
+      "right": "x",
+      "expected": "inconclusive",
+      "category": "unsupported",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M54",
+      "left": "x=1",
+      "right": "y=1",
+      "expected": "inconclusive",
+      "category": "different labels",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M55",
+      "left": "x=1",
+      "right": "1=x",
+      "expected": "inconclusive",
+      "category": "different labels",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M56",
+      "left": "x+",
+      "right": "1",
+      "expected": "inconclusive",
+      "category": "malformed",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M57",
+      "left": "1/2x",
+      "right": "x/2",
+      "expected": "inconclusive",
+      "category": "ambiguous notation",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M58",
+      "left": "\\left(x+1)",
+      "right": "x+1",
+      "expected": "inconclusive",
+      "category": "malformed",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M59",
+      "left": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "right": "x",
+      "expected": "inconclusive",
+      "category": "resource limit",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M60",
+      "left": "(a+b+c+d+f+g+h)^16",
+      "right": "1",
+      "expected": "inconclusive",
+      "category": "resource limit",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M61",
+      "left": "x^99999",
+      "right": "x",
+      "expected": "inconclusive",
+      "category": "resource limit",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M62",
+      "left": "x^0.5",
+      "right": "x^(1/2)",
+      "expected": "inconclusive",
+      "category": "opaque power",
+      "actual": "inconclusive"
+    },
+    {
+      "id": "M63",
+      "left": "pi",
+      "right": "3.14159",
+      "expected": "inconclusive",
+      "category": "opaque constant",
+      "actual": "inconclusive"
+    }
+  ],
+  "conflictCases": [
+    {
+      "id": "C01 distinct cues",
+      "expected": "clean",
+      "actual": "clean"
+    },
+    {
+      "id": "C02 duplicate visual + metaphor",
+      "expected": "blocked",
+      "actual": "blocked"
+    },
+    {
+      "id": "C03 visual only collision",
+      "expected": "warning",
+      "actual": "warning"
+    },
+    {
+      "id": "C04 same metaphor distinct visual",
+      "expected": "warning",
+      "actual": "warning"
+    },
+    {
+      "id": "C05 historical collision",
+      "expected": "warning",
+      "actual": "warning"
+    },
+    {
+      "id": "C06 equivalent mathematical meaning",
+      "expected": "clean",
+      "actual": "clean"
+    },
+    {
+      "id": "C07 same knowledge history",
+      "expected": "clean",
+      "actual": "clean"
+    },
+    {
+      "id": "C08 equivalent history meaning",
+      "expected": "clean",
+      "actual": "clean"
+    },
+    {
+      "id": "C09 missing atom",
+      "expected": "blocked",
+      "actual": "blocked"
+    },
+    {
+      "id": "C10 invalid resource",
+      "expected": "blocked",
+      "actual": "blocked"
+    },
+    {
+      "id": "C11 case-sensitive math",
+      "expected": "blocked",
+      "actual": "blocked"
+    },
+    {
+      "id": "C12 different animations",
+      "expected": "clean",
+      "actual": "clean"
+    },
+    {
+      "id": "C13 duplicate history is deduped",
+      "expected": "warning",
+      "actual": "warning"
+    },
+    {
+      "id": "C14 role disambiguation",
+      "expected": "warning",
+      "actual": "warning"
+    }
+  ]
+}

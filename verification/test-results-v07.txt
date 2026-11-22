@@ -1,0 +1,630 @@
+
+> memory-palace-mnemonic-engine@0.7.0 test
+> node --experimental-strip-types --test test/*.test.ts
+
+TAP version 13
+# (node:9105) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: BOCPD stays quiet on a stable high-success stream
+ok 1 - BOCPD stays quiet on a stable high-success stream
+  ---
+  duration_ms: 15.852412
+  type: 'test'
+  ...
+# Subtest: BOCPD confirms a sustained downward shift but rejects an isolated miss
+ok 2 - BOCPD confirms a sustained downward shift but rejects an isolated miss
+  ---
+  duration_ms: 2.816029
+  type: 'test'
+  ...
+# Subtest: adaptive BMA normalizes model weights and emits change diagnostics
+ok 3 - adaptive BMA normalizes model weights and emits change diagnostics
+  ---
+  duration_ms: 10.79614
+  type: 'test'
+  ...
+# Subtest: semantic cued errors do not contaminate the unaided forgetting posterior
+ok 4 - semantic cued errors do not contaminate the unaided forgetting posterior
+  ---
+  duration_ms: 9.366543
+  type: 'test'
+  ...
+# Subtest: unlabelled cued misses remain unattributed and reduce identification confidence
+ok 5 - unlabelled cued misses remain unattributed and reduce identification confidence
+  ---
+  duration_ms: 0.391082
+  type: 'test'
+  ...
+# Subtest: change-point channels are independent
+ok 6 - change-point channels are independent
+  ---
+  duration_ms: 1.253435
+  type: 'test'
+  ...
+# (node:9106) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: forgetting prediction monotonic; prior normalized; due day meets modeled target
+ok 7 - forgetting prediction monotonic; prior normalized; due day meets modeled target
+  ---
+  duration_ms: 5.697386
+  type: 'test'
+  ...
+# Subtest: success likelihood raises inferred half-life, misses lower it; uncertain excluded
+ok 8 - success likelihood raises inferred half-life, misses lower it; uncertain excluded
+  ---
+  duration_ms: 0.49069
+  type: 'test'
+  ...
+# Subtest: cued observations do not update unaided posterior; revealed answer resets shared exposure
+ok 9 - cued observations do not update unaided posterior; revealed answer resets shared exposure
+  ---
+  duration_ms: 0.81379
+  type: 'test'
+  ...
+# Subtest: future and same-session reviews do not contaminate likelihood
+ok 10 - future and same-session reviews do not contaminate likelihood
+  ---
+  duration_ms: 0.1951
+  type: 'test'
+  ...
+# Subtest: matrix directed empirical confusion, no diagonal and identical meanings excluded
+ok 11 - matrix directed empirical confusion, no diagonal and identical meanings excluded
+  ---
+  duration_ms: 4.495898
+  type: 'test'
+  ...
+# Subtest: guarded optimizer requires actual confusion evidence, protects stable positions, and is side-effect free
+ok 12 - guarded optimizer requires actual confusion evidence, protects stable positions, and is side-effect free
+  ---
+  duration_ms: 0.78655
+  type: 'test'
+  ...
+# Subtest: guard refuses same-session confusion duplicates and single failures
+ok 13 - guard refuses same-session confusion duplicates and single failures
+  ---
+  duration_ms: 0.145006
+  type: 'test'
+  ...
+# Subtest: simulation reproducible; identical training budget; fixed never replaces; guards limit changes
+ok 14 - simulation reproducible; identical training budget; fixed never replaces; guards limit changes
+  ---
+  duration_ms: 120.512162
+  type: 'test'
+  ...
+# Subtest: adaptive API accepts legacy and explicit reviews, rejects fabricated confusion, read-only report persists
+ok 15 - adaptive API accepts legacy and explicit reviews, rejects fabricated confusion, read-only report persists
+  ---
+  duration_ms: 174.764502
+  type: 'test'
+  ...
+# Subtest: positive service proposal compiles a one-cue replacement without altering the original scene
+ok 16 - positive service proposal compiles a one-cue replacement without altering the original scene
+  ---
+  duration_ms: 14.322295
+  type: 'test'
+  ...
+# Subtest: duplicate same-session unrevealed observations and confusion reports count once
+ok 17 - duplicate same-session unrevealed observations and confusion reports count once
+  ---
+  duration_ms: 0.274669
+  type: 'test'
+  ...
+# (node:9112) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: AST preserves nested LaTeX fraction, unary sign and exact source span
+ok 18 - AST preserves nested LaTeX fraction, unary sign and exact source span
+  ---
+  duration_ms: 2.636062
+  type: 'test'
+  ...
+# Subtest: mathematical fraction parsing derives source-backed roles, never confirms new knowledge
+ok 19 - mathematical fraction parsing derives source-backed roles, never confirms new knowledge
+  ---
+  duration_ms: 3.070703
+  type: 'test'
+  ...
+# Subtest: parser fails closed for unknown command, unsupported characters, deep nesting and ambiguous slash
+ok 20 - parser fails closed for unknown command, unsupported characters, deep nesting and ambiguous slash
+  ---
+  duration_ms: 0.679361
+  type: 'test'
+  ...
+# Subtest: 63 hand-labelled symbolic cases match three-valued contract
+ok 21 - 63 hand-labelled symbolic cases match three-valued contract
+  ---
+  duration_ms: 42.927764
+  type: 'test'
+  ...
+# Subtest: 200 deterministic metamorphic checks pass
+ok 22 - 200 deterministic metamorphic checks pass
+  ---
+  duration_ms: 21.943002
+  type: 'test'
+  ...
+# Subtest: 14 conflict cases classify as clean/warning/blocked
+ok 23 - 14 conflict cases classify as clean/warning/blocked
+  ---
+  duration_ms: 9.813979
+  type: 'test'
+  ...
+# Subtest: Poisson sign mutation returns exact valid-domain witness; no stochastic rounding
+ok 24 - Poisson sign mutation returns exact valid-domain witness; no stochastic rounding
+  ---
+  duration_ms: 0.368889
+  type: 'test'
+  ...
+# Subtest: cancellation never silently drops domain guards; equivalent guards canonicalize powers
+ok 25 - cancellation never silently drops domain guards; equivalent guards canonicalize powers
+  ---
+  duration_ms: 0.288349
+  type: 'test'
+  ...
+# Subtest: ranking preserves candidate order, assigns all ranks and blocks hard collision
+ok 26 - ranking preserves candidate order, assigns all ranks and blocks hard collision
+  ---
+  duration_ms: 1.671667
+  type: 'test'
+  ...
+# Subtest: historical cap never bypasses later local hard conflict
+ok 27 - historical cap never bypasses later local hard conflict
+  ---
+  duration_ms: 1.37135
+  type: 'test'
+  ...
+# Subtest: published history is advisory and visible in new jobs; score declines without rewriting old publication
+ok 28 - published history is advisory and visible in new jobs; score declines without rewriting old publication
+  ---
+  duration_ms: 23.502992
+  type: 'test'
+  ...
+# Subtest: legacy v0.1 persisted record without math or report extensions is readable and answer-checkable
+ok 29 - legacy v0.1 persisted record without math or report extensions is readable and answer-checkable
+  ---
+  duration_ms: 24.089991
+  type: 'test'
+  ...
+# Subtest: three new math APIs plus confirmation and unsupported safeguards over real HTTP
+ok 30 - three new math APIs plus confirmation and unsupported safeguards over real HTTP
+  ---
+  duration_ms: 90.749658
+  type: 'test'
+  ...
+# (node:9138) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: joint posterior normalizes and delayed predictions are monotone
+ok 31 - joint posterior normalizes and delayed predictions are monotone
+  ---
+  duration_ms: 1.698327
+  type: 'test'
+  ...
+# Subtest: unaided-only observations leave visual half-life marginal unchanged (without visual exposure)
+ok 32 - unaided-only observations leave visual half-life marginal unchanged (without visual exposure)
+  ---
+  duration_ms: 1.823313
+  type: 'test'
+  ...
+# Subtest: cued successes and misses move joint posterior, mixed modes yield evidence flag
+ok 33 - cued successes and misses move joint posterior, mixed modes yield evidence flag
+  ---
+  duration_ms: 1.407965
+  type: 'test'
+  ...
+# Subtest: unaided revelation affects knowledge clock only; uncertain/future/duplicate controls
+ok 34 - unaided revelation affects knowledge clock only; uncertain/future/duplicate controls
+  ---
+  duration_ms: 0.513053
+  type: 'test'
+  ...
+# Subtest: recoding shocks do not mutate history or override knowledge clock; loss is explicit
+ok 35 - recoding shocks do not mutate history or override knowledge clock; loss is explicit
+  ---
+  duration_ms: 1.194447
+  type: 'test'
+  ...
+# Subtest: cost posterior moves toward observed deficits, not latent parameters
+ok 36 - cost posterior moves toward observed deficits, not latent parameters
+  ---
+  duration_ms: 0.846189
+  type: 'test'
+  ...
+# Subtest: invalid or oversized evidence excluded; likelihood stable for maximum allowed samples
+ok 37 - invalid or oversized evidence excluded; likelihood stable for maximum allowed samples
+  ---
+  duration_ms: 2.636241
+  type: 'test'
+  ...
+# Subtest: Bayesian optimizer proposes low-cost high-confusion change but protects high-cost case
+ok 38 - Bayesian optimizer proposes low-cost high-confusion change but protects high-cost case
+  ---
+  duration_ms: 4.081291
+  type: 'test'
+  ...
+# Subtest: high cost does not block every replacement when existing memory is nearly lost
+ok 39 - high cost does not block every replacement when existing memory is nearly lost
+  ---
+  duration_ms: 1.250981
+  type: 'test'
+  ...
+# Subtest: optimizer rejects generic failure, future-only and duplicate confusion, changed knowledge or anchor
+ok 40 - optimizer rejects generic failure, future-only and duplicate confusion, changed knowledge or anchor
+  ---
+  duration_ms: 2.011413
+  type: 'test'
+  ...
+# Subtest: heterogeneous simulation deterministic and budgets identical; fixed policy never edits
+ok 41 - heterogeneous simulation deterministic and budgets identical; fixed policy never edits
+  ---
+  duration_ms: 596.278261
+  type: 'test'
+  ...
+# Subtest: V0.4 API persists caller-reported probe counts, rejects duplicate ID conflicts and preserves V0.3
+ok 42 - V0.4 API persists caller-reported probe counts, rejects duplicate ID conflicts and preserves V0.3
+  ---
+  duration_ms: 79.747331
+  type: 'test'
+  ...
+# (node:9149) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: skill gene library has unique ids, positive costs and deterministic handlers
+ok 43 - skill gene library has unique ids, positive costs and deterministic handlers
+  ---
+  duration_ms: 0.993457
+  type: 'test'
+  ...
+# Subtest: capability dependency graph is acyclic and complete
+ok 44 - capability dependency graph is acyclic and complete
+  ---
+  duration_ms: 0.257363
+  type: 'test'
+  ...
+# Subtest: canonical genome validates and compiles into a dependency-respecting DAG
+ok 45 - canonical genome validates and compiles into a dependency-respecting DAG
+  ---
+  duration_ms: 0.9345
+  type: 'test'
+  ...
+# Subtest: genome validator fails closed on malformed JSON structures
+ok 46 - genome validator fails closed on malformed JSON structures
+  ---
+  duration_ms: 1.197231
+  type: 'test'
+  ...
+# Subtest: genome rejects unsupported or out-of-range strategy parameters
+ok 47 - genome rejects unsupported or out-of-range strategy parameters
+  ---
+  duration_ms: 0.459474
+  type: 'test'
+  ...
+# Subtest: genome rejects missing capability dependencies and cycles
+ok 48 - genome rejects missing capability dependencies and cycles
+  ---
+  duration_ms: 0.176102
+  type: 'test'
+  ...
+# Subtest: runtime obeys exact inference budget and does not mutate source revision
+ok 49 - runtime obeys exact inference budget and does not mutate source revision
+  ---
+  duration_ms: 1.476196
+  type: 'test'
+  ...
+# Subtest: runtime safely skips downstream modules when budget is insufficient
+ok 50 - runtime safely skips downstream modules when budget is insufficient
+  ---
+  duration_ms: 0.520755
+  type: 'test'
+  ...
+# Subtest: input validation fails closed on malformed payloads
+ok 51 - input validation fails closed on malformed payloads
+  ---
+  duration_ms: 0.77317
+  type: 'test'
+  ...
+# Subtest: input validation rejects duplicate observation identifiers
+ok 52 - input validation rejects duplicate observation identifiers
+  ---
+  duration_ms: 0.466955
+  type: 'test'
+  ...
+# Subtest: input validation rejects out-of-range similarity and future observations
+ok 53 - input validation rejects out-of-range similarity and future observations
+  ---
+  duration_ms: 0.229822
+  type: 'test'
+  ...
+# Subtest: mutation preserves valid typed architecture
+ok 54 - mutation preserves valid typed architecture
+  ---
+  duration_ms: 0.676687
+  type: 'test'
+  ...
+# Subtest: equal-budget search charges all strategies the same reservation
+ok 55 - equal-budget search charges all strategies the same reservation
+  ---
+  duration_ms: 330.190117
+  type: 'test'
+  ...
+# Subtest: seeded random generator is reproducible
+ok 56 - seeded random generator is reproducible
+  ---
+  duration_ms: 0.582286
+  type: 'test'
+  ...
+# Subtest: cognition API exposes skill catalog and executes a validated genome over HTTP
+ok 57 - cognition API exposes skill catalog and executes a validated genome over HTTP
+  ---
+  duration_ms: 138.359562
+  type: 'test'
+  ...
+# (node:9155) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: exact fixture retains source and negative exponent
+ok 58 - exact fixture retains source and negative exponent
+  ---
+  duration_ms: 3.7914
+  type: 'test'
+  ...
+# Subtest: mutated exponent is not fixture verified
+ok 59 - mutated exponent is not fixture verified
+  ---
+  duration_ms: 0.722735
+  type: 'test'
+  ...
+# Subtest: fabricated evidence rejected
+ok 60 - fabricated evidence rejected
+  ---
+  duration_ms: 0.555576
+  type: 'test'
+  ...
+# Subtest: altered text with real evidence rejected
+ok 61 - altered text with real evidence rejected
+  ---
+  duration_ms: 0.266456
+  type: 'test'
+  ...
+# Subtest: duplicate atom IDs rejected
+ok 62 - duplicate atom IDs rejected
+  ---
+  duration_ms: 0.294047
+  type: 'test'
+  ...
+# Subtest: offline generates three valid candidate structures
+ok 63 - offline generates three valid candidate structures
+  ---
+  duration_ms: 1.498229
+  type: 'test'
+  ...
+# Subtest: missing and duplicate cue rejected
+ok 64 - missing and duplicate cue rejected
+  ---
+  duration_ms: 0.79287
+  type: 'test'
+  ...
+# Subtest: invalid asset blocked from compilation
+ok 65 - invalid asset blocked from compilation
+  ---
+  duration_ms: 1.219965
+  type: 'test'
+  ...
+# Subtest: role incompatible asset blocked
+ok 66 - role incompatible asset blocked
+  ---
+  duration_ms: 0.820831
+  type: 'test'
+  ...
+# Subtest: unknown canonical override field rejected
+ok 67 - unknown canonical override field rejected
+  ---
+  duration_ms: 0.897315
+  type: 'test'
+  ...
+# Subtest: duplicate strategies rejected
+ok 68 - duplicate strategies rejected
+  ---
+  duration_ms: 0.564059
+  type: 'test'
+  ...
+# Subtest: compiler places numerator above denominator and is deterministic
+ok 69 - compiler places numerator above denominator and is deterministic
+  ---
+  duration_ms: 1.678286
+  type: 'test'
+  ...
+# Subtest: recall strips answer, explanation and cue text
+ok 70 - recall strips answer, explanation and cue text
+  ---
+  duration_ms: 0.563468
+  type: 'test'
+  ...
+# Subtest: invalid coordinates rejected
+ok 71 - invalid coordinates rejected
+  ---
+  duration_ms: 0.184985
+  type: 'test'
+  ...
+# Subtest: unknown source blocked until exact revision is confirmed
+ok 72 - unknown source blocked until exact revision is confirmed
+  ---
+  duration_ms: 42.780745
+  type: 'test'
+  ...
+# Subtest: human review required; publication idempotent; persisted after reopening
+ok 73 - human review required; publication idempotent; persisted after reopening
+  ---
+  duration_ms: 19.687777
+  type: 'test'
+  ...
+# Subtest: concurrent writes do not lose knowledge entries
+ok 74 - concurrent writes do not lose knowledge entries
+  ---
+  duration_ms: 13.759168
+  type: 'test'
+  ...
+# Subtest: reviews reject duplicates, record atom misses, produce feedback
+ok 75 - reviews reject duplicates, record atom misses, produce feedback
+  ---
+  duration_ms: 8.983534
+  type: 'test'
+  ...
+# Subtest: remote adapter uses structured output and locally validates response
+ok 76 - remote adapter uses structured output and locally validates response
+  ---
+  duration_ms: 3.494178
+  type: 'test'
+  ...
+# Subtest: remote refuses incomplete content and invalid schema
+ok 77 - remote refuses incomplete content and invalid schema
+  ---
+  duration_ms: 1.017143
+  type: 'test'
+  ...
+# Subtest: HTTP end-to-end workflow and API failures
+ok 78 - HTTP end-to-end workflow and API failures
+  ---
+  duration_ms: 89.527395
+  type: 'test'
+  ...
+# Subtest: causal model-selection forecast endpoint separates unaided forgetting and labelled cued errors
+ok 79 - causal model-selection forecast endpoint separates unaided forgetting and labelled cued errors
+  ---
+  duration_ms: 13.806879
+  type: 'test'
+  ...
+# (node:9171) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: BMA posterior weights normalize and predictions remain bounded
+ok 80 - BMA posterior weights normalize and predictions remain bounded
+  ---
+  duration_ms: 2.693287
+  type: 'test'
+  ...
+# Subtest: BMA excludes other retrieval mode and uncertain trials
+ok 81 - BMA excludes other retrieval mode and uncertain trials
+  ---
+  duration_ms: 0.210614
+  type: 'test'
+  ...
+# Subtest: BMA rejects invalid forecast age
+ok 82 - BMA rejects invalid forecast age
+  ---
+  duration_ms: 0.207249
+  type: 'test'
+  ...
+# Subtest: split interference separates perceptual and semantic channels
+ok 83 - split interference separates perceptual and semantic channels
+  ---
+  duration_ms: 0.272786
+  type: 'test'
+  ...
+# Subtest: split interference caps matrix size
+ok 84 - split interference caps matrix size
+  ---
+  duration_ms: 0.277272
+  type: 'test'
+  ...
+# Subtest: change detector does not trigger on stable high success
+ok 85 - change detector does not trigger on stable high success
+  ---
+  duration_ms: 9.602645
+  type: 'test'
+  ...
+# Subtest: change detector flags abrupt sustained degradation
+ok 86 - change detector flags abrupt sustained degradation
+  ---
+  duration_ms: 7.578072
+  type: 'test'
+  ...
+# Subtest: change detector ignores isolated error
+ok 87 - change detector ignores isolated error
+  ---
+  duration_ms: 2.895317
+  type: 'test'
+  ...
+# Subtest: change detector validates configuration
+ok 88 - change detector validates configuration
+  ---
+  duration_ms: 0.279446
+  type: 'test'
+  ...
+# Subtest: change detector reset clears history
+ok 89 - change detector reset clears history
+  ---
+  duration_ms: 0.582006
+  type: 'test'
+  ...
+# (node:9182) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: transfer skill library has unique versioned genes and bounded transferability
+ok 90 - transfer skill library has unique versioned genes and bounded transferability
+  ---
+  duration_ms: 0.94785
+  type: 'test'
+  ...
+# Subtest: dependency graph is a DAG and dependency closure adds prerequisites
+ok 91 - dependency graph is a DAG and dependency closure adds prerequisites
+  ---
+  duration_ms: 0.703276
+  type: 'test'
+  ...
+# Subtest: validator rejects missing root, unknown genes and missing dependencies
+ok 92 - validator rejects missing root, unknown genes and missing dependencies
+  ---
+  duration_ms: 0.179226
+  type: 'test'
+  ...
+# Subtest: gene activation transfers by feature affinity with only a small source-domain prior
+ok 93 - gene activation transfers by feature affinity with only a small source-domain prior
+  ---
+  duration_ms: 0.219486
+  type: 'test'
+  ...
+# Subtest: selector does not inspect hidden evaluator labels and respects compute budget
+ok 94 - selector does not inspect hidden evaluator labels and respects compute budget
+  ---
+  duration_ms: 2.338719
+  type: 'test'
+  ...
+# Subtest: mechanism skill pulls in causal dependency and composed pair can be evaluated
+ok 95 - mechanism skill pulls in causal dependency and composed pair can be evaluated
+  ---
+  duration_ms: 0.493554
+  type: 'test'
+  ...
+# Subtest: mutation preserves dependency closure and can evolve versioned gene alleles
+ok 96 - mutation preserves dependency closure and can evolve versioned gene alleles
+  ---
+  duration_ms: 0.770046
+  type: 'test'
+  ...
+# Subtest: equal-compute search evaluates 40 candidates per arm with identical reservation
+ok 97 - equal-compute search evaluates 40 candidates per arm with identical reservation
+  ---
+  duration_ms: 176.629873
+  type: 'test'
+  ...
+# Subtest: independent benchmark has no target-domain or held-out-pair leakage in training
+ok 98 - independent benchmark has no target-domain or held-out-pair leakage in training
+  ---
+  duration_ms: 6.303336
+  type: 'test'
+  ...
+# Subtest: transfer policy uses public features only, not the evaluator-only hidden skill utilities
+ok 99 - transfer policy uses public features only, not the evaluator-only hidden skill utilities
+  ---
+  duration_ms: 0.539723
+  type: 'test'
+  ...
+# Subtest: transfer HTTP API exposes skill catalog and feature-only selection
+ok 100 - transfer HTTP API exposes skill catalog and feature-only selection
+  ---
+  duration_ms: 100.429518
+  type: 'test'
+  ...
+1..100
+# tests 100
+# suites 0
+# pass 100
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1859.614692

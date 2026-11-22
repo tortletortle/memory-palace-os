@@ -1,0 +1,9 @@
+Full repository typecheck status: NOT COMPLETED.
+
+Attempted `tsc --noEmit`; TypeScript reported TS2688 because the declared `@types/node` package was not present.
+Attempted `npm install --ignore-scripts --no-audit --no-fund`; dependency installation timed out in this environment.
+
+The focused strict typecheck for the new V0.7 transfer core passed:
+`npm run typecheck:v07-core` -> exit code 0.
+
+All 100 runtime tests passed, including HTTP integration tests for the new transfer endpoints. This does not replace a full-project typecheck.

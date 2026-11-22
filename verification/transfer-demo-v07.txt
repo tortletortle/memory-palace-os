@@ -1,0 +1,250 @@
+
+> memory-palace-mnemonic-engine@0.7.0 transfer:demo
+> node --experimental-strip-types examples/transfer-demo.ts
+
+(node:8992) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "title": "Memory Palace OS V0.7 cross-domain transfer demo",
+  "genome": {
+    "id": "default-transfer-v07",
+    "generation": 0,
+    "geneIds": [
+      "atom-chunking",
+      "spatial-route",
+      "symbol-anchor",
+      "causal-chain",
+      "contrastive-pair",
+      "timeline-sequence",
+      "hierarchy-chunk",
+      "dual-code",
+      "analogy-bridge",
+      "mechanism-simulation",
+      "retrieval-cue",
+      "interleaved-retrieval",
+      "semantic-boundary"
+    ],
+    "activationThreshold": 0.25,
+    "maxActiveGenes": 6,
+    "synergyPairs": [
+      "analogy-bridge+dual-code",
+      "causal-chain+mechanism-simulation",
+      "causal-chain+timeline-sequence",
+      "spatial-route+retrieval-cue",
+      "symbol-anchor+contrastive-pair"
+    ],
+    "metadata": {}
+  },
+  "dependencyGraph": {
+    "nodes": [
+      "atom-chunking",
+      "spatial-route",
+      "symbol-anchor",
+      "causal-chain",
+      "contrastive-pair",
+      "timeline-sequence",
+      "hierarchy-chunk",
+      "dual-code",
+      "analogy-bridge",
+      "mechanism-simulation",
+      "retrieval-cue",
+      "interleaved-retrieval",
+      "semantic-boundary"
+    ],
+    "edges": [
+      {
+        "from": "atom-chunking",
+        "to": "spatial-route"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "symbol-anchor"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "causal-chain"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "contrastive-pair"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "timeline-sequence"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "hierarchy-chunk"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "dual-code"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "analogy-bridge"
+      },
+      {
+        "from": "causal-chain",
+        "to": "mechanism-simulation"
+      },
+      {
+        "from": "atom-chunking",
+        "to": "retrieval-cue"
+      },
+      {
+        "from": "retrieval-cue",
+        "to": "interleaved-retrieval"
+      },
+      {
+        "from": "contrastive-pair",
+        "to": "interleaved-retrieval"
+      },
+      {
+        "from": "contrastive-pair",
+        "to": "semantic-boundary"
+      }
+    ],
+    "topologicalOrder": [
+      "atom-chunking",
+      "analogy-bridge",
+      "causal-chain",
+      "contrastive-pair",
+      "dual-code",
+      "hierarchy-chunk",
+      "mechanism-simulation",
+      "retrieval-cue",
+      "interleaved-retrieval",
+      "semantic-boundary",
+      "spatial-route",
+      "symbol-anchor",
+      "timeline-sequence"
+    ],
+    "capabilities": [
+      "atomic-structure",
+      "causal-structure",
+      "contrast-structure",
+      "cross-domain-mapping",
+      "dual-representation",
+      "hierarchical-structure",
+      "interleaved-practice",
+      "mechanism-model",
+      "retrieval-cue",
+      "semantic-boundary",
+      "spatial-anchor",
+      "symbol-mapping",
+      "temporal-structure"
+    ],
+    "valid": true,
+    "errors": []
+  },
+  "selection": {
+    "genomeId": "default-transfer-v07",
+    "domain": "digital_logic",
+    "activeGenes": [
+      {
+        "geneId": "atom-chunking",
+        "activation": 1,
+        "costUnits": 1,
+        "reason": "mandatory knowledge atomization root"
+      },
+      {
+        "geneId": "causal-chain",
+        "activation": 0.7152826666666666,
+        "costUnits": 3,
+        "reason": "dependency of mechanism-simulation"
+      },
+      {
+        "geneId": "hierarchy-chunk",
+        "activation": 0.6281875000000002,
+        "costUnits": 2,
+        "reason": "feature-affinity transfer match"
+      },
+      {
+        "geneId": "mechanism-simulation",
+        "activation": 0.7187581395348837,
+        "costUnits": 4,
+        "reason": "feature-affinity transfer match"
+      },
+      {
+        "geneId": "retrieval-cue",
+        "activation": 0.42057058823529414,
+        "costUnits": 2,
+        "reason": "feature-affinity transfer match"
+      },
+      {
+        "geneId": "symbol-anchor",
+        "activation": 0.7928892307692309,
+        "costUnits": 3,
+        "reason": "feature-affinity transfer match"
+      },
+      {
+        "geneId": "timeline-sequence",
+        "activation": 0.3049541984732825,
+        "costUnits": 2,
+        "reason": "feature-affinity transfer match"
+      }
+    ],
+    "totalCostUnits": 17,
+    "budgetUnits": 18,
+    "budgetRespected": true,
+    "dependencyGraph": {
+      "nodes": [
+        "atom-chunking",
+        "causal-chain",
+        "hierarchy-chunk",
+        "mechanism-simulation",
+        "retrieval-cue",
+        "symbol-anchor",
+        "timeline-sequence"
+      ],
+      "edges": [
+        {
+          "from": "atom-chunking",
+          "to": "causal-chain"
+        },
+        {
+          "from": "atom-chunking",
+          "to": "hierarchy-chunk"
+        },
+        {
+          "from": "causal-chain",
+          "to": "mechanism-simulation"
+        },
+        {
+          "from": "atom-chunking",
+          "to": "retrieval-cue"
+        },
+        {
+          "from": "atom-chunking",
+          "to": "symbol-anchor"
+        },
+        {
+          "from": "atom-chunking",
+          "to": "timeline-sequence"
+        }
+      ],
+      "topologicalOrder": [
+        "atom-chunking",
+        "causal-chain",
+        "hierarchy-chunk",
+        "mechanism-simulation",
+        "retrieval-cue",
+        "symbol-anchor",
+        "timeline-sequence"
+      ],
+      "capabilities": [
+        "atomic-structure",
+        "causal-structure",
+        "hierarchical-structure",
+        "mechanism-model",
+        "retrieval-cue",
+        "symbol-mapping",
+        "temporal-structure"
+      ],
+      "valid": true,
+      "errors": []
+    },
+    "expectedFeatureFit": 0.5967737206132263
+  }
+}

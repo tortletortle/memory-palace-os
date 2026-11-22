@@ -1,0 +1,96 @@
+
+> memory-palace-mnemonic-engine@0.5.0 robustness:v05
+> node --experimental-strip-types eval/v05-robustness.ts
+
+(node:1135) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "scenarios": [
+    {
+      "scenario": "stable_exponential",
+      "n": 32,
+      "bmaMAE": 0.13497684481753802,
+      "exponentialMAE": 0.2309370010758504,
+      "meanPrediction": 0.5576282686161338,
+      "meanObserved": 0.59375
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "n": 32,
+      "bmaMAE": 0.13383707644018844,
+      "exponentialMAE": 0.2171200724275754,
+      "meanPrediction": 0.5542512450002052,
+      "meanObserved": 0.5812500000000002
+    },
+    {
+      "scenario": "two_phase",
+      "n": 32,
+      "bmaMAE": 0.1023676300447096,
+      "exponentialMAE": 0.16087007242757537,
+      "meanPrediction": 0.5508723902861838,
+      "meanObserved": 0.525
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "n": 32,
+      "bmaMAE": 0.1851880451322062,
+      "exponentialMAE": 0.11645078594482508,
+      "meanPrediction": 0.5496402755330714,
+      "meanObserved": 0.39375000000000004
+    },
+    {
+      "scenario": "visual_dominant",
+      "n": 32,
+      "bmaMAE": 0.14587216838248135,
+      "exponentialMAE": 0.26399507242757536,
+      "meanPrediction": 0.5591466817988032,
+      "meanObserved": 0.6281250000000002
+    },
+    {
+      "scenario": "semantic_dominant",
+      "n": 32,
+      "bmaMAE": 0.13999499120422187,
+      "exponentialMAE": 0.12352657188965015,
+      "meanPrediction": 0.5460033967093728,
+      "meanObserved": 0.44062500000000004
+    }
+  ],
+  "changePoint": [
+    {
+      "scenario": "stable_exponential",
+      "n": 32,
+      "detectionRate": 0.0625,
+      "meanDetectionDay": 23.5
+    },
+    {
+      "scenario": "stable_powerlaw",
+      "n": 32,
+      "detectionRate": 0,
+      "meanDetectionDay": null
+    },
+    {
+      "scenario": "two_phase",
+      "n": 32,
+      "detectionRate": 0.03125,
+      "meanDetectionDay": 33
+    },
+    {
+      "scenario": "abrupt_decay_shift",
+      "n": 32,
+      "detectionRate": 0.1875,
+      "meanDetectionDay": 28
+    },
+    {
+      "scenario": "visual_dominant",
+      "n": 32,
+      "detectionRate": 0.03125,
+      "meanDetectionDay": 42
+    },
+    {
+      "scenario": "semantic_dominant",
+      "n": 32,
+      "detectionRate": 0.03125,
+      "meanDetectionDay": 20
+    }
+  ]
+}

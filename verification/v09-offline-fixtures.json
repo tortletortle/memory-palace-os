@@ -1,0 +1,134 @@
+{
+  "kind": "small_handwritten_fixture_smoke_benchmark",
+  "count": 12,
+  "summary": [
+    {
+      "domain": "probability",
+      "n": 2,
+      "domainAccuracy": 1,
+      "sourceValidation": 1,
+      "meanConcepts": 1.5
+    },
+    {
+      "domain": "programming",
+      "n": 2,
+      "domainAccuracy": 1,
+      "sourceValidation": 1,
+      "meanConcepts": 1
+    },
+    {
+      "domain": "history",
+      "n": 2,
+      "domainAccuracy": 1,
+      "sourceValidation": 1,
+      "meanConcepts": 1
+    },
+    {
+      "domain": "digital_logic",
+      "n": 2,
+      "domainAccuracy": 1,
+      "sourceValidation": 1,
+      "meanConcepts": 1
+    },
+    {
+      "domain": "language",
+      "n": 2,
+      "domainAccuracy": 1,
+      "sourceValidation": 1,
+      "meanConcepts": 1
+    },
+    {
+      "domain": "biology",
+      "n": 2,
+      "domainAccuracy": 1,
+      "sourceValidation": 1,
+      "meanConcepts": 1
+    }
+  ],
+  "results": [
+    {
+      "expected": "probability",
+      "actual": "probability",
+      "correct": true,
+      "concepts": 2,
+      "evidenceValid": true
+    },
+    {
+      "expected": "probability",
+      "actual": "probability",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "programming",
+      "actual": "programming",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "programming",
+      "actual": "programming",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "history",
+      "actual": "history",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "history",
+      "actual": "history",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "digital_logic",
+      "actual": "digital_logic",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "digital_logic",
+      "actual": "digital_logic",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "language",
+      "actual": "language",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "language",
+      "actual": "language",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "biology",
+      "actual": "biology",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    },
+    {
+      "expected": "biology",
+      "actual": "biology",
+      "correct": true,
+      "concepts": 1,
+      "evidenceValid": true
+    }
+  ]
+}

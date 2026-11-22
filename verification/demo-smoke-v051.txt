@@ -1,0 +1,424 @@
+
+> memory-palace-mnemonic-engine@0.5.1 demo
+> node --experimental-strip-types examples/demo.ts
+
+{
+  "knowledge": {
+    "id": "ea5a278c-7483-40ae-a072-09fe6d9c3c18",
+    "source": "P(X=k)=\\frac{\\lambda^k e^{-\\lambda}}{k!}",
+    "title": "泊松分布（公式）",
+    "atoms": [
+      {
+        "id": "a1",
+        "text": "\\lambda^k",
+        "evidence": "\\lambda^k",
+        "role": "numerator"
+      },
+      {
+        "id": "a2",
+        "text": "e^{-\\lambda}",
+        "evidence": "e^{-\\lambda}",
+        "role": "numerator"
+      },
+      {
+        "id": "a3",
+        "text": "k!",
+        "evidence": "k!",
+        "role": "denominator"
+      }
+    ],
+    "status": "verified_fixture",
+    "revision": "3586657d3a2e6b84ad84a32fb01325271f99841cd626e63ef4dfe64562b1999c",
+    "math": {
+      "status": "parsed",
+      "ast": {
+        "kind": "eq",
+        "left": {
+          "kind": "probability",
+          "arg": {
+            "kind": "group",
+            "arg": {
+              "kind": "eq",
+              "left": {
+                "kind": "symbol",
+                "value": "X",
+                "start": 2,
+                "end": 3
+              },
+              "right": {
+                "kind": "symbol",
+                "value": "k",
+                "start": 4,
+                "end": 5
+              },
+              "start": 2,
+              "end": 5
+            },
+            "start": 1,
+            "end": 6
+          },
+          "start": 0,
+          "end": 6
+        },
+        "right": {
+          "kind": "div",
+          "left": {
+            "kind": "group",
+            "arg": {
+              "kind": "mul",
+              "left": {
+                "kind": "pow",
+                "left": {
+                  "kind": "symbol",
+                  "value": "lambda",
+                  "start": 13,
+                  "end": 20
+                },
+                "right": {
+                  "kind": "symbol",
+                  "value": "k",
+                  "start": 21,
+                  "end": 22
+                },
+                "start": 13,
+                "end": 22
+              },
+              "right": {
+                "kind": "pow",
+                "left": {
+                  "kind": "symbol",
+                  "value": "e",
+                  "start": 23,
+                  "end": 24
+                },
+                "right": {
+                  "kind": "group",
+                  "arg": {
+                    "kind": "neg",
+                    "arg": {
+                      "kind": "symbol",
+                      "value": "lambda",
+                      "start": 27,
+                      "end": 34
+                    },
+                    "start": 26,
+                    "end": 34
+                  },
+                  "start": 25,
+                  "end": 35
+                },
+                "start": 23,
+                "end": 35
+              },
+              "start": 13,
+              "end": 35
+            },
+            "start": 12,
+            "end": 36
+          },
+          "right": {
+            "kind": "group",
+            "arg": {
+              "kind": "factorial",
+              "arg": {
+                "kind": "symbol",
+                "value": "k",
+                "start": 37,
+                "end": 38
+              },
+              "start": 37,
+              "end": 39
+            },
+            "start": 36,
+            "end": 40
+          },
+          "start": 7,
+          "end": 40
+        },
+        "start": 0,
+        "end": 40
+      }
+    }
+  },
+  "mathChecks": {
+    "correct": {
+      "status": "equivalent",
+      "reason": "Exact identity on the shared domain of the supported expression semantics",
+      "method": "exact-rational-polynomial",
+      "guards": {
+        "left": [
+          "defined:[\"factorial\",[\"symbol\",\"k\"]]",
+          "defined:[\"pow\",[\"symbol\",\"lambda\"],[\"symbol\",\"k\"]]"
+        ],
+        "right": [
+          "defined:[\"factorial\",[\"symbol\",\"k\"]]",
+          "defined:[\"pow\",[\"symbol\",\"lambda\"],[\"symbol\",\"k\"]]"
+        ]
+      }
+    },
+    "negativeExponentMutation": {
+      "status": "not_equivalent",
+      "reason": "Exact integer substitution separates the expressions (rational arithmetic or transcendence of e)",
+      "method": "exact-counterexample",
+      "guards": {
+        "left": [
+          "defined:[\"factorial\",[\"symbol\",\"k\"]]",
+          "defined:[\"pow\",[\"symbol\",\"lambda\"],[\"symbol\",\"k\"]]"
+        ],
+        "right": [
+          "defined:[\"factorial\",[\"symbol\",\"k\"]]",
+          "defined:[\"pow\",[\"symbol\",\"lambda\"],[\"symbol\",\"k\"]]"
+        ]
+      },
+      "witness": {
+        "k": 1,
+        "lambda": 1
+      }
+    }
+  },
+  "candidates": [
+    {
+      "title": "分式机械塔",
+      "report": {
+        "passed": true,
+        "issues": [],
+        "coverage": 1,
+        "semanticStatus": "human_review_required",
+        "conflicts": [],
+        "score": 100,
+        "rank": 1
+      }
+    },
+    {
+      "title": "计数工厂",
+      "report": {
+        "passed": true,
+        "issues": [],
+        "coverage": 1,
+        "semanticStatus": "human_review_required",
+        "conflicts": [],
+        "score": 100,
+        "rank": 2
+      }
+    },
+    {
+      "title": "公式装配台",
+      "report": {
+        "passed": true,
+        "issues": [],
+        "coverage": 1,
+        "semanticStatus": "human_review_required",
+        "conflicts": [],
+        "score": 100,
+        "rank": 3
+      }
+    }
+  ],
+  "publishedScene": {
+    "version": 1,
+    "id": "10faa55eb2c109432ed6f70f",
+    "knowledgeId": "ea5a278c-7483-40ae-a072-09fe6d9c3c18",
+    "knowledgeRevision": "3586657d3a2e6b84ad84a32fb01325271f99841cd626e63ef4dfe64562b1999c",
+    "anchor": {
+      "id": "desk",
+      "position": [
+        0,
+        2,
+        0
+      ]
+    },
+    "catalogVersion": "1",
+    "strategy": "symbolic",
+    "objects": [
+      {
+        "id": "obj-a1",
+        "atomId": "a1",
+        "assetId": "power-tower",
+        "shape": "cylinder",
+        "color": "#D1A14C",
+        "position": [
+          -0.675,
+          3.1,
+          0
+        ],
+        "scale": [
+          0.65,
+          0.65,
+          0.65
+        ],
+        "animation": "pulse",
+        "cue": "一座逐层叠起的塔",
+        "explanation": "塔的重复层级提醒自己恢复 λ 的指数 k。",
+        "answer": "\\lambda^k"
+      },
+      {
+        "id": "obj-a2",
+        "atomId": "a2",
+        "assetId": "minus-sign",
+        "shape": "box",
+        "color": "#E46C6C",
+        "position": [
+          0.675,
+          3.1,
+          0
+        ],
+        "scale": [
+          0.65,
+          0.65,
+          0.65
+        ],
+        "animation": "pulse",
+        "cue": "向后移动的红色负号装置",
+        "explanation": "反向标记提醒指数包含负号，底数与指数以原式为准。",
+        "answer": "e^{-\\lambda}"
+      },
+      {
+        "id": "obj-a3",
+        "atomId": "a3",
+        "assetId": "factorial-queue",
+        "shape": "sphere",
+        "color": "#9877D1",
+        "position": [
+          0,
+          0.8999999999999999,
+          0
+        ],
+        "scale": [
+          0.65,
+          0.65,
+          0.65
+        ],
+        "animation": "pulse",
+        "cue": "分数线下的一列排列球",
+        "explanation": "排列队列提醒 k 的阶乘在分母。",
+        "answer": "k!"
+      }
+    ],
+    "fractionBar": {
+      "position": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        2.7,
+        0.06,
+        0.08
+      ]
+    }
+  },
+  "recall": {
+    "id": "5e131e3c-7109-42ad-a4d2-b99f26f4c2de",
+    "jobId": "24191c54-f293-44d7-9189-06dbdda9ef3c",
+    "knowledgeId": "ea5a278c-7483-40ae-a072-09fe6d9c3c18",
+    "scene": {
+      "version": 1,
+      "id": "10faa55eb2c109432ed6f70f",
+      "knowledgeId": "ea5a278c-7483-40ae-a072-09fe6d9c3c18",
+      "knowledgeRevision": "3586657d3a2e6b84ad84a32fb01325271f99841cd626e63ef4dfe64562b1999c",
+      "anchor": {
+        "id": "desk",
+        "position": [
+          0,
+          2,
+          0
+        ]
+      },
+      "catalogVersion": "1",
+      "strategy": "symbolic",
+      "objects": [
+        {
+          "id": "obj-a1",
+          "atomId": "a1",
+          "assetId": "power-tower",
+          "shape": "cylinder",
+          "color": "#D1A14C",
+          "position": [
+            -0.675,
+            3.1,
+            0
+          ],
+          "scale": [
+            0.65,
+            0.65,
+            0.65
+          ],
+          "animation": "pulse"
+        },
+        {
+          "id": "obj-a2",
+          "atomId": "a2",
+          "assetId": "minus-sign",
+          "shape": "box",
+          "color": "#E46C6C",
+          "position": [
+            0.675,
+            3.1,
+            0
+          ],
+          "scale": [
+            0.65,
+            0.65,
+            0.65
+          ],
+          "animation": "pulse"
+        },
+        {
+          "id": "obj-a3",
+          "atomId": "a3",
+          "assetId": "factorial-queue",
+          "shape": "sphere",
+          "color": "#9877D1",
+          "position": [
+            0,
+            0.8999999999999999,
+            0
+          ],
+          "scale": [
+            0.65,
+            0.65,
+            0.65
+          ],
+          "animation": "pulse"
+        }
+      ],
+      "fractionBar": {
+        "position": [
+          0,
+          2,
+          0
+        ],
+        "scale": [
+          2.7,
+          0.06,
+          0.08
+        ]
+      }
+    },
+    "createdAt": "2026-11-18T11:42:53.468Z"
+  },
+  "feedback": {
+    "publicationId": "5e131e3c-7109-42ad-a4d2-b99f26f4c2de",
+    "reviewCount": 2,
+    "atoms": [
+      {
+        "atomId": "a1",
+        "misses": 0,
+        "uncertain": 0,
+        "suggestion": "继续收集回忆证据。"
+      },
+      {
+        "atomId": "a2",
+        "misses": 2,
+        "uncertain": 0,
+        "suggestion": "核对原知识理解；若理解正确，再考虑强化这一视觉线索。保留位置和旧版本。"
+      },
+      {
+        "atomId": "a3",
+        "misses": 0,
+        "uncertain": 0,
+        "suggestion": "继续收集回忆证据。"
+      }
+    ]
+  }
+}

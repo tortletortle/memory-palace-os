@@ -1,0 +1,1 @@
+Chromium/Playwright: navigation to local server rejected with net::ERR_BLOCKED_BY_ADMINISTRATOR. Actual browser UI and WebGL not verified.

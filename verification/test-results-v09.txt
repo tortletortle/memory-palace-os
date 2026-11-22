@@ -1,0 +1,1 @@
+全量自动化测试：110/110通过\n命令：node --experimental-strip-types --test test/*.test.ts\nHTTP离线端到端：通过\n远程模型适配器：模拟HTTP响应测试通过；未进行真实供应商联网调用\n完整TypeScript typecheck：未通过（环境缺少 @types/node）\n
