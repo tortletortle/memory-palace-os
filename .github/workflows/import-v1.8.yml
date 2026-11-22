@@ -10,15 +10,8 @@ permissions:
 
 jobs:
   import:
-    if: github.ref == 'refs/heads/import/v1.8.0'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the temporary import branch
-        uses: actions/checkout@v4
-        with:
-          ref: import/v1.8.0
-          persist-credentials: false
-
       - name: Verify and import the exact V1.8.0 tree
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -26,24 +19,24 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          bundle="$GITHUB_WORKSPACE/.github/import/memory-palace-os-v1.8.0.bundle"
-          test -s "$bundle"
+          remote="https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git"
           tmp="$(mktemp -d)"
-          git -C "$tmp" init -q
-          git -C "$tmp" fetch --quiet "$bundle" refs/heads/main:refs/remotes/bundle/main
+          git clone --quiet --single-branch --branch import/v1.8.0 "$remote" "$tmp/work"
+          bundle="$tmp/work/.github/import/memory-palace-os-v1.8.0.bundle"
+          test -s "$bundle"
 
-          original_commit="$(git -C "$tmp" rev-parse refs/remotes/bundle/main)"
-          original_tree="$(git -C "$tmp" rev-parse "${original_commit}^{tree}")"
+          git -C "$tmp/work" fetch --quiet "$bundle" refs/heads/main:refs/remotes/bundle/main
+          original_commit="$(git -C "$tmp/work" rev-parse refs/remotes/bundle/main)"
+          original_tree="$(git -C "$tmp/work" rev-parse "${original_commit}^{tree}")"
           test "$original_tree" = "8281bcf5172cc1aacfba083580979ed89f2a5c27"
-          original_count="$(git -C "$tmp" ls-tree -r --name-only "$original_commit" | wc -l | tr -d ' ')"
+          original_count="$(git -C "$tmp/work" ls-tree -r --name-only "$original_commit" | wc -l | tr -d ' ')"
           test "$original_count" = "217"
 
-          remote="https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git"
-          git -C "$tmp" fetch --quiet "$remote" refs/heads/main:refs/remotes/origin/main
-          current_commit="$(git -C "$tmp" rev-parse refs/remotes/origin/main)"
-          current_tree="$(git -C "$tmp" rev-parse "${current_commit}^{tree}")"
+          git -C "$tmp/work" fetch --quiet origin refs/heads/main:refs/remotes/origin/main
+          current_commit="$(git -C "$tmp/work" rev-parse refs/remotes/origin/main)"
+          current_tree="$(git -C "$tmp/work" rev-parse "${current_commit}^{tree}")"
 
-          python3 - "$tmp" "$current_commit" "$original_commit" <<'PY'
+          python3 - "$tmp/work" "$current_commit" "$original_commit" <<'PY'
           import subprocess, sys
           repo, current, original = sys.argv[1:]
           def entries(ref):
@@ -73,18 +66,18 @@ jobs:
           export GIT_AUTHOR_EMAIL="41898282+github-actions[bot]@users.noreply.github.com"
           export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
           export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-          new_commit="$(printf '%s\\n' 'Import complete verified Memory Palace OS V1.8.0 source tree' | git -C "$tmp" commit-tree "$original_tree" -p "$current_commit")"
-          git -C "$tmp" push "$remote" "$new_commit:refs/heads/main"
+          new_commit="$(printf '%s\\n' 'Import complete verified Memory Palace OS V1.8.0 source tree' | git -C "$tmp/work" commit-tree "$original_tree" -p "$current_commit")"
+          git -C "$tmp/work" push origin "$new_commit:refs/heads/main"
 
-          git -C "$tmp" fetch --quiet "$remote" refs/heads/main:refs/remotes/origin/main
-          verified_tree="$(git -C "$tmp" rev-parse refs/remotes/origin/main^{tree})"
-          verified_count="$(git -C "$tmp" ls-tree -r --name-only refs/remotes/origin/main | wc -l | tr -d ' ')"
+          git -C "$tmp/work" fetch --quiet origin refs/heads/main:refs/remotes/origin/main
+          verified_tree="$(git -C "$tmp/work" rev-parse refs/remotes/origin/main^{tree})"
+          verified_count="$(git -C "$tmp/work" ls-tree -r --name-only refs/remotes/origin/main | wc -l | tr -d ' ')"
           test "$verified_tree" = "$original_tree"
           test "$verified_count" = "217"
           echo "SUCCESS: $verified_count/217 source files verified; tree $verified_tree; commit $new_commit"
 
-          if ! git ls-remote --exit-code --tags "$remote" refs/tags/v1.8.0 >/dev/null 2>&1; then
-            git -C "$tmp" push "$remote" "$new_commit:refs/tags/v1.8.0"
+          if ! git ls-remote --exit-code --tags origin refs/tags/v1.8.0 >/dev/null 2>&1; then
+            git -C "$tmp/work" push origin "$new_commit:refs/tags/v1.8.0"
             echo "Created tag v1.8.0."
           else
             echo "Tag v1.8.0 already exists; left unchanged."
