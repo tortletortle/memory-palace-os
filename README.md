@@ -1,41 +1,18 @@
-# V1.5.0 — MMG review planner
+# Memory Palace OS / Mnemonic Engine v1.8.0
+
+将教材与学习资料转化为可探索的 3D 记忆宫殿，并结合主动回忆、纵向学习证据、遗忘状态估计和交互式知识实验。当前 V1.8.0 增加 Knowledge-to-Simulation Compiler：只编译原文中明确出现的代数等式与数值约束，生成有界、安全、可追溯的交互仿真；它不是通用 AI 物理建模器。
+
+**当前验收基线：** `npm test` 162/162 通过；`npm run typecheck` 通过。真实浏览器 WebGL 端到端验收和真人长期学习效果实验仍未完成，不能把模拟结果视为真人效果证据。
+
+## V1.5.0 — MMG review planner
 
 新增实验策略 `marginal`：七天边际收益 + 覆盖保护。默认 fixed 不变。`npm run review:experiment:v15` 可复现实验，详见 `verification/v15-report.md`；测量仅为空间定位，不代表独立知识回忆。
 
-# Memory Palace OS / Mnemonic Engine v1.4.0
+## Project overview
 
 持续迭代的 TypeScript 记忆系统：教材理解 → 知识图谱 → 3D 空间宫殿 → 主动回忆 → 证据记录 → 双记忆状态估计与人工复核建议。保留旧版知识编译、认知策略、技能迁移和本地离线能力。
 
-
-## V1.4：预算约束复习规划器
-
-- `GET /api/palaces/:id/review-plan?budgetSeconds=300&policy=fixed`：返回只读的复习队列。`policy=adaptive` 为实验策略；默认固定间隔优先。
-- 页面「记忆状态」内选择预算与策略，按计划进行隐藏标签的空间定位训练。预算是预计时长，不是强制计时器。
-- `npm run review:experiment`：运行 3 个合成环境 × 24 随机种子的配对实验（相同训练次数、相同预设时间成本）。
-- 风险优先策略在三个合成环境均退化；不默认部署。空间定位不是脱离宫殿的自由知识回忆。
-- 详见 `verification/v14-report.md`。
-
-## V1.3：纵向学习测量与证据导出
-
-- 为知识锚点增加显式 `inspector` 浏览暴露事件，记录卡片查看的开始时间和停留时长；页面隐藏、切换锚点和离开页面时结束计时。
-- 为回忆任务记录客户端任务开始时间；信心评分在作答前填写，避免看到反馈后再回填。
-- `/api/palaces/:id/learning` 现在按概念报告首次仪器化接触时间、浏览次数、总/中位停留时长、回忆响应时间，以及描述性信心 Brier 分数。
-- `/api/palaces/:id/learning/export` 导出回忆与浏览事件 CSV；事件 ID 幂等，服务端限制事件时间窗和数据规模。
-- V1.2 历史记录仍可读取；没有显式时间戳的旧记录会标记为旧版代理时间，不伪装成真实首次接触时间。
-- 浏览停留时长、响应时间和信心校准仅作描述性数据，不直接提升遗忘模型预测，也不自动修改空间布局。
-- `verification/V13-PROSPECTIVE-EXPERIMENT.md` 给出后续真人随机对照实验方案。当前没有真人效果实验结果。
-
-### 新增 API
-
-| 方法 | 路径 | 作用 |
-|---|---|---|
-| POST | `/api/palaces/:id/exposures` | 保存一次知识卡片浏览事件 |
-| GET | `/api/palaces/:id/learning` | 返回带首次接触来源、停留时长和信心校准的学习报告 |
-| GET | `/api/palaces/:id/learning/export` | 下载事件级 CSV 数据 |
-
-信心 1–5 暂映射为 0.1、0.3、0.5、0.7、0.9，仅用于描述性 Brier 分数；样本不足时标记 `sparse`，不参与预测。浏览时长不是注意力或学习成功的直接测量。CSV 导出会对可能被电子表格解释为公式的单元格进行转义。
-
-## V0.4：贝叶斯双记忆与鲁棒性验证
+# V0.4：贝叶斯双记忆与鲁棒性验证
 
 - `src/bayesian.ts`：8×8 (K,V) 联合半衰期后验；两种独立暴露时钟；联合观测似然；替换成本离散后验（知识成本及带提示测试成本分开估计）；基于明确混淆证据、干扰降幅、收益概率与下行风险的决策。
 - `src/adaptive-service.ts`：复用原始场景验证、候选编译和人工确认边界；新版分析只读，不自动发布或迁移场景。V0.3 `/adaptive` 接口不变。
