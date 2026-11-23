@@ -167,6 +167,14 @@ function graph(object:PalaceObject){
   ordered.push(next);done.add(next.output);
  }
  for(const c of constraints)if(!done.has(c.variable))fail('约束引用未声明变量');
+ for(const id of done){
+  let lo=-Infinity,hi=Infinity,strictLo=false,strictHi=false;
+  for(const c of constraints.filter(x=>x.variable===id)){
+   if(c.op.startsWith('>')){if(c.value>lo){lo=c.value;strictLo=c.op==='>';}else if(c.value===lo)strictLo ||= c.op==='>';}
+   else{if(c.value<hi){hi=c.value;strictHi=c.op==='<';}else if(c.value===hi)strictHi ||= c.op==='<';}
+  }
+  if(lo>hi||lo===hi&&(strictLo||strictHi))fail('显式约束互相矛盾：'+id);
+ }
  const variableIds=[...done].sort();
  for(const variable of declarations.keys())if(!done.has(variable))fail('单位声明引用未定义变量：'+variable);
  const missing=variableIds.filter(id=>!declarations.has(id));
