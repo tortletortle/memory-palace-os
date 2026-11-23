@@ -1,0 +1,29 @@
+name: Node CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - main
+      - "feature/v1.9-*"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+      - name: Install development dependencies
+        run: npm install --no-package-lock --ignore-scripts
+      - name: Run test suite
+        run: npm test
+      - name: TypeScript type check
+        run: npm run typecheck
+      - name: Check simulation front end syntax
+        run: node --check public/simulation.js
