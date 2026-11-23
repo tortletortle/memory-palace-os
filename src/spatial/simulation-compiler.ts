@@ -53,6 +53,7 @@ function formatDimension(a:Dimension):string{
  return parts.length?parts.join('·'):'1';
 }
 function parseUnitExpression(source:string):Dimension{
+ if(source.length>64)fail('单位表达式过长');
  const s=normalize(source).replace(/\s+/g,'');
  if(!s)fail('单位声明不能为空');
  let i=0,sign=1,expectFactor=true,result=dim();

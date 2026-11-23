@@ -25,6 +25,14 @@ test('SI base and derived units verify a kinetic-energy equation',()=>{
  assert.deepEqual(runSimulation(o,c.revision,{m:2,v:3}).outputs,[{id:'E',value:9,unit:'J'}]);
 });
 
+test('multi-equation kinematics checks every term and keeps the explicit time bound',()=>{
+ const {o,c}=compiled('unit(v0)=m/s；unit(a)=m/s^2；unit(t)=s；unit(v)=m/s；unit(s)=m；v=v0+a*t；s=v0*t+0.5*a*t^2；t>=0。');
+ assert.equal(c.unitAnalysis.status,'verified');
+ assert.deepEqual(runSimulation(o,c.revision,{v0:1,a:2,t:3}).outputs,[
+  {id:'v',value:7,unit:'m/s'},{id:'s',value:12,unit:'m'}
+ ]);
+});
+
 test('derived electrical units and topological ordering are dimensionally consistent',()=>{
  const {o,c}=compiled('unit(I)=A；unit(R)=ohm；unit(U)=V；unit(P)=W；P=U*I；U=I*R。');
  assert.equal(c.unitAnalysis.status,'verified');
@@ -87,7 +95,8 @@ test('unknown, duplicate, unsupported and malformed unit declarations abstain',(
   'unit(x)=furlong；y=x。',
   'unit(x)=kg m/s；y=x。',
   'unit(x)=m^9；y=x。',
-  'unit(x)=m/；y=x。'
+  'unit(x)=m/；y=x。',
+  'unit(x)='+'m*'.repeat(40)+'m；y=x。'
  ]){
   assert.equal(compileSimulation(object(source)).supported,false,source);
  }
