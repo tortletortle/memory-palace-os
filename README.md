@@ -4,6 +4,12 @@
 
 **当前验收基线：** `npm test` 162/162 通过；`npm run typecheck` 通过。真实浏览器 WebGL 端到端验收和真人长期学习效果实验仍未完成，不能把模拟结果视为真人效果证据。
 
+## V1.9.0 development — unit-aware simulation
+
+当前开发分支为 `feature/v1.9-unit-aware-compiler`。公式编译器新增显式单位声明，例如 `unit(m)=kg；unit(v)=m/s；unit(E)=J；E=0.5*m*v^2`，在变量单位完整时执行 SI 量纲传播与一致性检查。只做量纲一致性，不做单位换算，也不验证单位标注或原文物理假设的真实性。
+
+新增单元测试已纳入 `npm test`，但此开发分支尚未完成实际运行验收；不要将其视为已发布的 V1.9.0 稳定版。
+
 ## V1.5.0 — MMG review planner
 
 新增实验策略 `marginal`：七天边际收益 + 覆盖保护。默认 fixed 不变。`npm run review:experiment:v15` 可复现实验，详见 `verification/v15-report.md`；测量仅为空间定位，不代表独立知识回忆。

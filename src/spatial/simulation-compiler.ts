@@ -175,7 +175,7 @@ function graph(object:PalaceObject){
  }else if(missing.length){
   unitAnalysis={status:'incomplete',declared:[...declarations].map(([variable,value])=>({variable,unit:value.unit,dimension:formatDimension(value.dimension)})),missing,message:'单位声明不完整，缺少：'+missing.join('、')+'；不执行量纲一致性认证。'};
  }else{
-  const dimensions=new Map([...declarations].map(([id,value])=>[id,value.dimension]));
+  const dimensions=new Map<string,Dimension>([...declarations].map(([id,value])=>[id,value.dimension] as [string,Dimension]));
   for(const equation of ordered){
    const declared=declarations.get(equation.output)!;
    const literal=numericLiteral(equation.expr);
