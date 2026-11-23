@@ -21,7 +21,7 @@ A reconstructed integration worktree based on the locally available V1.8.0 Git b
 - HTTP integration tests exercised the state-machine and paired-comparison routes against a real local Node HTTP server and verified the store remained unchanged.
 - Static DOM contract: all frontend selectors resolve; the compare controls exist; no `innerHTML` or `eval` sink is used.
 
-This was a reconstructed local worktree rather than a fresh clone at the exact GitHub PR head SHA. Therefore it is strong local integration evidence, but exact remote-branch checkout parity and GitHub Actions CI remain unverified. Chromium/WebGL visual acceptance also remains pending.
+This was a reconstructed local worktree rather than a fresh clone at the exact GitHub PR head SHA. Therefore it is strong local integration evidence, but exact remote-branch checkout parity and GitHub Actions CI remain unverified. Headless Chromium was attempted against the local demo page but timed out with D-Bus connection and zygote termination errors; no screenshot or interactive browser evidence was produced. Chromium/WebGL visual acceptance therefore remains pending.
 
 ## Scientific boundary
 
