@@ -9,7 +9,6 @@ type BranchResult=
 
 function fail(message:string):never{throw new EngineError('FSM_COMPARE_INVALID',message,422);}
 function record(value:unknown):value is Record<string,unknown>{return !!value&&typeof value==='object'&&!Array.isArray(value);}
-function errorStep(message:string,fallback:number){const match=message.match(/第\s*(\d+)\s*步/);return match?Number(match[1]):fallback;}
 function execute(object:PalaceObject,revision:string,steps:unknown):BranchResult{
  try{return {ok:true,...runStateMachine(object,revision,steps)};}
  catch(error){
@@ -57,7 +56,6 @@ export function compareStateMachineRuns(object:PalaceObject,revision:unknown,bas
  const baseSteps=baselineRun.ok?baselineRun.steps:[];
  const interventionSteps=interventionRun.ok?interventionRun.steps:[];
  let firstObservedDifferenceStep:number|null=null;
- const completed=(result:BranchResult)=>result.ok?result.steps.length:result.completedSteps;
  if(baselineRun.ok&&interventionRun.ok){
   const count=Math.max(baseSteps.length,interventionSteps.length);
   for(let i=0;i<count;i++){
