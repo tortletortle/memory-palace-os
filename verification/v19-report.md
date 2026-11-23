@@ -13,16 +13,17 @@
 
 ## Verification plan
 
-The new `test/v19-units.test.ts` covers:
+The new `test/v19-units.test.ts` contains 11 focused cases covering:
 1. kinetic energy with kg, m/s, and J;
-2. electrical resistance, voltage, and power derived units;
-3. explicitly annotated dimensional constants;
-4. addition, multiplication, and trigonometric dimension errors;
-5. square-root dimensions and radian handling;
-6. variable-exponent restrictions;
-7. incomplete and absent declarations;
-8. unknown, duplicate, malformed, and unsupported unit declarations;
-9. revision invalidation when units change.
+2. multi-equation kinematics, dimensional consistency of both terms, and a non-negative time bound;
+3. electrical resistance, voltage, and power derived units;
+4. explicitly annotated dimensional constants;
+5. addition/subtraction and trigonometric dimension errors;
+6. square-root dimensions and radian handling;
+7. variable-exponent restrictions;
+8. incomplete and absent declarations;
+9. unknown, duplicate, malformed, unsupported, overlong, and trailing-operator unit declarations;
+10. revision invalidation when unit declarations change.
 
 **Execution status:** not run. This environment has not executed `npm test` or `npm run typecheck` against the candidate branch. The code is a development candidate, not a verified release.
 
