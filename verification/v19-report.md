@@ -25,7 +25,12 @@ The new `test/v19-units.test.ts` contains 11 focused cases covering:
 9. unknown, duplicate, malformed, unsupported, overlong, and trailing-operator unit declarations;
 10. revision invalidation when unit declarations change.
 
-**Execution status:** not run. This environment has not executed `npm test` or `npm run typecheck` against the candidate branch. The code is a development candidate, not a verified release.
+**Execution status (2026-11-23):**
+- Node.js 22.16.0: `node --experimental-strip-types --test test/*.test.ts` — **173/173 passed**, including 162 inherited tests and all 11 new V1.9 tests.
+- TypeScript 5.8.3: `tsc --noEmit --typeRoots /opt/nvm/versions/node/v22.16.0/lib/node_modules/ts-node/node_modules/@types` — passed.
+- Frontend syntax: `node --check public/simulation.js` — passed.
+- The local test checkout was based on the original V1.8.0 bundle; the tested compiler, test, and UI file contents were checked against the exact Git blob SHAs in this candidate branch.
+- Real browser interaction, responsive visual review, and WebGL rendering remain unverified. This is a tested development candidate, not yet a merged stable release.
 
 ## Known limitations
 
