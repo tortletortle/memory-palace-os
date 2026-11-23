@@ -18,7 +18,7 @@ Tested in Node.js 22.16.0 against the locally available V1.8.0 source snapshot (
 - `node --check public/simulation.js`, `public/app.js`, and `public/state-machine.js`: passed.
 - The locally tested modified source, server, test, and UI files were checked with `git hash-object` against their exact GitHub branch blob SHAs.
 - HTTP integration verifies that `state-machine.html`, `state-machine.js`, and `state-machine.css` are served successfully. Static DOM checks confirm every JavaScript selector has a matching element, the palace entry links exist, and the UI does not use `innerHTML` or `eval`.
-- The nine new state-machine tests include a real local HTTP server integration check and verify that execution does not mutate palace storage.
+- The ten new state-machine tests include a real local HTTP server integration check and verify that execution does not mutate palace storage.
 
 The npm registry was unreachable from this environment (DNS `EAI_AGAIN`), so project devDependencies were not freshly installed. The type check used the preinstalled TypeScript and Node type definitions. The local snapshot is the V1.8.0 bundle, not a fresh clone of the current GitHub main commit; exact current-main regression parity therefore remains a separate verification item.
 
