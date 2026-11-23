@@ -4,13 +4,13 @@
 
 **当前验收基线：** `npm test` 162/162 通过；`npm run typecheck` 通过。真实浏览器 WebGL 端到端验收和真人长期学习效果实验仍未完成，不能把模拟结果视为真人效果证据。
 
-## V1.9 development — causal state machine
-
-独立开发分支 `feature/v1.9-causal-state-machine` 增加证据约束的离散事件状态机：显式状态、事件、守卫条件、不变量和可重放的状态转移轨迹。它不从相关性推断因果，不是连续时间物理求解器；输入单位目前仅作为标签。接口和限制见 `docs/v1.9-causal-state-machine.md`，验收状态见 `verification/v19-causal-report.md`。本地 Node 22.16.0 回归测试 172/172 通过，TypeScript 类型检查和前端语法检查通过；新增独立状态机工作台与宫殿入口。GitHub Actions job 未启动 runner，不能视为远程 CI 通过；Chromium headless 未能初始化，真实浏览器/响应式视觉验收仍未完成。
-
 ## V1.5.0 — MMG review planner
 
 新增实验策略 `marginal`：七天边际收益 + 覆盖保护。默认 fixed 不变。`npm run review:experiment:v15` 可复现实验，详见 `verification/v15-report.md`；测量仅为空间定位，不代表独立知识回忆。
+
+## V1.9 development — causal state machine
+
+独立开发分支 `feature/v1.9-causal-state-machine` 增加证据约束的离散事件状态机：显式状态、事件、守卫条件、不变量和可重放的状态转移轨迹。它不从相关性推断因果，不是连续时间物理求解器；输入单位目前仅作为标签。接口和限制见 `docs/v1.9-causal-state-machine.md`，验收状态见 `verification/v19-causal-report.md`。本地 Node 22.16.0 回归测试 172/172 通过，TypeScript 类型检查和前端语法检查通过；新增独立状态机工作台与宫殿入口。GitHub Actions job 未启动 runner，不能视为远程 CI 通过；Chromium headless 未能初始化，真实浏览器/响应式视觉验收仍未完成。
 
 ## Project overview
 
