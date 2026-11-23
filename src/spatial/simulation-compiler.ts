@@ -53,7 +53,7 @@ function formatDimension(a:Dimension):string{
  return parts.length?parts.join('·'):'1';
 }
 function parseUnitExpression(source:string):Dimension{
- const s=normalize(source).replace(/\\s+/g,'');
+ const s=normalize(source).replace(/\s+/g,'');
  if(!s)fail('单位声明不能为空');
  let i=0,sign=1,expectFactor=true,result=dim();
  while(i<s.length){
@@ -65,7 +65,7 @@ function parseUnitExpression(source:string):Dimension{
    i+=symbol.length;
    let exponent=1;
    if(s[i]==='^'){
-    i++;const power=s.slice(i).match(/^[+-]?\\d+/);
+    i++;const power=s.slice(i).match(/^[+-]?\d+/);
     if(!power)fail('单位指数必须是整数');
     exponent=Number(power[0]);i+=power[0].length;
     if(!Number.isInteger(exponent)||Math.abs(exponent)>8)fail('单位指数必须在 -8 到 8 之间');
@@ -123,13 +123,13 @@ function inferDimension(e:Expr,units:Map<string,Dimension>):Dimension{
 function graph(object:PalaceObject){
  const evidence=object.evidenceQuote;
  if(!evidence.trim()||evidence.length>2000)fail('缺少或超出允许长度的原文证据');
- if(/错误|不成立|不等于|并非|反例|不正确|不适用|≠|!=|\\bwrong\\b|\\bincorrect\\b|\\bnot valid\\b/i.test(object.label+' '+evidence))fail('原文含冲突线索，需人工复核');
- const clauses=evidence.split(/[。；;\\n，,：:！？?]/).map(x=>x.trim().replace(/^\\$+|\\$+$/g,'').trim()).filter(Boolean);
+ if(/错误|不成立|不等于|并非|反例|不正确|不适用|≠|!=|\bwrong\b|\bincorrect\b|\bnot valid\b/i.test(object.label+' '+evidence))fail('原文含冲突线索，需人工复核');
+ const clauses=evidence.split(/[。；;\n，,：:！？?]/).map(x=>x.trim().replace(/^\$+|\$+$/g,'').trim()).filter(Boolean);
  const eqs:Equation[]=[],constraints:Constraint[]=[];
  const declarations=new Map<string,{unit:string;dimension:Dimension}>();
  for(const clause of clauses){
   const normalized=normalize(clause).replace(/Ω/g,'ohm');
-  const unitMatch=normalized.match(/^unit\\(([A-Za-z][A-Za-z0-9_]{0,23})\\)\\s*=\\s*(.+)$/);
+  const unitMatch=normalized.match(/^unit\(([A-Za-z][A-Za-z0-9_]{0,23})\)\s*=\s*(.+)$/);
   if(unitMatch){
    const variable=unitMatch[1],unit=unitMatch[2].trim();
    if(!validName(variable))fail('单位声明中的变量名非法');
@@ -138,9 +138,9 @@ function graph(object:PalaceObject){
    declarations.set(variable,{unit,dimension:parseUnitExpression(unit)});
    continue;
   }
-  if(/^unit\\(/.test(normalized))fail('单位声明格式错误；使用 unit(v)=m/s');
+  if(/^unit\(/.test(normalized))fail('单位声明格式错误；使用 unit(v)=m/s');
   if(/[<>]/.test(normalized)){
-   const m=normalized.match(/^\\s*([A-Za-z][A-Za-z0-9_]*)\\s*(>=|<=|>|<)\\s*([+-]?(?:\\d+(?:\\.\\d+)?|\\.\\d+)(?:[eE][+-]?\\d+)?)\\s*$/);
+   const m=normalized.match(/^\s*([A-Za-z][A-Za-z0-9_]*)\s*(>=|<=|>|<)\s*([+-]?(?:\d+(?:\.\d+)?|\.\d+)(?:[eE][+-]?\d+)?)\s*$/);
    if(!m||!validName(m[1]))fail('仅支持独立的变量与常数比较约束，例如 t>=0');
    constraints.push({variable:m[1],op:m[2],value:bounded(Number(m[3])),source:clause});
    if(constraints.length>12)fail('最多十二条显式约束');
