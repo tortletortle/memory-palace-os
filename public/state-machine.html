@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>因果状态机 · Memory Palace OS</title>
+<link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/lab.css"><link rel="stylesheet" href="/state-machine.css">
+</head>
+<body>
+<main class="lab-shell">
+ <nav class="lab-top"><a href="/">← 返回记忆宫殿</a><a href="/simulation.html">公式工作室 ↗</a></nav>
+ <header class="lab-header"><div class="eyebrow">EVIDENCE / CAUSAL STATE MACHINE</div><h1>状态转移工作台<span>.</span></h1><p>用明确事件、守卫条件和不变量执行可重复的离散状态追踪。不从相关性自动推断因果。</p></header>
+ <div class="lab-grid fsm-grid">
+  <aside class="lab-card">
+   <h2>知识锚点</h2>
+   <label for="palace">宫殿</label><select id="palace"></select>
+   <label for="anchor">知识</label><select id="anchor"></select>
+   <h3>原文证据</h3><p id="evidence" class="lab-evidence">—</p>
+   <p id="status" role="status" class="fsm-status">请选择已保存的知识锚点。</p>
+   <div class="lab-hint">语法示例：<br><code>state(off)；state(on)；initial(off)；transition(off,power_on,on)。</code><br>带条件：<br><code>input(T)=K；transition(heating,heat,boiling):T&gt;=373。</code></div>
+  </aside>
+  <section class="lab-card fsm-main">
+   <div id="empty"><h2>选择一个已保存的知识锚点</h2><p>只有原文包含明确的状态机声明时才会编译；不支持的规则会被拒绝。</p></div>
+   <div id="workspace" hidden>
+    <div class="eyebrow">COMPILED TRANSITION SYSTEM</div><h2 id="title"></h2><p id="verification" class="lab-hint"></p>
+    <h3>状态集合</h3><div id="states" class="fsm-states"></div>
+    <h3>转移规则</h3><div id="transitions" class="fsm-transitions"></div>
+    <h3>不变量</h3><ul id="invariants" class="fsm-invariants"></ul>
+    <div class="fsm-runner">
+     <h3>构造事件序列</h3>
+     <label for="event">事件</label><select id="event"></select>
+     <div id="inputs" class="lab-inputs"></div>
+     <button id="add-step" class="primary-btn" type="button">加入事件序列 ＋</button>
+     <div class="fsm-queue-head"><h3>待执行步骤</h3><button id="clear" type="button" class="fsm-quiet">清空</button></div>
+     <ol id="steps" class="fsm-step-list"></ol>
+     <button id="run" class="primary-btn" type="button">执行完整状态追踪 →</button>
+     <div id="result" class="fsm-result" aria-live="polite"></div>
+    </div>
+   </div>
+  </section>
+ </div>
+</main>
+<script type="module" src="/state-machine.js"></script>
+</body></html>

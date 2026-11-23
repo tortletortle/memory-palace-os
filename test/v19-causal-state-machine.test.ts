@@ -7,7 +7,7 @@ import {Engine} from '../src/service.ts';
 import {OfflineModel} from '../src/model.ts';
 import {api} from '../src/server.ts';
 import {EngineError} from '../src/schema.ts';
-import {mkdtemp,rm} from 'node:fs/promises';
+import {mkdtemp,readFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 
@@ -20,6 +20,7 @@ test('explicit event interventions produce a deterministic finite-state trace',(
  const source='state(off)；state(on)；initial(off)；transition(off,power_on,on)；transition(on,power_off,off)。';
  const {o,c}=compiled(source);
  assert.deepEqual(c.states,['off','on']);
+ assert.equal(c.evidenceQuote,source);
  assert.equal(c.initialState,'off');
  const steps=[{event:'power_on',inputs:{}},{event:'power_off',inputs:{}}];
  const result=runStateMachine(o,c.revision,steps);
@@ -110,10 +111,20 @@ test('HTTP routes compile and run a state machine without mutating palace learni
   assert.equal(response.status,200);
   assert.equal((await response.json() as any).finalState,'off');
   assert.deepEqual(await store.read(),before);
+  for(const file of ['state-machine.html','state-machine.js','state-machine.css'])assert.equal((await fetch(url+'/'+file)).status,200);
   const stale=await post(route+'/run',{revision:'stale',steps:[{event:'power_on',inputs:{}}]});
   assert.equal(stale.status,409);
  }finally{
   await new Promise<void>(resolve=>server.close(()=>resolve()));
   await rm(dir,{recursive:true,force:true});
  }
+});
+
+test('state-machine frontend DOM contract has no executable HTML injection sink',async()=>{
+ const html=await readFile('public/state-machine.html','utf8'),js=await readFile('public/state-machine.js','utf8'),index=await readFile('public/index.html','utf8'),app=await readFile('public/app.js','utf8');
+ const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
+ assert.deepEqual([...js.matchAll(/\$\('([^']+)'\)/g)].map(m=>m[1]).filter(x=>!ids.has(x)),[]);
+ assert.match(index,/id="object-state-machine"/);
+ assert.match(app,/object-state-machine/);
+ assert.doesNotMatch(js,/\beval\(|innerHTML/);
 });
