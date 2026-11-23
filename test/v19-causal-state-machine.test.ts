@@ -6,12 +6,14 @@ import {Store} from '../src/store.ts';
 import {Engine} from '../src/service.ts';
 import {OfflineModel} from '../src/model.ts';
 import {api} from '../src/server.ts';
+import {EngineError} from '../src/schema.ts';
 import {mkdtemp,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 
 const object=(evidenceQuote:string):PalaceObject=>({id:'o',conceptId:'c',label:'水相变状态机',kind:'mechanism',evidenceQuote,metaphor:'状态转移',x:0,z:0,color:'#ffffff'});
-function compiled(source:string){const o=object(source),c=compileStateMachine(o);assert.equal(c.supported,true,JSON.stringify(c));if(!c.supported)throw new Error(c.reason);return {o,c};}
+function compiled(source:string){const o=object(source),c=compileStateMachine(o);if(!c.supported)throw new Error(c.reason);assert.equal(c.supported,true);return {o,c};}
+const hasCode=(code:string)=>(e:unknown)=>e instanceof EngineError&&e.code===code;
 function run(source:string,steps:unknown){const {o,c}=compiled(source);return runStateMachine(o,c.revision,steps);}
 
 test('explicit event interventions produce a deterministic finite-state trace',()=>{
@@ -30,8 +32,8 @@ test('guards and invariants gate state transitions using declared input units',(
  const source='state(idle)；state(boiling)；initial(idle)；input(T)=K；transition(idle,heat,boiling):T>=373；invariant(T>=0)。';
  const {o,c}=compiled(source);
  assert.deepEqual(c.inputs,[{id:'T',unit:'K'}]);
- assert.throws(()=>runStateMachine(o,c.revision,[{event:'heat',inputs:{T:372}}]),e=>e.code==='FSM_GUARD_BLOCKED');
- assert.throws(()=>runStateMachine(o,c.revision,[{event:'heat',inputs:{T:-1}}]),e=>e.code==='FSM_INVARIANT');
+ assert.throws(()=>runStateMachine(o,c.revision,[{event:'heat',inputs:{T:372}}]),hasCode('FSM_GUARD_BLOCKED'));
+ assert.throws(()=>runStateMachine(o,c.revision,[{event:'heat',inputs:{T:-1}}]),hasCode('FSM_INVARIANT'));
  const result=runStateMachine(o,c.revision,[{event:'heat',inputs:{T:373}}]);
  assert.equal(result.finalState,'boiling');
  assert.equal(result.steps[0].guard?.source,'T>=373');
@@ -46,7 +48,7 @@ test('disjoint guarded branches select exactly one transition',()=>{
 test('overlapping guards are rejected at runtime rather than choosing by source order',()=>{
  const source='state(low)；state(mid)；state(high)；initial(low)；input(T)=K；transition(low,heat,mid):T>=300；transition(low,heat,high):T>=200。';
  const {o,c}=compiled(source);
- assert.throws(()=>runStateMachine(o,c.revision,[{event:'heat',inputs:{T:350}}]),e=>e.code==='FSM_AMBIGUOUS');
+ assert.throws(()=>runStateMachine(o,c.revision,[{event:'heat',inputs:{T:350}}]),hasCode('FSM_AMBIGUOUS'));
 });
 
 test('all declared inputs are required and extra, non-finite, or oversized values are refused',()=>{
@@ -59,8 +61,8 @@ test('all declared inputs are required and extra, non-finite, or oversized value
 test('unknown events and events unavailable from the current state fail closed',()=>{
  const source='state(off)；state(on)；initial(off)；transition(off,power_on,on)；transition(on,power_off,off)。';
  const {o,c}=compiled(source);
- assert.throws(()=>runStateMachine(o,c.revision,[{event:'power_off',inputs:{}}]),e=>e.code==='FSM_NO_TRANSITION');
- assert.throws(()=>runStateMachine(o,c.revision,[{event:'unknown',inputs:{}}]),e=>e.code==='FSM_NO_TRANSITION');
+ assert.throws(()=>runStateMachine(o,c.revision,[{event:'power_off',inputs:{}}]),hasCode('FSM_NO_TRANSITION'));
+ assert.throws(()=>runStateMachine(o,c.revision,[{event:'unknown',inputs:{}}]),hasCode('FSM_NO_TRANSITION'));
 });
 
 test('malformed or structurally incomplete state machines abstain',()=>{
@@ -82,7 +84,7 @@ test('malformed or structurally incomplete state machines abstain',()=>{
 
 test('stale source revisions and oversized traces are rejected',()=>{
  const {o,c}=compiled('state(a)；state(b)；initial(a)；transition(a,start,b)。');
- assert.throws(()=>runStateMachine({...o,evidenceQuote:o.evidenceQuote+' state(c)'},c.revision,[{event:'start',inputs:{}}]),e=>e.code==='FSM_STALE');
+ assert.throws(()=>runStateMachine({...o,evidenceQuote:o.evidenceQuote+' state(c)'},c.revision,[{event:'start',inputs:{}}]),hasCode('FSM_STALE'));
  assert.throws(()=>runStateMachine(o,c.revision,Array(41).fill({event:'start',inputs:{}})));
 });
 

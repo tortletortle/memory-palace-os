@@ -40,10 +40,11 @@ function compile(object:PalaceObject):Machine{
    initial=m[1];continue;
   }
   if((m=clause.match(/^input\(([A-Za-z][A-Za-z0-9_]*)\)=([A-Za-z0-9µμΩ°/_^.-]{1,24})$/))){
-   if(!validId(m[1]))fail('输入变量名称非法');
-   if(inputs.some(x=>x.id===m[1]))fail('重复输入声明：'+m[1]);
+   const inputId=m[1],unit=m[2];
+   if(!validId(inputId))fail('输入变量名称非法');
+   if(inputs.some(x=>x.id===inputId))fail('重复输入声明：'+inputId);
    if(inputs.length>=8)fail('最多八个数值输入');
-   inputs.push({id:m[1],unit:m[2]});continue;
+   inputs.push({id:inputId,unit});continue;
   }
   if((m=clause.match(/^transition\(([A-Za-z][A-Za-z0-9_]*),([A-Za-z][A-Za-z0-9_]*),([A-Za-z][A-Za-z0-9_]*)\)(?::(.+))?$/))){
    if(!validId(m[1])||!validId(m[2])||!validId(m[3]))fail('状态转移名称非法');
