@@ -35,6 +35,17 @@
      <ol id="steps" class="fsm-step-list"></ol>
      <button id="run" class="primary-btn" type="button">执行完整状态追踪 →</button>
      <div id="result" class="fsm-result" aria-live="polite"></div>
+     <section id="counterfactual" class="fsm-counterfactual" hidden>
+      <h3>单变量干预对照</h3>
+      <p class="lab-hint">复制当前事件序列作为基线，只改变一个步骤中的一个数值输入。其他事件和输入保持不变。</p>
+      <div class="fsm-compare-fields">
+       <label>干预步骤<select id="compare-step"></select></label>
+       <label>输入变量<select id="compare-variable"></select></label>
+       <label>干预数值<input id="compare-value" type="number" step="any"></label>
+      </div>
+      <button id="compare-run" class="primary-btn" type="button">比较基线与干预 →</button>
+      <div id="compare-result" class="fsm-result" aria-live="polite"></div>
+     </section>
     </div>
    </div>
   </section>

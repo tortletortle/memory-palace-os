@@ -10,7 +10,7 @@
 
 ## V1.9 development — causal state machine
 
-独立开发分支 `feature/v1.9-causal-state-machine` 增加证据约束的离散事件状态机：显式状态、事件、守卫条件、不变量和可重放的状态转移轨迹。它不从相关性推断因果，不是连续时间物理求解器；输入单位目前仅作为标签。接口和限制见 `docs/v1.9-causal-state-machine.md`，验收状态见 `verification/v19-causal-report.md`。本地 Node 22.16.0 回归测试 172/172 通过，TypeScript 类型检查和前端语法检查通过；新增独立状态机工作台、SVG 状态转移图与宫殿入口。GitHub Actions job 未启动 runner，不能视为远程 CI 通过；Chromium headless 未能初始化，真实浏览器/响应式视觉验收仍未完成。
+独立开发分支 `feature/v1.9-causal-state-machine` 增加证据约束的离散事件状态机：显式状态、事件、守卫条件、不变量和可重放的状态转移轨迹。它不从相关性推断因果，不是连续时间物理求解器；输入单位目前仅作为标签。接口和限制见 `docs/v1.9-causal-state-machine.md`，验收状态见 `verification/v19-causal-report.md`。在基于 V1.8.0 本地快照重建的集成工作树中，Node.js 22.16.0 全量测试 179/179 通过，TypeScript 类型检查、前端语法与 HTTP 集成测试通过。新增单变量反事实对照：固定事件序列，只改变一个输入值，对比两条状态路径并标出首次可观察差异（成功时为路径分歧，失败时为阻断步骤）。该结果只说明显式模型内部行为，不证明现实因果关系。当前并非精确 GitHub PR HEAD 的干净克隆，远程 CI、Chromium 与响应式视觉验收仍未完成。
 
 ## Project overview
 
