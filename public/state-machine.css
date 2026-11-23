@@ -33,3 +33,16 @@
 .fsm-graph .fsm-node.current{fill:#526d3e;stroke:#e5f6c8;stroke-width:4}
 .fsm-graph .fsm-node-label{fill:#eef5e9;font-size:11px;text-anchor:middle}
 .fsm-graph .fsm-empty{fill:#a8b5ac;font-size:13px;text-anchor:middle}
+
+.fsm-edge.baseline{stroke:#76a9d8;stroke-width:3}
+.fsm-edge.active{stroke:#b7e39f;stroke-width:3.5}
+.fsm-counterfactual{margin-top:24px;padding-top:18px;border-top:1px solid #35443a}
+.fsm-counterfactual h3{margin-top:0}
+.fsm-compare-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.fsm-compare-fields label{display:grid;gap:7px;color:#c2d0c2;font-size:12px;min-width:0}
+.fsm-compare-fields select,.fsm-compare-fields input{box-sizing:border-box;width:100%;min-width:0;padding:10px;border-radius:8px;border:1px solid #4d6050;background:#111913;color:#e6eee3}
+.fsm-compare-result-row{padding:10px 12px;margin-top:8px;background:#121a14;border:1px solid #34463a;border-radius:8px;overflow-wrap:anywhere}
+.fsm-compare-legend{display:flex;gap:16px;flex-wrap:wrap;color:#aebcaf;font-size:11px;margin-top:10px}
+.fsm-compare-legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;background:#76a9d8}
+.fsm-compare-legend span:last-child:before{background:#b7e39f}
+@media(max-width:720px){.fsm-compare-fields{grid-template-columns:1fr}}

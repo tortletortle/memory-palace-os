@@ -1,5 +1,6 @@
 import {compileSimulation,runSimulation,sweepSimulation} from './spatial/simulation-compiler.ts';
 import {compileStateMachine,runStateMachine} from './spatial/causal-state-machine.ts';
+import {compareStateMachineRuns} from './spatial/counterfactual-compare.ts';
 import {compileDynamicLab,runDynamicLab,labObject} from './spatial/dynamic-lab.ts';
 import {assessmentCatalog, assessmentBank, addTransfer, issueAssessment, getAssessment, submitAssessment, gradeAssessment, assessmentReport} from './spatial/knowledge-assessment.ts';
 import {mathInfo,compareMath} from './math.ts';
@@ -73,6 +74,7 @@ export function api(engine:Engine){let active=0;return createServer(async(req,re
     const b=await body(req);
     if(method==='POST'&&(match=path.match(/^\/api\/palaces\/([^/]+)\/simulations\/([^/]+)\/(run|sweep)$/))){const o=await labObject(engine.store,decodeURIComponent(match[1]),decodeURIComponent(match[2]));return send(res,200,match[3]==='run'?runSimulation(o,b.revision,b.inputs):sweepSimulation(o,b.revision,b.inputs,b.variable,b.low,b.high,b.points));}
     if(method==='POST'&&(match=path.match(/^\/api\/palaces\/([^/]+)\/state-machines\/([^/]+)\/run$/))){const o=await labObject(engine.store,decodeURIComponent(match[1]),decodeURIComponent(match[2]));return send(res,200,runStateMachine(o,b.revision,b.steps));}
+    if(method==='POST'&&(match=path.match(/^\/api\/palaces\/([^/]+)\/state-machines\/([^/]+)\/compare$/))){const o=await labObject(engine.store,decodeURIComponent(match[1]),decodeURIComponent(match[2]));return send(res,200,compareStateMachineRuns(o,b.revision,b.baselineSteps,b.interventionSteps));}
     if(method==='POST'&&(match=path.match(/^\/api\/palaces\/([^/]+)\/labs\/([^/]+)\/run$/)))return send(res,200,runDynamicLab(await labObject(engine.store,decodeURIComponent(match[1]),decodeURIComponent(match[2])),b.revision,b.inputs));
     if(method==='POST'&&(match=path.match(/^\/api\/palaces\/([^/]+)\/assessment\/bank$/)))return send(res,201,await addTransfer(engine.store,decodeURIComponent(match[1]),b));
     if(method==='POST'&&(match=path.match(/^\/api\/palaces\/([^/]+)\/assessment\/attempts$/)))return send(res,201,await issueAssessment(engine.store,decodeURIComponent(match[1]),b));
