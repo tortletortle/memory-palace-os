@@ -23,3 +23,13 @@
 .fsm-result{margin-top:16px;color:#c5e7be;font-size:13px;line-height:1.8;overflow-wrap:anywhere}
 .fsm-result .trace-row{padding:8px 10px;margin-top:6px;background:#142119;border:1px solid #344c38;border-radius:8px}
 @media(max-width:720px){.fsm-grid{grid-template-columns:1fr}.fsm-transition{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}}
+
+.fsm-graph{display:block;width:100%;height:auto;min-height:220px;background:#111913;border:1px solid #34463a;border-radius:12px;overflow:visible}
+.fsm-graph .fsm-edge{fill:none;stroke:#627a66;stroke-width:2;marker-end:url(#fsm-arrow)}
+.fsm-graph .fsm-edge.active{stroke:#b7e39f;stroke-width:3.5}
+.fsm-graph .fsm-edge-label{fill:#c5d2c2;font-size:11px;text-anchor:middle}
+.fsm-graph .fsm-node{fill:#203226;stroke:#718e73;stroke-width:2}
+.fsm-graph .fsm-node.initial{fill:#344a32;stroke:#c3e4a8;stroke-width:3}
+.fsm-graph .fsm-node.current{fill:#526d3e;stroke:#e5f6c8;stroke-width:4}
+.fsm-graph .fsm-node-label{fill:#eef5e9;font-size:11px;text-anchor:middle}
+.fsm-graph .fsm-empty{fill:#a8b5ac;font-size:13px;text-anchor:middle}

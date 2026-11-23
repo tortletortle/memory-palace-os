@@ -6,7 +6,7 @@
 - Added GET compile and POST trace-run endpoints under each palace knowledge anchor.
 - Added ten regression tests covering deterministic traces, guard thresholds, invariants, disjoint and overlapping guards, input validation, unknown events, malformed models, stale revisions, trace limits, HTTP integration, and the static UI contract.
 - Execution is stateless and does not mutate palace learning data.
-- Added a dedicated `state-machine.html` workspace with state pills, transition rows, invariant display, event-sequence builder, and trace output; added navigation from the palace and selected-anchor panel.
+- Added a dedicated `state-machine.html` workspace with state pills, an SVG transition graph, transition rows, invariant display, event-sequence builder, and trace output; successful transitions are highlighted. Added navigation from the palace and selected-anchor panel.
 - No AI-generated state machine or arbitrary code is executed.
 
 ## Local verification
@@ -16,6 +16,7 @@ Tested in Node.js 22.16.0 against the locally available V1.8.0 source snapshot (
 - `npm test`: **172/172 passed** (162 inherited tests + 10 state-machine tests).
 - `npm run typecheck -- --typeRoots /opt/nvm/versions/node/v22.16.0/lib/node_modules/ts-node/node_modules/@types`: passed with TypeScript 5.8.3 and the environment's preinstalled Node type definitions.
 - `node --check public/simulation.js`, `public/app.js`, and `public/state-machine.js`: passed.
+- The locally tested modified source, server, test, and UI files were checked with `git hash-object` against their exact GitHub branch blob SHAs.
 - HTTP integration verifies that `state-machine.html`, `state-machine.js`, and `state-machine.css` are served successfully. Static DOM checks confirm every JavaScript selector has a matching element, the palace entry links exist, and the UI does not use `innerHTML` or `eval`.
 - The nine new state-machine tests include a real local HTTP server integration check and verify that execution does not mutate palace storage.
 
